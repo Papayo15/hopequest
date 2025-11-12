@@ -4,12 +4,14 @@
  */
 
 import React from 'react';
-import { View, StyleSheet, ScrollView } from 'react-native';
+import { View, StyleSheet, ScrollView, TouchableOpacity, Alert, Platform } from 'react-native';
 import { Heading1, Heading2, BodyText, SmallText, Card } from '../components/ui';
 import { Colors } from '../constants';
 import { useUserStore, useGameStore } from '../stores';
+import { useNavigation } from '@react-navigation/native';
 
 const ProfileScreen: React.FC = () => {
+  const navigation = useNavigation();
   const {
     username,
     age,
@@ -17,8 +19,45 @@ const ProfileScreen: React.FC = () => {
     totalSessions,
     achievements,
     createdAt,
+    logout,
   } = useUserStore();
-  const { countriesCompleted, totalStars } = useGameStore();
+  const { completedCountries, totalStars } = useGameStore();
+
+  const handleLogout = () => {
+    if (Platform.OS === 'web' && typeof (global as any).window !== 'undefined') {
+      const confirmLogout = (global as any).window.confirm(
+        '¿Estás seguro de que quieres cerrar sesión?\n\nTu progreso se guardará y podrás volver más tarde.'
+      );
+      if (confirmLogout) {
+        logout();
+        // No resetear el juego, solo cerrar sesión
+        // El progreso se mantiene en AsyncStorage
+        (navigation as any).reset({
+          index: 0,
+          routes: [{ name: 'Auth' }],
+        });
+      }
+    } else {
+      Alert.alert(
+        'Cerrar Sesión',
+        'Tu progreso se guardará y podrás volver más tarde.',
+        [
+          { text: 'Cancelar', style: 'cancel' },
+          {
+            text: 'Cerrar Sesión',
+            style: 'destructive',
+            onPress: () => {
+              logout();
+              (navigation as any).reset({
+                index: 0,
+                routes: [{ name: 'Auth' }],
+              });
+            },
+          },
+        ]
+      );
+    }
+  };
 
   const formatPlayTime = (seconds: number): string => {
     const hours = Math.floor(seconds / 3600);
@@ -48,7 +87,7 @@ const ProfileScreen: React.FC = () => {
         <Heading2 style={styles.sectionTitle}>Estadísticas</Heading2>
         <View style={styles.statsGrid}>
           <View style={styles.statItem}>
-            <Heading2 color={Colors.primary.main}>{countriesCompleted.length}</Heading2>
+            <Heading2 color={Colors.primary}>{completedCountries.length}</Heading2>
             <SmallText color={Colors.text.secondary}>Países Visitados</SmallText>
           </View>
           <View style={styles.statItem}>
@@ -92,10 +131,26 @@ const ProfileScreen: React.FC = () => {
 
       {/* Member Since */}
       {createdAt && (
-        <SmallText align="center" color={Colors.text.tertiary}>
+        <SmallText align="center" color={Colors.text.secondary} style={styles.memberSince}>
           Miembro desde {new Date(createdAt).toLocaleDateString()}
         </SmallText>
       )}
+
+      {/* Logout Button */}
+      <Card variant="outlined" style={styles.card}>
+        <Heading2 style={styles.sectionTitle}>Cambiar de Usuario</Heading2>
+        <BodyText color={Colors.text.secondary} style={styles.logoutDescription}>
+          Si otra persona quiere jugar, puedes cerrar sesión. Tu progreso se guardará automáticamente.
+        </BodyText>
+        <TouchableOpacity
+          style={styles.logoutButton}
+          onPress={handleLogout}
+        >
+          <BodyText color={Colors.error} style={styles.logoutButtonText}>
+            🚪 Cerrar Sesión
+          </BodyText>
+        </TouchableOpacity>
+      </Card>
     </ScrollView>
   );
 };
@@ -103,7 +158,7 @@ const ProfileScreen: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.background.primary,
+    backgroundColor: Colors.background,
   },
   content: {
     padding: 20,
@@ -122,7 +177,7 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     borderRadius: 40,
-    backgroundColor: Colors.primary.light,
+    backgroundColor: Colors.primary + '20',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -139,7 +194,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 16,
     padding: 12,
-    backgroundColor: Colors.background.secondary,
+    backgroundColor: Colors.backgroundSecondary,
     borderRadius: 12,
   },
   achievementItem: {
@@ -147,12 +202,31 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 12,
     padding: 12,
-    backgroundColor: Colors.background.secondary,
+    backgroundColor: Colors.backgroundSecondary,
     borderRadius: 8,
   },
   achievementInfo: {
     flex: 1,
     marginLeft: 12,
+  },
+  memberSince: {
+    marginBottom: 16,
+  },
+  logoutDescription: {
+    marginBottom: 16,
+    lineHeight: 20,
+  },
+  logoutButton: {
+    padding: 16,
+    backgroundColor: Colors.error + '10',
+    borderRadius: 12,
+    borderWidth: 2,
+    borderColor: Colors.error,
+    alignItems: 'center',
+  },
+  logoutButtonText: {
+    fontWeight: '600',
+    fontSize: 16,
   },
 });
 
