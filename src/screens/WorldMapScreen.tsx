@@ -18,6 +18,7 @@ import { Heading2, BodyText, SmallText, Card } from '../components/ui';
 import { Colors, GameConfig } from '../constants';
 import { useGameStore } from '../stores';
 import * as CountriesData from '../constants/countries';
+import Svg, { Line, Circle } from 'react-native-svg';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
@@ -188,6 +189,81 @@ const WorldMapScreen: React.FC = () => {
     });
   };
 
+  // Obtener icono de portal basado en el tipo
+  const getPortalIcon = (countryId: string): string => {
+    const countryData = (CountriesData as any)[countryId];
+    if (!countryData || !countryData.availablePortals || countryData.availablePortals.length === 0) {
+      return '🚶';
+    }
+
+    const portalType = countryData.availablePortals[0];
+    const icons: Record<string, string> = {
+      terrestre: '🚂',
+      aereo: '✈️',
+      maritimo: '⛴️',
+      clandestino: '🚶',
+      refugiado: '🆘',
+      familiar: '👨‍👩‍👧‍👦',
+    };
+    return icons[portalType] || '🚪';
+  };
+
+  // Renderizar líneas de conexión entre países
+  const renderPortalConnections = () => {
+    const connections = [];
+    const mapHeight = 300;
+    const mapWidth = SCREEN_WIDTH - 40;
+
+    for (let i = 0; i < countryPins.length - 1; i++) {
+      const current = countryPins[i];
+      const next = countryPins[i + 1];
+
+      if (!current || !next) continue;
+
+      const x1 = (current.position.x / 100) * mapWidth;
+      const y1 = (current.position.y / 100) * mapHeight;
+      const x2 = (next.position.x / 100) * mapWidth;
+      const y2 = (next.position.y / 100) * mapHeight;
+
+      const isActive = current.completed || current.unlocked;
+      const strokeColor = isActive ? Colors.primary : Colors.text.disabled;
+      const strokeWidth = current.isNext ? 3 : 2;
+
+      connections.push(
+        <Line
+          key={`line-${current.id}-${next.id}`}
+          x1={x1}
+          y1={y1}
+          x2={x2}
+          y2={y2}
+          stroke={strokeColor}
+          strokeWidth={strokeWidth}
+          strokeDasharray={isActive ? undefined : '5,5'}
+          opacity={isActive ? 0.8 : 0.3}
+        />
+      );
+
+      // Portal icon at midpoint
+      if (isActive) {
+        const midX = (x1 + x2) / 2;
+        const midY = (y1 + y2) / 2;
+
+        connections.push(
+          <Circle
+            key={`portal-${current.id}-${next.id}`}
+            cx={midX}
+            cy={midY}
+            r={8}
+            fill={Colors.accent}
+            opacity={0.9}
+          />
+        );
+      }
+    }
+
+    return connections;
+  };
+
   return (
     <View style={styles.container}>
       {/* Header */}
@@ -233,6 +309,16 @@ const WorldMapScreen: React.FC = () => {
       {/* Map Placeholder */}
       <View style={styles.mapContainer}>
         <View style={styles.map}>
+          {/* Portal Connections */}
+          <Svg
+            height={300}
+            width={SCREEN_WIDTH - 40}
+            style={styles.connectionsLayer}
+          >
+            {renderPortalConnections()}
+          </Svg>
+
+          {/* Country Pins */}
           {filteredCountries.map((country) => (
             <TouchableOpacity
               key={country.id}
@@ -265,6 +351,12 @@ const WorldMapScreen: React.FC = () => {
               {country.completed && country.stars && (
                 <SmallText style={styles.stars}>
                   {'⭐'.repeat(country.stars)}
+                </SmallText>
+              )}
+              {/* Portal icon for unlocked/completed */}
+              {(country.unlocked || country.completed) && (
+                <SmallText style={styles.portalIcon}>
+                  {getPortalIcon(country.id)}
                 </SmallText>
               )}
             </TouchableOpacity>
@@ -393,6 +485,16 @@ const styles = StyleSheet.create({
   },
   stars: {
     fontSize: 10,
+  },
+  portalIcon: {
+    fontSize: 12,
+    marginTop: 2,
+  },
+  connectionsLayer: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    zIndex: 0,
   },
   listContainer: {
     flex: 1,

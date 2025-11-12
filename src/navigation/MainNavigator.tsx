@@ -18,6 +18,8 @@ import SettingsScreen from '../screens/SettingsScreen';
 // Game Screens
 import CountryOverviewScreen from '../screens/game/CountryOverviewScreen';
 import ActivityScreen from '../screens/game/ActivityScreen';
+import PhysicsScreen from '../screens/game/PhysicsScreen';
+import BossBattleScreen from '../screens/game/BossBattleScreen';
 
 const Tab = createBottomTabNavigator<MainTabParamList>();
 const Stack = createStackNavigator();
@@ -117,6 +119,16 @@ const MainNavigator: React.FC = () => {
         name="Activity"
         component={ActivityScreen}
         options={{ title: 'Actividad' }}
+      />
+      <Stack.Screen
+        name="Physics"
+        component={PhysicsScreen}
+        options={{ title: 'Modo Físico' }}
+      />
+      <Stack.Screen
+        name="BossBattle"
+        component={BossBattleScreen}
+        options={{ title: 'Batalla Final' }}
       />
     </Stack.Navigator>
   );

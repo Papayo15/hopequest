@@ -53,29 +53,43 @@ export const argentina: Country = {
           question: '¿Qué baile se originó en Argentina?',
           options: ['Salsa', 'Tango', 'Samba', 'Cumbia'],
           correctAnswer: 1,
-          explanation: 'El tango nació en Buenos Aires a fines del siglo XIX.',
+          explanation: 'El tango nació en Buenos Aires a fines del siglo XIX en los barrios de inmigrantes. Es Patrimonio Cultural Inmaterial de la Humanidad.',
+          difficulty: 'easy',
+        },
+        {
+          question: '¿Qué vino es emblemático de Argentina?',
+          options: ['Cabernet', 'Malbec', 'Merlot', 'Chardonnay'],
+          correctAnswer: 1,
+          explanation: 'El Malbec es el vino emblemático de Argentina. Mendoza es la principal región vitivinícola del país.',
           difficulty: 'easy',
         },
         {
           question: '¿Cómo se llama la región al sur de Argentina?',
           options: ['Pampas', 'Patagonia', 'Amazonía', 'Atacama'],
           correctAnswer: 1,
-          explanation: 'La Patagonia es la región sur de Argentina, conocida por su belleza natural.',
-          difficulty: 'easy',
+          explanation: 'La Patagonia es la región sur de Argentina, conocida por sus glaciares, montañas y belleza natural. Incluye el Parque Nacional Los Glaciares.',
+          difficulty: 'medium',
         },
         {
           question: '¿Cuál es el principal destino de emigrantes argentinos?',
           options: ['Estados Unidos', 'Brasil', 'España', 'Chile'],
           correctAnswer: 2,
-          explanation: 'España es el principal destino por conexiones históricas e idioma.',
+          explanation: 'España es el principal destino de argentinos por las conexiones históricas, el idioma común y la doble nacionalidad que muchos tienen por descendencia europea.',
           difficulty: 'medium',
         },
         {
-          question: '¿Qué vino es famoso en Argentina?',
-          options: ['Cabernet', 'Malbec', 'Merlot', 'Chardonnay'],
+          question: '¿Cuántos argentinos aproximadamente viven en el exterior?',
+          options: ['500 mil', '1 millón', '2 millones', '3 millones'],
           correctAnswer: 1,
-          explanation: 'El Malbec es el vino emblemático de Argentina.',
-          difficulty: 'easy',
+          explanation: 'Aproximadamente 1 millón de argentinos viven en el exterior. Las crisis económicas recurrentes han causado varias olas migratorias, especialmente en 2001-2002.',
+          difficulty: 'hard',
+        },
+        {
+          question: '¿Por qué Buenos Aires es llamada "La París de Sudamérica"?',
+          options: ['Por su torre Eiffel', 'Por su arquitectura europea e influencia francesa', 'Por su idioma', 'Por su comida'],
+          correctAnswer: 1,
+          explanation: 'Buenos Aires es llamada así por su arquitectura europea, sus amplias avenidas, cafés literarios y fuerte influencia cultural francesa, especialmente a principios del siglo XX.',
+          difficulty: 'hard',
         },
       ],
       rewards: {
@@ -105,13 +119,24 @@ export const argentina: Country = {
       description: 'Encuentra parejas',
       difficulty: 'easy',
       pairs: [
-        { id: 1, content: '💃' },
-        { id: 2, content: '⚽' },
-        { id: 3, content: '🥩' },
-        { id: 4, content: '🍷' },
-        { id: 5, content: '🏔️' },
-        { id: 6, content: '🌃' },
+        { id: 1, content: '💃' }, // Tango
+        { id: 2, content: '⚽' }, // Fútbol (Maradona, Messi)
+        { id: 3, content: '🥩' }, // Asado
+        { id: 4, content: '🍷' }, // Vino Malbec
+        { id: 5, content: '🏔️' }, // Patagonia
+        { id: 6, content: '🌃' }, // Buenos Aires
+        { id: 7, content: '🧉' }, // Mate
+        { id: 8, content: '🏛️' }, // Teatro Colón
+        { id: 9, content: '🌊' }, // Cataratas del Iguazú
+        { id: 10, content: '🎭' }, // Cultura
+        { id: 11, content: '🐄' }, // Ganadería
+        { id: 12, content: '🌾' }, // Pampas
+        { id: 13, content: '🏖️' }, // Mar del Plata
+        { id: 14, content: '🎵' }, // Música
+        { id: 15, content: '📚' }, // Literatura (Borges)
+        { id: 16, content: '🧊' }, // Glaciares
       ],
+      maxPairs: 16,
       rewards: {
         stars: 2,
         money: 100,

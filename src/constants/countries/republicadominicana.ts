@@ -53,29 +53,43 @@ export const republicadominicana: Country = {
           question: '¿Qué música se originó en República Dominicana?',
           options: ['Salsa', 'Merengue y Bachata', 'Reggaeton', 'Cumbia'],
           correctAnswer: 1,
-          explanation: 'El merengue y la bachata son géneros musicales originarios de República Dominicana.',
+          explanation: 'El merengue y la bachata son géneros musicales originarios de República Dominicana. El merengue es el baile nacional y la bachata ha ganado popularidad mundial.',
+          difficulty: 'easy',
+        },
+        {
+          question: '¿Por qué deporte es famosa la República Dominicana?',
+          options: ['Fútbol', 'Béisbol', 'Boxeo', 'Baloncesto'],
+          correctAnswer: 1,
+          explanation: 'República Dominicana es una potencia del béisbol, con cientos de jugadores en las Grandes Ligas (MLB). El béisbol es prácticamente una religión nacional.',
           difficulty: 'easy',
         },
         {
           question: '¿Cuál fue la primera ciudad europea en América?',
           options: ['La Habana', 'Cartagena', 'Santo Domingo', 'San Juan'],
           correctAnswer: 2,
-          explanation: 'Santo Domingo, fundada en 1496, fue la primera ciudad europea en América.',
+          explanation: 'Santo Domingo, fundada en 1496 por Bartolomé Colón, fue la primera ciudad europea permanente en América. Su zona colonial es Patrimonio de la Humanidad.',
           difficulty: 'medium',
         },
         {
-          question: '¿Por qué deporte es famosa la República Dominicana?',
-          options: ['Fútbol', 'Béisbol', 'Boxeo', 'Baloncesto'],
-          correctAnswer: 1,
-          explanation: 'República Dominicana es una potencia del béisbol, con muchos jugadores en MLB.',
-          difficulty: 'easy',
+          question: '¿Con qué país comparte República Dominicana la isla La Española?',
+          options: ['Cuba', 'Jamaica', 'Haití', 'Puerto Rico'],
+          correctAnswer: 2,
+          explanation: 'República Dominicana comparte la isla La Española (Hispaniola) con Haití. La frontera entre ambos países tiene aproximadamente 750 mil haitianos viviendo en territorio dominicano.',
+          difficulty: 'medium',
         },
         {
-          question: '¿Cuántos dominicanos viven en el exterior?',
+          question: '¿Cuántos dominicanos aproximadamente viven en el exterior?',
           options: ['500 mil', '1 millón', '2 millones', '5 millones'],
           correctAnswer: 2,
-          explanation: 'Aproximadamente 2 millones de dominicanos viven fuera del país.',
-          difficulty: 'medium',
+          explanation: 'Aproximadamente 2 millones de dominicanos viven fuera del país, principalmente en Estados Unidos (Nueva York, Miami), España, Italia y Suiza. Envían $8 mil millones anuales en remesas.',
+          difficulty: 'hard',
+        },
+        {
+          question: '¿Qué porcentaje del PIB dominicano representan las remesas?',
+          options: ['3%', '8%', '15%', '25%'],
+          correctAnswer: 1,
+          explanation: 'Las remesas representan aproximadamente el 8% del PIB dominicano, equivalente a unos $8 mil millones USD anuales. Son una fuente importante de ingresos para muchas familias.',
+          difficulty: 'hard',
         },
       ],
       rewards: {
@@ -105,13 +119,24 @@ export const republicadominicana: Country = {
       description: 'Encuentra las parejas',
       difficulty: 'easy',
       pairs: [
-        { id: 1, content: '🎵' },
-        { id: 2, content: '⚾' },
-        { id: 3, content: '🏖️' },
-        { id: 4, content: '🏛️' },
-        { id: 5, content: '🌴' },
-        { id: 6, content: '💃' },
+        { id: 1, content: '🎵' }, // Merengue y bachata
+        { id: 2, content: '⚾' }, // Béisbol
+        { id: 3, content: '🏖️' }, // Playas paradisíacas
+        { id: 4, content: '🏛️' }, // Santo Domingo colonial
+        { id: 5, content: '🌴' }, // Palmeras
+        { id: 6, content: '💃' }, // Baile merengue
+        { id: 7, content: '🥥' }, // Coco
+        { id: 8, content: '🎸' }, // Música
+        { id: 9, content: '🌊' }, // Mar Caribe
+        { id: 10, content: '🍹' }, // Mamajuana
+        { id: 11, content: '🐚' }, // Conchas marinas
+        { id: 12, content: '🏝️' }, // Islas
+        { id: 13, content: '🎺' }, // Instrumentos musicales
+        { id: 14, content: '🦜' }, // Cotorra dominicana
+        { id: 15, content: '🌺' }, // Flores tropicales
+        { id: 16, content: '🏐' }, // Voleibol de playa
       ],
+      maxPairs: 16,
       rewards: {
         stars: 2,
         money: 85,

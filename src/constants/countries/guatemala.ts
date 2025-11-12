@@ -51,31 +51,45 @@ export const guatemala: Country = {
       difficulty: 'medium',
       questions: [
         {
-          question: '¿Cuántas lenguas mayas se hablan en Guatemala?',
-          options: ['5 lenguas', 'Más de 20 lenguas', '10 lenguas', '50 lenguas'],
+          question: '¿Qué ave nacional de Guatemala también es el nombre de su moneda?',
+          options: ['El águila', 'El quetzal', 'El tucán', 'El cóndor'],
           correctAnswer: 1,
-          explanation: 'Guatemala tiene una increíble diversidad lingüística con más de 20 lenguas mayas vivas.',
-          difficulty: 'medium',
+          explanation: 'El quetzal es un ave sagrada para los mayas y el símbolo nacional de Guatemala. También es el nombre de la moneda guatemalteca.',
+          difficulty: 'easy',
         },
         {
           question: '¿Qué ciudad maya importante está en Guatemala?',
           options: ['Chichen Itzá', 'Machu Picchu', 'Tikal', 'Teotihuacán'],
           correctAnswer: 2,
-          explanation: 'Tikal es una de las ciudades mayas más grandes y está en Guatemala, es Patrimonio de la Humanidad.',
+          explanation: 'Tikal es una de las ciudades mayas más grandes y poderosas. Está ubicada en la selva de Petén y es Patrimonio de la Humanidad de la UNESCO.',
           difficulty: 'easy',
         },
         {
-          question: '¿Qué representa el quetzal para Guatemala?',
-          options: ['Un dios maya', 'El ave nacional y la moneda', 'Una montaña sagrada', 'Un guerrero legendario'],
+          question: '¿Cuántas lenguas mayas se hablan actualmente en Guatemala?',
+          options: ['5 lenguas', 'Más de 20 lenguas', '10 lenguas', '50 lenguas'],
           correctAnswer: 1,
-          explanation: 'El quetzal es el ave nacional de Guatemala y también el nombre de su moneda.',
-          difficulty: 'easy',
+          explanation: 'Guatemala tiene una increíble diversidad lingüística con más de 20 lenguas mayas vivas, además del español. Esto la convierte en uno de los países más diversos lingüísticamente de América.',
+          difficulty: 'medium',
         },
         {
-          question: '¿Cuánto representan las remesas en el PIB de Guatemala?',
+          question: '¿Qué ciudad colonial guatemalteca es Patrimonio de la Humanidad?',
+          options: ['Ciudad de Guatemala', 'Antigua Guatemala', 'Quetzaltenango', 'Flores'],
+          correctAnswer: 1,
+          explanation: 'Antigua Guatemala es famosa por su arquitectura colonial española bien conservada y sus calles empedradas. Fue la capital de Guatemala hasta 1773.',
+          difficulty: 'medium',
+        },
+        {
+          question: '¿Qué porcentaje del PIB guatemalteco representan las remesas de emigrantes?',
           options: ['5%', '10%', '15%', '25%'],
           correctAnswer: 2,
-          explanation: 'Las remesas de guatemaltecos en el exterior representan el 15% del PIB, vitales para muchas familias.',
+          explanation: 'Las remesas enviadas por guatemaltecos en el exterior representan aproximadamente el 15% del PIB nacional. Son enviadas principalmente desde Estados Unidos y son vitales para muchas familias.',
+          difficulty: 'hard',
+        },
+        {
+          question: '¿Cuántos guatemaltecos aproximadamente viven en el exterior?',
+          options: ['500,000', '1.6 millones', '3 millones', '5 millones'],
+          correctAnswer: 1,
+          explanation: 'Aproximadamente 1.6 millones de guatemaltecos viven fuera del país, principalmente en Estados Unidos (98%). Muchos dejaron Guatemala buscando mejores oportunidades económicas.',
           difficulty: 'hard',
         },
       ],
@@ -112,7 +126,18 @@ export const guatemala: Country = {
         { id: 4, content: '🎭' }, // Máscaras mayas
         { id: 5, content: '🌺' }, // Flores
         { id: 6, content: '🥖' }, // Pan
+        { id: 7, content: '🎨' }, // Artesanías
+        { id: 8, content: '☕' }, // Café guatemalteco
+        { id: 9, content: '🏺' }, // Cerámica maya
+        { id: 10, content: '🌽' }, // Maíz (base de alimentación)
+        { id: 11, content: '🎺' }, // Marimba (instrumento nacional)
+        { id: 12, content: '🌴' }, // Palma
+        { id: 13, content: '⛰️' }, // Montañas
+        { id: 14, content: '🦅' }, // Águila
+        { id: 15, content: '🎪' }, // Festivales
+        { id: 16, content: '🌊' }, // Lagos
       ],
+      maxPairs: 16, // Máximo para nivel difícil (11-12 años)
       rewards: {
         stars: 2,
         money: 80,

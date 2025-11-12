@@ -62,7 +62,7 @@ export interface Activity {
   type: 'trivia' | 'puzzle' | 'memory';
   title: string;
   description: string;
-  difficulty: 'easy' | 'medium' | 'hard';
+  difficulty: 'easy' | 'medium' | 'hard'; // Mantener para compatibilidad
   rewards: {
     stars: number;
     money: number;
@@ -72,12 +72,14 @@ export interface Activity {
   // Trivia specific
   questions?: TriviaQuestion[];
 
-  // Puzzle specific
+  // Puzzle specific (campo dinámico basado en edad)
   imageUrl?: string;
-  gridSize?: 3 | 4 | 5;
+  gridSize?: 3 | 4 | 5; // Deprecated: usar puzzlePieces
+  puzzlePieces?: number; // Nuevo: número de piezas según edad (6, 12, 20)
 
-  // Memory specific
+  // Memory specific (campo dinámico basado en edad)
   pairs?: MemoryPair[];
+  maxPairs?: number; // Nuevo: número máximo de pares disponibles
 }
 
 export interface TriviaQuestion {

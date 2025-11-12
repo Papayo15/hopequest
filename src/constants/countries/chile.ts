@@ -50,32 +50,46 @@ export const chile: Country = {
       difficulty: 'medium',
       questions: [
         {
-          question: '¿Cuántos kilómetros de longitud tiene Chile?',
-          options: ['1,000 km', '2,000 km', '4,000 km', '6,000 km'],
-          correctAnswer: 2,
-          explanation: 'Chile tiene más de 4,000 km de longitud, siendo el país más largo del mundo.',
-          difficulty: 'medium',
-        },
-        {
-          question: '¿Qué es la Isla de Pascua famosa?',
-          options: ['Playas', 'Moais (estatuas gigantes)', 'Volcanes', 'Pingüinos'],
-          correctAnswer: 1,
-          explanation: 'La Isla de Pascua es famosa por los moais, estatuas monolíticas de piedra.',
-          difficulty: 'easy',
-        },
-        {
           question: '¿Cuál es el desierto más seco del mundo?',
           options: ['Sahara', 'Gobi', 'Atacama', 'Kalahari'],
           correctAnswer: 2,
-          explanation: 'El desierto de Atacama en Chile es el más seco del mundo.',
+          explanation: 'El desierto de Atacama en Chile es el más seco del mundo. Hay áreas donde nunca se ha registrado lluvia.',
           difficulty: 'easy',
         },
         {
-          question: '¿De dónde provienen la mayoría de los inmigrantes actuales?',
+          question: '¿Qué es la Isla de Pascua famosa por tener?',
+          options: ['Playas', 'Moais (estatuas gigantes)', 'Volcanes', 'Pingüinos'],
+          correctAnswer: 1,
+          explanation: 'La Isla de Pascua (Rapa Nui) es famosa por los moais, estatuas monolíticas de piedra creadas por la cultura polinesia. Son Patrimonio de la Humanidad.',
+          difficulty: 'easy',
+        },
+        {
+          question: '¿Cuántos kilómetros de longitud tiene Chile aproximadamente?',
+          options: ['1,000 km', '2,000 km', '4,000 km', '6,000 km'],
+          correctAnswer: 2,
+          explanation: 'Chile tiene más de 4,000 km de longitud de norte a sur, pero solo 180 km de ancho promedio. Es el país más largo y angosto del mundo.',
+          difficulty: 'medium',
+        },
+        {
+          question: '¿De dónde provienen la mayoría de los inmigrantes recientes en Chile?',
           options: ['Argentina y Perú', 'Venezuela y Haití', 'Bolivia y Colombia', 'España e Italia'],
           correctAnswer: 1,
-          explanation: 'Venezuela y Haití son los principales orígenes de inmigrantes recientes en Chile.',
+          explanation: 'Venezuela y Haití son los principales orígenes de inmigrantes recientes en Chile (2015-2020). Chile se convirtió en destino importante por su estabilidad económica relativa.',
           difficulty: 'medium',
+        },
+        {
+          question: '¿Cuántos inmigrantes aproximadamente viven en Chile actualmente?',
+          options: ['500 mil', '1.5 millones', '3 millones', '5 millones'],
+          correctAnswer: 1,
+          explanation: 'Aproximadamente 1.5 millones de inmigrantes viven en Chile, representando cerca del 8% de la población. Esta cifra creció significativamente en la última década.',
+          difficulty: 'hard',
+        },
+        {
+          question: '¿Qué evento en 1973 generó un exilio masivo de chilenos?',
+          options: ['Un terremoto', 'El golpe militar', 'Una crisis económica', 'Una guerra'],
+          correctAnswer: 1,
+          explanation: 'El golpe militar de 1973 contra el presidente Salvador Allende generó un exilio masivo de chilenos hacia Argentina, Suecia, Francia, España y otros países. Miles buscaron asilo político.',
+          difficulty: 'hard',
         },
       ],
       rewards: {
@@ -105,14 +119,24 @@ export const chile: Country = {
       description: 'Encuentra parejas',
       difficulty: 'medium',
       pairs: [
-        { id: 1, content: '🗿' },
-        { id: 2, content: '🏔️' },
-        { id: 3, content: '🏜️' },
-        { id: 4, content: '🌊' },
-        { id: 5, content: '🍇' },
-        { id: 6, content: '⛷️' },
-        { id: 7, content: '🐧' },
+        { id: 1, content: '🗿' }, // Moais de Isla de Pascua
+        { id: 2, content: '🏔️' }, // Cordillera de los Andes
+        { id: 3, content: '🏜️' }, // Desierto de Atacama
+        { id: 4, content: '🌊' }, // Costa del Pacífico
+        { id: 5, content: '🍇' }, // Vinos chilenos
+        { id: 6, content: '⛷️' }, // Esquí en los Andes
+        { id: 7, content: '🐧' }, // Pingüinos de la Patagonia
+        { id: 8, content: '🌋' }, // Volcanes
+        { id: 9, content: '🎿' }, // Torres del Paine
+        { id: 10, content: '☀️' }, // Astronomía en Atacama
+        { id: 11, content: '🏛️' }, // Valparaíso
+        { id: 12, content: '🦙' }, // Llamas del norte
+        { id: 13, content: '🍷' }, // Valle del vino
+        { id: 14, content: '🏖️' }, // Playas
+        { id: 15, content: '🌲' }, // Bosques del sur
+        { id: 16, content: '🎨' }, // Pablo Neruda
       ],
+      maxPairs: 16,
       rewards: {
         stars: 2,
         money: 110,

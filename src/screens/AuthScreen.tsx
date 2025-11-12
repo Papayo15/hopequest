@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { View, StyleSheet, TextInput, TouchableOpacity, Alert, Platform } from 'react-native';
+import { View, StyleSheet, TextInput, TouchableOpacity, Alert, Platform, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import type { RootStackNavigationProp } from '../navigation/types';
 import { Heading1, Heading2, BodyText, SmallText, Button } from '../components/ui';
@@ -78,13 +78,14 @@ const AuthScreen: React.FC = () => {
   if (step === 'character_selection') {
     return (
       <View style={styles.container}>
-        <View style={styles.content}>
-          <Heading1 align="center" style={styles.title}>
-            ¡Elige tu personaje!
-          </Heading1>
-          <BodyText align="center" style={styles.subtitle}>
-            ¿Quién serás en esta aventura?
-          </BodyText>
+        <ScrollView contentContainerStyle={styles.scrollContent}>
+          <View style={styles.content}>
+            <Heading1 align="center" style={styles.title}>
+              ¡Elige tu personaje!
+            </Heading1>
+            <BodyText align="center" style={styles.subtitle}>
+              ¿Quién serás en esta aventura?
+            </BodyText>
 
           {/* Gender Selection */}
           <View style={styles.genderContainer}>
@@ -185,7 +186,8 @@ const AuthScreen: React.FC = () => {
               disabled={!selectedGender}
             />
           </View>
-        </View>
+          </View>
+        </ScrollView>
       </View>
     );
   }
@@ -250,9 +252,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.background.primary,
   },
-  content: {
-    flex: 1,
+  scrollContent: {
+    flexGrow: 1,
     justifyContent: 'center',
+    paddingVertical: 40,
+  },
+  content: {
     padding: 24,
     maxWidth: 400,
     alignSelf: 'center',

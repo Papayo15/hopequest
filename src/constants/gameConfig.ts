@@ -60,35 +60,38 @@ export const GameConfig = {
   // Continentes
   continents: ['americas', 'europe', 'asia', 'africa', 'oceania'] as const,
 
-  // Sistema de dificultad
+  // Sistema de dificultad (ajustado para 5-12 años)
   difficulty: {
     levels: 3,
     level1: {
       name: 'Exploradores Jóvenes',
-      ageRange: [6, 8],
+      ageRange: [5, 7],
       countries: [1, 12], // IDs de países
       puzzlePieces: 6,
       memoryPairs: 6,
       physicsLaunches: 7,
       showTrajectory: true,
+      questionDifficulty: 'easy' as const,
     },
     level2: {
       name: 'Aventureros Valientes',
-      ageRange: [9, 11],
+      ageRange: [8, 10],
       countries: [13, 25],
       puzzlePieces: 12,
       memoryPairs: 10,
       physicsLaunches: 5,
       showTrajectory: 'partial',
+      questionDifficulty: 'medium' as const,
     },
     level3: {
       name: 'Viajeros Expertos',
-      ageRange: [12, 14],
+      ageRange: [11, 12],
       countries: [26, 35],
       puzzlePieces: 20,
       memoryPairs: 16,
       physicsLaunches: 3,
       showTrajectory: false,
+      questionDifficulty: 'hard' as const,
     },
   },
 

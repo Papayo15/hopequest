@@ -53,29 +53,43 @@ export const ecuador: Country = {
           question: '¿Por qué Ecuador se llama así?',
           options: ['Por un río', 'Por la línea ecuatorial', 'Por un volcán', 'Por un héroe'],
           correctAnswer: 1,
-          explanation: 'Ecuador toma su nombre de la línea ecuatorial que atraviesa el país.',
+          explanation: 'Ecuador toma su nombre de la línea ecuatorial (latitud 0°) que atraviesa el país. El monumento "Mitad del Mundo" marca este punto.',
           difficulty: 'easy',
         },
         {
           question: '¿Qué islas famosas pertenecen a Ecuador?',
           options: ['Maldivas', 'Galápagos', 'Canarias', 'Baleares'],
           correctAnswer: 1,
-          explanation: 'Las Islas Galápagos, donde Darwin estudió la evolución, son de Ecuador.',
+          explanation: 'Las Islas Galápagos, donde Charles Darwin estudió la evolución, pertenecen a Ecuador. Son Patrimonio Natural de la Humanidad por su biodiversidad única.',
           difficulty: 'easy',
         },
         {
           question: '¿Cuándo adoptó Ecuador el dólar estadounidense?',
           options: ['1990', '2000', '2010', '2015'],
           correctAnswer: 1,
-          explanation: 'Ecuador adoptó el dólar en 2000 durante una grave crisis económica.',
+          explanation: 'Ecuador adoptó el dólar estadounidense en el año 2000 durante una grave crisis económica que causó la quiebra de varios bancos y pérdida de ahorros.',
           difficulty: 'medium',
         },
         {
           question: '¿Cuál es el principal destino de emigrantes ecuatorianos?',
           options: ['Estados Unidos', 'España', 'Italia', 'Chile'],
           correctAnswer: 1,
-          explanation: 'España recibe el 40% de los emigrantes ecuatorianos.',
+          explanation: 'España recibe aproximadamente el 40% de los emigrantes ecuatorianos. La gran ola migratoria ocurrió tras la crisis del 2000, especialmente hacia Madrid y Barcelona.',
           difficulty: 'medium',
+        },
+        {
+          question: '¿Qué ciudad ecuatoriana fue la primera declarada Patrimonio Cultural de la Humanidad?',
+          options: ['Guayaquil', 'Cuenca', 'Quito', 'Loja'],
+          correctAnswer: 2,
+          explanation: 'Quito fue una de las primeras ciudades en ser declarada Patrimonio Cultural de la Humanidad en 1978, junto con Cracovia. Su centro histórico colonial está muy bien preservado.',
+          difficulty: 'hard',
+        },
+        {
+          question: '¿Cuántos ecuatorianos aproximadamente viven en el exterior?',
+          options: ['500 mil', '1.2 millones', '2 millones', '3 millones'],
+          correctAnswer: 1,
+          explanation: 'Aproximadamente 1.2 millones de ecuatorianos viven en el exterior, enviando remesas de $3.4 mil millones anuales. La mayoría emigró tras la crisis económica del 2000.',
+          difficulty: 'hard',
         },
       ],
       rewards: {
@@ -105,13 +119,24 @@ export const ecuador: Country = {
       description: 'Encuentra las parejas',
       difficulty: 'easy',
       pairs: [
-        { id: 1, content: '🐢' },
-        { id: 2, content: '🦎' },
-        { id: 3, content: '🌋' },
-        { id: 4, content: '🏔️' },
-        { id: 5, content: '🌴' },
-        { id: 6, content: '🐧' },
+        { id: 1, content: '🐢' }, // Tortugas Galápagos
+        { id: 2, content: '🦎' }, // Iguanas marinas
+        { id: 3, content: '🌋' }, // Volcanes
+        { id: 4, content: '🏔️' }, // Andes
+        { id: 5, content: '🌴' }, // Amazonía
+        { id: 6, content: '🐧' }, // Pingüinos de Galápagos
+        { id: 7, content: '🦩' }, // Flamencos
+        { id: 8, content: '🏛️' }, // Quito colonial
+        { id: 9, content: '💵' }, // Dólar estadounidense
+        { id: 10, content: '🌎' }, // Línea ecuatorial
+        { id: 11, content: '🐒' }, // Monos amazónicos
+        { id: 12, content: '🌺' }, // Flores tropicales
+        { id: 13, content: '🦜' }, // Loros amazónicos
+        { id: 14, content: '🥥' }, // Coco
+        { id: 15, content: '🌊' }, // Costa del Pacífico
+        { id: 16, content: '🎭' }, // Cultura indígena
       ],
+      maxPairs: 16,
       rewards: {
         stars: 2,
         money: 90,

@@ -53,28 +53,42 @@ export const paraguay: Country = {
           question: '¿Qué idiomas son oficiales en Paraguay?',
           options: ['Solo español', 'Español e inglés', 'Español y guaraní', 'Portugués y español'],
           correctAnswer: 2,
-          explanation: 'Paraguay es bilingüe, con español y guaraní como idiomas oficiales.',
+          explanation: 'Paraguay es el único país oficialmente bilingüe de América Latina, con español y guaraní. El 90% de la población habla guaraní, una lengua indígena.',
           difficulty: 'easy',
         },
         {
           question: '¿Cuál es el instrumento nacional de Paraguay?',
           options: ['Guitarra', 'Arpa paraguaya', 'Charango', 'Quena'],
           correctAnswer: 1,
-          explanation: 'El arpa paraguaya es el instrumento nacional y característico.',
-          difficulty: 'medium',
+          explanation: 'El arpa paraguaya es el instrumento nacional y característico. Su sonido es único y forma parte esencial de la música tradicional paraguaya.',
+          difficulty: 'easy',
         },
         {
           question: '¿Dónde migran la mayoría de paraguayos?',
           options: ['Brasil', 'España', 'Argentina', 'Estados Unidos'],
           correctAnswer: 2,
-          explanation: 'El 70% de los paraguayos emigrantes viven en Argentina.',
+          explanation: 'Aproximadamente el 70% de los paraguayos emigrantes viven en Argentina, especialmente en Buenos Aires. Buscan mejores oportunidades económicas y laborales.',
           difficulty: 'medium',
         },
         {
           question: '¿Qué es el ñandutí?',
           options: ['Una danza', 'Un encaje tradicional', 'Una comida', 'Un instrumento'],
           correctAnswer: 1,
-          explanation: 'El ñandutí es un encaje tradicional paraguayo muy elaborado.',
+          explanation: 'El ñandutí es un encaje tradicional paraguayo muy elaborado y delicado. Su nombre en guaraní significa "tela de araña" por su diseño circular.',
+          difficulty: 'medium',
+        },
+        {
+          question: '¿Cuántos paraguayos aproximadamente viven en el exterior?',
+          options: ['300 mil', '850 mil', '1.5 millones', '2 millones'],
+          correctAnswer: 1,
+          explanation: 'Aproximadamente 850 mil paraguayos viven en el exterior, enviando remesas de $700 millones anuales. La mayoría emigró buscando mejores oportunidades económicas.',
+          difficulty: 'hard',
+        },
+        {
+          question: '¿Qué porcentaje de la población paraguaya vive bajo la línea de pobreza?',
+          options: ['10%', '15%', '23%', '35%'],
+          correctAnswer: 2,
+          explanation: 'Aproximadamente el 23% de la población paraguaya vive bajo la línea de pobreza. Esta situación económica difícil es una de las principales causas de emigración.',
           difficulty: 'hard',
         },
       ],
@@ -105,12 +119,24 @@ export const paraguay: Country = {
       description: 'Encuentra parejas',
       difficulty: 'easy',
       pairs: [
-        { id: 1, content: '🎵' },
-        { id: 2, content: '🧉' },
-        { id: 3, content: '🎭' },
-        { id: 4, content: '🌺' },
-        { id: 5, content: '🏛️' },
+        { id: 1, content: '🎵' }, // Arpa paraguaya
+        { id: 2, content: '🧉' }, // Tereré (mate frío)
+        { id: 3, content: '🎭' }, // Cultura guaraní
+        { id: 4, content: '🌺' }, // Flores
+        { id: 5, content: '🏛️' }, // Misiones jesuíticas
+        { id: 6, content: '🕸️' }, // Ñandutí (encaje)
+        { id: 7, content: '🌊' }, // Río Paraguay
+        { id: 8, content: '🦎' }, // Fauna del Chaco
+        { id: 9, content: '🎶' }, // Música folclórica
+        { id: 10, content: '🌳' }, // Bosques
+        { id: 11, content: '🏰' }, // Asunción
+        { id: 12, content: '🦜' }, // Aves tropicales
+        { id: 13, content: '🌿' }, // Yerba mate
+        { id: 14, content: '🎨' }, // Artesanías
+        { id: 15, content: '💚' }, // Naturaleza
+        { id: 16, content: '🏞️' }, // Pantanal
       ],
+      maxPairs: 16,
       rewards: {
         stars: 2,
         money: 85,

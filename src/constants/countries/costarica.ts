@@ -50,32 +50,46 @@ export const costarica: Country = {
       difficulty: 'medium',
       questions: [
         {
-          question: '¿Desde cuándo Costa Rica no tiene ejército?',
-          options: ['1848', '1948', '2000', '1900'],
+          question: '¿Qué significa la frase "Pura Vida" en Costa Rica?',
+          options: ['Buena suerte', 'Una filosofía de vida positiva', 'Adiós', 'Bienvenido'],
           correctAnswer: 1,
-          explanation: 'Costa Rica abolió el ejército en 1948, siendo uno de los pocos países sin fuerzas armadas.',
-          difficulty: 'medium',
-        },
-        {
-          question: '¿Qué porcentaje del territorio son áreas protegidas?',
-          options: ['10%', '25%', '50%', '75%'],
-          correctAnswer: 1,
-          explanation: 'El 25% del territorio costarricense está protegido, líder en conservación.',
-          difficulty: 'medium',
-        },
-        {
-          question: '¿Qué significa "Pura Vida"?',
-          options: ['Buena suerte', 'Filosofía de vida positiva', 'Adiós', 'Bienvenido'],
-          correctAnswer: 1,
-          explanation: 'Pura Vida es más que una frase, es una filosofía de vida positiva y relajada.',
+          explanation: 'Pura Vida es la frase nacional de Costa Rica. Es más que un saludo, representa una filosofía de vida positiva, relajada y apreciando las cosas simples.',
           difficulty: 'easy',
         },
         {
-          question: '¿De dónde provienen la mayoría de inmigrantes en Costa Rica?',
+          question: '¿Desde cuándo Costa Rica no tiene ejército?',
+          options: ['1848', '1948', '2000', '1900'],
+          correctAnswer: 1,
+          explanation: 'Costa Rica abolió su ejército en 1948 tras una guerra civil. Es uno de los pocos países del mundo sin fuerzas armadas, invirtiendo esos recursos en educación y salud.',
+          difficulty: 'easy',
+        },
+        {
+          question: '¿Qué porcentaje del territorio costarricense son áreas protegidas?',
+          options: ['10%', '25%', '50%', '75%'],
+          correctAnswer: 1,
+          explanation: 'Aproximadamente el 25% del territorio costarricense está protegido en parques nacionales y reservas. Costa Rica es líder mundial en conservación ambiental.',
+          difficulty: 'medium',
+        },
+        {
+          question: '¿De qué país provienen la mayoría de los inmigrantes en Costa Rica?',
           options: ['Venezuela', 'Nicaragua', 'Colombia', 'Honduras'],
           correctAnswer: 1,
-          explanation: 'Nicaragua es el principal país de origen de inmigrantes en Costa Rica.',
+          explanation: 'Nicaragua es el principal país de origen de inmigrantes en Costa Rica, representando aproximadamente el 70% de la población inmigrante debido a la proximidad y búsqueda de mejores oportunidades.',
           difficulty: 'medium',
+        },
+        {
+          question: '¿Qué porcentaje de la población costarricense son inmigrantes?',
+          options: ['5%', '10%', '15%', '20%'],
+          correctAnswer: 1,
+          explanation: 'Aproximadamente el 10% de la población en Costa Rica son inmigrantes (cerca de 500 mil personas), principalmente nicaragüenses y venezolanos.',
+          difficulty: 'hard',
+        },
+        {
+          question: '¿En qué destaca Costa Rica a nivel energético?',
+          options: ['Petróleo', 'Energía renovable', 'Gas natural', 'Carbón'],
+          correctAnswer: 1,
+          explanation: 'Costa Rica es líder mundial en energía renovable. El país ha logrado operar varios años consecutivos con casi 100% de su electricidad proveniente de fuentes renovables como hidroeléctrica, eólica y geotérmica.',
+          difficulty: 'hard',
         },
       ],
       rewards: {
@@ -105,13 +119,24 @@ export const costarica: Country = {
       description: 'Encuentra parejas de animales',
       difficulty: 'easy',
       pairs: [
-        { id: 1, content: '🦥' },
-        { id: 2, content: '🦜' },
-        { id: 3, content: '🐸' },
-        { id: 4, content: '🦋' },
-        { id: 5, content: '🌴' },
-        { id: 6, content: '🌊' },
+        { id: 1, content: '🦥' }, // Perezosos
+        { id: 2, content: '🦜' }, // Guacamayas
+        { id: 3, content: '🐸' }, // Rana de ojos rojos
+        { id: 4, content: '🦋' }, // Mariposas
+        { id: 5, content: '🌴' }, // Palmeras
+        { id: 6, content: '🌊' }, // Playas
+        { id: 7, content: '🌋' }, // Volcán Arenal
+        { id: 8, content: '☕' }, // Café costarricense
+        { id: 9, content: '🐢' }, // Tortugas marinas
+        { id: 10, content: '🌺' }, // Guaria morada (flor nacional)
+        { id: 11, content: '🦎' }, // Reptiles
+        { id: 12, content: '🌿' }, // Selva tropical
+        { id: 13, content: '🏞️' }, // Parques nacionales
+        { id: 14, content: '🐵' }, // Monos
+        { id: 15, content: '🎋' }, // Bambú
+        { id: 16, content: '🦅' }, // Águila harpía
       ],
+      maxPairs: 16,
       rewards: {
         stars: 2,
         money: 90,

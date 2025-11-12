@@ -51,32 +51,46 @@ export const honduras: Country = {
       difficulty: 'medium',
       questions: [
         {
-          question: '¿Qué porcentaje de hondureños vive en pobreza?',
-          options: ['30%', '40%', '60%', '80%'],
-          correctAnswer: 2,
-          explanation: 'Aproximadamente el 60% de la población hondureña vive en condiciones de pobreza.',
-          difficulty: 'medium',
-        },
-        {
           question: '¿Cuál es el sitio arqueológico maya más importante de Honduras?',
           options: ['Tikal', 'Copán', 'Chichen Itzá', 'Uxmal'],
           correctAnswer: 1,
-          explanation: 'Copán es el sitio maya más importante de Honduras, conocido por sus estelas talladas.',
+          explanation: 'Copán es el sitio maya más importante de Honduras, famoso por sus estelas talladas y su gran plaza ceremonial. Es Patrimonio de la Humanidad.',
           difficulty: 'easy',
-        },
-        {
-          question: '¿Qué representan las remesas en el PIB de Honduras?',
-          options: ['10%', '15%', '25%', '35%'],
-          correctAnswer: 2,
-          explanation: 'Las remesas representan el 25% del PIB hondureño, vitales para la economía.',
-          difficulty: 'hard',
         },
         {
           question: '¿En cuántos océanos tiene costa Honduras?',
           options: ['Ninguno', 'Uno', 'Dos', 'Tres'],
           correctAnswer: 2,
-          explanation: 'Honduras tiene costa en el Océano Pacífico y el Mar Caribe (Atlántico).',
+          explanation: 'Honduras es uno de los pocos países centroamericanos con costa en dos océanos: el Océano Pacífico y el Mar Caribe (Océano Atlántico).',
+          difficulty: 'easy',
+        },
+        {
+          question: '¿Qué producto hondureño es reconocido mundialmente?',
+          options: ['El cacao', 'El café', 'El azúcar', 'El té'],
+          correctAnswer: 1,
+          explanation: 'El café hondureño es reconocido internacionalmente por su alta calidad. Honduras es uno de los principales exportadores de café en América Central.',
           difficulty: 'medium',
+        },
+        {
+          question: '¿Qué porcentaje aproximado de hondureños vive en condiciones de pobreza?',
+          options: ['30%', '40%', '60%', '80%'],
+          correctAnswer: 2,
+          explanation: 'Aproximadamente el 60% de la población hondureña vive en condiciones de pobreza. Esta es una de las principales razones por las que muchos hondureños emigran.',
+          difficulty: 'medium',
+        },
+        {
+          question: '¿Qué porcentaje del PIB hondureño representan las remesas enviadas desde el exterior?',
+          options: ['10%', '15%', '25%', '35%'],
+          correctAnswer: 2,
+          explanation: 'Las remesas representan aproximadamente el 25% del PIB hondureño, lo que significa que son vitales para la economía del país. La mayoría viene de Estados Unidos.',
+          difficulty: 'hard',
+        },
+        {
+          question: '¿Cuántos hondureños aproximadamente viven en el exterior?',
+          options: ['200 mil', '500 mil', '800 mil', '1.5 millones'],
+          correctAnswer: 2,
+          explanation: 'Aproximadamente 800 mil hondureños viven en el exterior, principalmente en Estados Unidos (90%). Muchos dejaron Honduras por la violencia y falta de oportunidades.',
+          difficulty: 'hard',
         },
       ],
       rewards: {
@@ -108,11 +122,22 @@ export const honduras: Country = {
       pairs: [
         { id: 1, content: '☕' }, // Café
         { id: 2, content: '🏛️' }, // Copán
-        { id: 3, content: '🏝️' }, // Islas
+        { id: 3, content: '🏝️' }, // Islas de la Bahía
         { id: 4, content: '🌴' }, // Palmeras
-        { id: 5, content: '🌊' }, // Océanos
+        { id: 5, content: '🌊' }, // Dos océanos
         { id: 6, content: '🦜' }, // Guacamaya
+        { id: 7, content: '🌽' }, // Maíz
+        { id: 8, content: '🎭' }, // Cultura garífuna
+        { id: 9, content: '🐠' }, // Arrecifes de coral
+        { id: 10, content: '🏔️' }, // Montañas
+        { id: 11, content: '🌺' }, // Flores tropicales
+        { id: 12, content: '🥥' }, // Coco
+        { id: 13, content: '🦅' }, // Águila harpía
+        { id: 14, content: '🏺' }, // Cerámica maya
+        { id: 15, content: '🎶' }, // Música punta
+        { id: 16, content: '🍌' }, // Banano
       ],
+      maxPairs: 16,
       rewards: {
         stars: 2,
         money: 80,

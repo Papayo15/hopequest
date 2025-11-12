@@ -50,31 +50,45 @@ export const cuba: Country = {
       difficulty: 'hard',
       questions: [
         {
-          question: '¿En qué año fue la Revolución Cubana?',
-          options: ['1950', '1959', '1962', '1970'],
-          correctAnswer: 1,
-          explanation: 'La Revolución Cubana triunfó en 1959, liderada por Fidel Castro.',
-          difficulty: 'medium',
+          question: '¿Dónde vive la mayoría de cubanos en Estados Unidos?',
+          options: ['Nueva York', 'California', 'Florida', 'Texas'],
+          correctAnswer: 2,
+          explanation: 'Florida, especialmente Miami, tiene la mayor población cubana en Estados Unidos. La proximidad geográfica y las conexiones históricas hacen de Florida el principal destino.',
+          difficulty: 'easy',
         },
         {
           question: '¿Qué género musical se originó en Cuba?',
           options: ['Reggae', 'Salsa', 'Tango', 'Samba'],
           correctAnswer: 1,
-          explanation: 'La salsa tiene sus raíces en el son cubano y otros ritmos de la isla.',
+          explanation: 'La salsa tiene sus raíces en el son cubano y otros ritmos de la isla. Cuba también es cuna del mambo, el chachachá y el bolero.',
           difficulty: 'easy',
         },
         {
-          question: '¿Dónde vive la mayoría de cubanos en Estados Unidos?',
-          options: ['Nueva York', 'California', 'Florida', 'Texas'],
-          correctAnswer: 2,
-          explanation: 'Florida, especialmente Miami, tiene la mayor población cubana en EE.UU.',
-          difficulty: 'easy',
+          question: '¿En qué año fue la Revolución Cubana?',
+          options: ['1950', '1959', '1962', '1970'],
+          correctAnswer: 1,
+          explanation: 'La Revolución Cubana triunfó en 1959, liderada por Fidel Castro. Este evento cambió radicalmente la historia de Cuba y generó olas migratorias hacia Estados Unidos.',
+          difficulty: 'medium',
+        },
+        {
+          question: '¿Qué zona histórica de La Habana es Patrimonio de la Humanidad?',
+          options: ['Vedado', 'La Habana Vieja', 'Miramar', 'Centro Habana'],
+          correctAnswer: 1,
+          explanation: 'La Habana Vieja es el centro histórico de la capital cubana, declarada Patrimonio de la Humanidad por la UNESCO en 1982 por su arquitectura colonial excepcional.',
+          difficulty: 'medium',
         },
         {
           question: '¿Qué son los "balseros"?',
           options: ['Pescadores', 'Bailarines', 'Migrantes que cruzan en balsas', 'Músicos'],
           correctAnswer: 2,
-          explanation: 'Los balseros son cubanos que intentan llegar a EE.UU. en balsas improvisadas.',
+          explanation: 'Los balseros son cubanos que intentan llegar a Estados Unidos en balsas improvisadas, arriesgando sus vidas en el Estrecho de Florida. Esta forma de migración aumentó especialmente durante el Periodo Especial de los años 90.',
+          difficulty: 'hard',
+        },
+        {
+          question: '¿Cuántos cubanos aproximadamente viven en el exterior?',
+          options: ['500 mil', '1 millón', '2 millones', '3 millones'],
+          correctAnswer: 2,
+          explanation: 'Aproximadamente 2 millones de cubanos viven en el exterior, principalmente en Estados Unidos (70%). Esta diáspora envía remesas que representan $3.7 mil millones anuales para la economía cubana.',
           difficulty: 'hard',
         },
       ],
@@ -105,14 +119,24 @@ export const cuba: Country = {
       description: 'Encuentra parejas cubanas',
       difficulty: 'medium',
       pairs: [
-        { id: 1, content: '🎺' },
-        { id: 2, content: '🍹' },
-        { id: 3, content: '🚗' },
-        { id: 4, content: '🎭' },
-        { id: 5, content: '⚾' },
-        { id: 6, content: '🏛️' },
-        { id: 7, content: '🎵' },
+        { id: 1, content: '🎺' }, // Música (salsa, son)
+        { id: 2, content: '🍹' }, // Mojito y daiquiri
+        { id: 3, content: '🚗' }, // Autos clásicos
+        { id: 4, content: '🎭' }, // Teatro y danza
+        { id: 5, content: '⚾' }, // Béisbol
+        { id: 6, content: '🏛️' }, // La Habana Vieja
+        { id: 7, content: '🎵' }, // Son cubano
+        { id: 8, content: '🥃' }, // Ron cubano
+        { id: 9, content: '🌴' }, // Palmeras
+        { id: 10, content: '💃' }, // Salsa
+        { id: 11, content: '🏖️' }, // Playas del Caribe
+        { id: 12, content: '🎨' }, // Arte cubano
+        { id: 13, content: '📚' }, // Literatura
+        { id: 14, content: '🚢' }, // Balseros
+        { id: 15, content: '🌊' }, // Malecón
+        { id: 16, content: '🎸' }, // Trova
       ],
+      maxPairs: 16,
       rewards: {
         stars: 2,
         money: 100,

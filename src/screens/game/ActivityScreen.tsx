@@ -4,15 +4,17 @@
  * DEMO: Solo Trivia es funcional, Puzzle y Memory muestran placeholder
  */
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { View, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { useRoute, useNavigation } from '@react-navigation/native';
 import { Heading1, Heading2, BodyText, SmallText, Card } from '../../components/ui';
 import { Colors } from '../../constants';
+import { useUserStore } from '../../stores';
 
 const ActivityScreen: React.FC = () => {
   const route = useRoute<any>();
   const navigation = useNavigation<any>();
+  const userAge = useUserStore((state) => state.age);
 
   const {
     countryName,
@@ -27,9 +29,29 @@ const ActivityScreen: React.FC = () => {
   const [score, setScore] = useState(0);
   const [completed, setCompleted] = useState(false);
 
+  // Filtrar preguntas según la edad del usuario
+  const filteredQuestions = useMemo(() => {
+    const allQuestions = activityData?.questions || [];
+    if (!userAge || !allQuestions.length) return allQuestions;
+
+    // Determinar nivel máximo de dificultad según edad
+    let maxDifficulties: string[] = [];
+    if (userAge <= 7) {
+      maxDifficulties = ['easy']; // 5-7 años: solo preguntas fáciles
+    } else if (userAge <= 10) {
+      maxDifficulties = ['easy', 'medium']; // 8-10 años: fáciles y medianas
+    } else {
+      maxDifficulties = ['easy', 'medium', 'hard']; // 11-12 años: todas
+    }
+
+    return allQuestions.filter((q: any) =>
+      maxDifficulties.includes(q.difficulty || 'easy')
+    );
+  }, [activityData?.questions, userAge]);
+
   // TRIVIA (funcional)
   const renderTrivia = () => {
-    const questions = activityData?.questions || [];
+    const questions = filteredQuestions;
     const question = questions[currentQuestion];
 
     if (!question) {
