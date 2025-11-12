@@ -1,0 +1,63 @@
+{
+  "common": {
+    "welcome": "स्वागत है",
+    "continue": "जारी रखें",
+    "cancel": "रद्द करें",
+    "confirm": "पुष्टि करें",
+    "back": "वापस",
+    "next": "अगला",
+    "start": "शुरू करें",
+    "restart": "पुनः आरंभ करें",
+    "close": "बंद करें",
+    "save": "सहेजें",
+    "loading": "लोड हो रहा है...",
+    "error": "त्रुटि",
+    "success": "सफलता"
+  },
+  "auth": {
+    "title": "आशा यात्रा में आपका स्वागत है!",
+    "subtitle": "सीखने से भरी एक विश्व साहसिक यात्रा",
+    "startAdventure": "साहसिक शुरू करें"
+  },
+  "home": {
+    "greeting": "नमस्ते, {{name}}!",
+    "continueAdventure": "साहसिक जारी रखें"
+  },
+  "game": {
+    "map": "विश्व मानचित्र",
+    "currentCountry": "वर्तमान देश",
+    "stats": {
+      "money": "पैसा",
+      "health": "स्वास्थ्य",
+      "moral": "मनोबल",
+      "stars": "तारे"
+    },
+    "portals": {
+      "aereo": "हवाई",
+      "maritimo": "समुद्री",
+      "terrestre": "भूमि",
+      "clandestino": "गुप्त",
+      "refugiado": "शरणार्थी",
+      "familiar": "परिवार"
+    },
+    "activities": {
+      "trivia": "प्रश्नोत्तरी",
+      "puzzle": "पहेली",
+      "memory": "स्मृति"
+    }
+  },
+  "countries": {
+    "venezuela": "वेनेज़ुएला",
+    "mexico": "मेक्सिको",
+    "estadosunidos": "संयुक्त राज्य अमेरिका",
+    "espana": "स्पेन",
+    "china": "चीन",
+    "india": "भारत",
+    "australia": "ऑस्ट्रेलिया"
+  },
+  "messages": {
+    "levelComplete": "स्तर पूर्ण!",
+    "tryAgain": "पुनः प्रयास करें",
+    "congratulations": "बधाई हो!"
+  }
+}

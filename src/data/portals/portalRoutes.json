@@ -1,0 +1,254 @@
+{
+  "routes": [
+    {
+      "id": "mexico_usa",
+      "fromCountry": "mexico",
+      "toCountry": "usa",
+      "availablePortals": ["terrestre", "aereo", "clandestino"],
+      "recommendedPortal": "aereo",
+      "distance": 1900,
+      "historicalContext": {
+        "es": "La frontera México-USA es la más cruzada del mundo. Millones de mexicanos han migrado legalmente con visas de trabajo. Lamentablemente, otros sin opciones legales han arriesgado sus vidas en el desierto.",
+        "en": "The Mexico-USA border is the most crossed in the world. Millions of Mexicans have migrated legally with work visas. Unfortunately, others without legal options have risked their lives in the desert."
+      }
+    },
+    {
+      "id": "mexico_spain",
+      "fromCountry": "mexico",
+      "toCountry": "spain",
+      "availablePortals": ["aereo", "maritimo"],
+      "recommendedPortal": "aereo",
+      "distance": 9200,
+      "historicalContext": {
+        "es": "Hoy, muchos mexicanos viajan a España por turismo, estudios o trabajo. España es atractiva por el idioma compartido y lazos culturales históricos.",
+        "en": "Today, many Mexicans travel to Spain for tourism, studies or work. Spain is attractive due to the shared language and historical cultural ties."
+      }
+    },
+    {
+      "id": "brazil_japan",
+      "fromCountry": "brazil",
+      "toCountry": "japan",
+      "availablePortals": ["aereo", "maritimo"],
+      "recommendedPortal": "aereo",
+      "distance": 18500,
+      "historicalContext": {
+        "es": "Brasil tiene la mayor comunidad japonesa fuera de Japón (1.5 millones). En los 90s, muchos 'dekasegi' (descendientes de japoneses brasileños) migraron de vuelta a Japón a trabajar. Es un círculo migratorio fascinante.",
+        "en": "Brazil has the largest Japanese community outside Japan (1.5 million). In the 90s, many 'dekasegi' (descendants of Japanese-Brazilians) migrated back to Japan to work. It's a fascinating migratory circle."
+      }
+    },
+    {
+      "id": "spain_argentina",
+      "fromCountry": "spain",
+      "toCountry": "argentina",
+      "availablePortals": ["aereo", "maritimo"],
+      "recommendedPortal": "aereo",
+      "distance": 10100,
+      "historicalContext": {
+        "es": "Entre 1880-1930, más de 2 millones de españoles emigraron a Argentina en barco. Era un viaje de 15-20 días. Hoy, sus descendientes son argentinos y algunos están regresando a España buscando oportunidades.",
+        "en": "Between 1880-1930, over 2 million Spaniards emigrated to Argentina by ship. It was a 15-20 day journey. Today, their descendants are Argentinian and some are returning to Spain seeking opportunities."
+      }
+    },
+    {
+      "id": "syria_turkey",
+      "fromCountry": "syria",
+      "toCountry": "turkey",
+      "availablePortals": ["terrestre", "refugiado"],
+      "recommendedPortal": "refugiado",
+      "distance": 850,
+      "historicalContext": {
+        "es": "Desde 2011, más de 6 millones de sirios han huido de la guerra civil. Turquía acogió a más de 3.6 millones de refugiados sirios, la mayor población de refugiados del mundo. Es una crisis humanitaria masiva.",
+        "en": "Since 2011, over 6 million Syrians have fled the civil war. Turkey has hosted over 3.6 million Syrian refugees, the world's largest refugee population. It's a massive humanitarian crisis."
+      }
+    },
+    {
+      "id": "egypt_spain",
+      "fromCountry": "egypt",
+      "toCountry": "spain",
+      "availablePortals": ["aereo", "maritimo", "clandestino"],
+      "recommendedPortal": "aereo",
+      "distance": 3400,
+      "historicalContext": {
+        "es": "Muchos africanos intentan llegar a España cruzando el Mediterráneo. Es una de las rutas migratorias más peligrosas del mundo. Desde 2014, más de 25,000 personas han muerto en el Mediterráneo intentando llegar a Europa.",
+        "en": "Many Africans attempt to reach Spain crossing the Mediterranean. It's one of the world's most dangerous migration routes. Since 2014, over 25,000 people have died in the Mediterranean trying to reach Europe."
+      }
+    },
+    {
+      "id": "japan_usa",
+      "fromCountry": "japan",
+      "toCountry": "usa",
+      "availablePortals": ["aereo", "maritimo"],
+      "recommendedPortal": "aereo",
+      "distance": 10900,
+      "historicalContext": {
+        "es": "En el siglo XX, miles de japoneses emigraron a California y Hawái para trabajar en agricultura. Durante la Segunda Guerra Mundial, 120,000 japoneses-americanos fueron internados en campos de concentración en USA. Una página oscura de la historia migratoria.",
+        "en": "In the 20th century, thousands of Japanese emigrated to California and Hawaii to work in agriculture. During WWII, 120,000 Japanese-Americans were interned in concentration camps in the USA. A dark page in migration history."
+      }
+    },
+    {
+      "id": "australia_uk",
+      "fromCountry": "australia",
+      "toCountry": "uk",
+      "availablePortals": ["aereo"],
+      "recommendedPortal": "aereo",
+      "distance": 17000,
+      "historicalContext": {
+        "es": "Australia fue colonia británica. Entre 1945-1982, más de 1 millón de británicos emigraron a Australia bajo el programa 'Ten Pound Poms' (pagaban solo 10 libras por el viaje en barco). Hoy, muchos jóvenes australianos hacen el viaje inverso buscando experiencia en Europa.",
+        "en": "Australia was a British colony. Between 1945-1982, over 1 million Britons emigrated to Australia under the 'Ten Pound Poms' program (they paid only 10 pounds for the ship journey). Today, many young Australians make the reverse journey seeking experience in Europe."
+      }
+    },
+    {
+      "id": "venezuela_colombia",
+      "fromCountry": "venezuela",
+      "toCountry": "colombia",
+      "availablePortals": ["terrestre", "refugiado"],
+      "recommendedPortal": "terrestre",
+      "distance": 850,
+      "historicalContext": {
+        "es": "Desde 2015, más de 6 millones de venezolanos han huido de la crisis económica y política. Colombia ha recibido a más de 2.5 millones. Es el mayor éxodo en la historia reciente de América Latina. Muchos cruzan a pie por la frontera.",
+        "en": "Since 2015, over 6 million Venezuelans have fled the economic and political crisis. Colombia has received over 2.5 million. It's the largest exodus in recent Latin American history. Many cross on foot through the border."
+      }
+    },
+    {
+      "id": "guatemala_mexico",
+      "fromCountry": "guatemala",
+      "toCountry": "mexico",
+      "availablePortals": ["terrestre", "refugiado", "clandestino"],
+      "recommendedPortal": "terrestre",
+      "distance": 900,
+      "historicalContext": {
+        "es": "Centroamericanos (Guatemala, Honduras, El Salvador) migran a través de México intentando llegar a USA. Es un viaje peligroso de más de 3,000 km. Muchos viajan en 'La Bestia' (tren de carga) arriesgando sus vidas.",
+        "en": "Central Americans (Guatemala, Honduras, El Salvador) migrate through Mexico trying to reach the USA. It's a dangerous journey of over 3,000 km. Many travel on 'La Bestia' (cargo train) risking their lives."
+      }
+    },
+    {
+      "id": "india_uae",
+      "fromCountry": "india",
+      "toCountry": "uae",
+      "availablePortals": ["aereo"],
+      "recommendedPortal": "aereo",
+      "distance": 3000,
+      "historicalContext": {
+        "es": "Más de 3.5 millones de indios viven en Emiratos Árabes Unidos, trabajando principalmente en construcción, servicios y tecnología. Envían miles de millones de dólares en remesas a India cada año.",
+        "en": "Over 3.5 million Indians live in the United Arab Emirates, working mainly in construction, services and technology. They send billions of dollars in remittances to India every year."
+      }
+    },
+    {
+      "id": "china_australia",
+      "fromCountry": "china",
+      "toCountry": "australia",
+      "availablePortals": ["aereo"],
+      "recommendedPortal": "aereo",
+      "distance": 9000,
+      "historicalContext": {
+        "es": "Australia tiene una política de inmigración basada en puntos que atrae a profesionales chinos altamente calificados. Hoy, más de 1.2 millones de chinos viven en Australia. Es una migración calificada y próspera.",
+        "en": "Australia has a points-based immigration policy that attracts highly skilled Chinese professionals. Today, over 1.2 million Chinese live in Australia. It's a skilled and prosperous migration."
+      }
+    },
+    {
+      "id": "philippines_saudi",
+      "fromCountry": "philippines",
+      "toCountry": "saudi_arabia",
+      "availablePortals": ["aereo"],
+      "recommendedPortal": "aereo",
+      "distance": 7800,
+      "historicalContext": {
+        "es": "Filipinas es uno de los mayores exportadores de trabajadores del mundo. Más de 1 millón de filipinos trabajan en Arabia Saudita, principalmente en trabajo doméstico y enfermería. Las remesas son vitales para la economía filipina.",
+        "en": "The Philippines is one of the world's largest exporters of workers. Over 1 million Filipinos work in Saudi Arabia, mainly in domestic work and nursing. Remittances are vital for the Philippine economy."
+      }
+    },
+    {
+      "id": "poland_uk",
+      "fromCountry": "poland",
+      "toCountry": "uk",
+      "availablePortals": ["aereo", "terrestre"],
+      "recommendedPortal": "aereo",
+      "distance": 1700,
+      "historicalContext": {
+        "es": "Después de que Polonia se unió a la UE en 2004, más de 1 millón de polacos emigraron al Reino Unido buscando trabajo. Formaron una de las comunidades más grandes de inmigrantes en UK. Tras el Brexit, muchos regresaron a Polonia.",
+        "en": "After Poland joined the EU in 2004, over 1 million Poles emigrated to the United Kingdom seeking work. They formed one of the largest immigrant communities in the UK. After Brexit, many returned to Poland."
+      }
+    },
+    {
+      "id": "haiti_dominican_republic",
+      "fromCountry": "haiti",
+      "toCountry": "dominican_republic",
+      "availablePortals": ["terrestre", "clandestino"],
+      "recommendedPortal": "terrestre",
+      "distance": 350,
+      "historicalContext": {
+        "es": "Haití y República Dominicana comparten la isla de La Española. Cientos de miles de haitianos cruzan a RD buscando trabajo, especialmente en construcción y agricultura. La relación es compleja, con discriminación pero también dependencia económica mutua.",
+        "en": "Haiti and the Dominican Republic share the island of Hispaniola. Hundreds of thousands of Haitians cross into DR seeking work, especially in construction and agriculture. The relationship is complex, with discrimination but also mutual economic dependence."
+      }
+    }
+  ],
+
+  "specialRoutes": [
+    {
+      "id": "family_reunification_any",
+      "fromCountry": "any",
+      "toCountry": "any",
+      "availablePortals": ["familiar"],
+      "recommendedPortal": "familiar",
+      "requirements": {
+        "specialConditions": [
+          {
+            "type": "family_in_destination",
+            "value": true,
+            "description": {
+              "es": "Debes tener un familiar ya establecido en el país destino",
+              "en": "You must have a family member already established in the destination country"
+            }
+          }
+        ]
+      },
+      "historicalContext": {
+        "es": "La reunificación familiar es un derecho humano reconocido internacionalmente. Permite que familias separadas por la migración puedan reunirse. Es uno de los procesos migratorios más emotivos y poderosos.",
+        "en": "Family reunification is an internationally recognized human right. It allows families separated by migration to reunite. It's one of the most emotional and powerful migration processes."
+      }
+    }
+  ],
+
+  "routeCategories": {
+    "historical": [
+      "spain_argentina",
+      "italy_usa",
+      "japan_brazil",
+      "ireland_usa"
+    ],
+    "current_crisis": [
+      "syria_turkey",
+      "venezuela_colombia",
+      "afghanistan_pakistan",
+      "ukraine_poland"
+    ],
+    "economic_migration": [
+      "mexico_usa",
+      "philippines_saudi",
+      "india_uae",
+      "poland_uk"
+    ],
+    "dangerous_routes": [
+      "egypt_spain",
+      "libya_italy",
+      "guatemala_mexico",
+      "myanmar_bangladesh"
+    ],
+    "return_migration": [
+      "brazil_japan",
+      "argentina_spain",
+      "usa_mexico"
+    ]
+  },
+
+  "metadata": {
+    "totalRoutes": 15,
+    "version": "1.0",
+    "lastUpdated": "2025-01-01",
+    "sources": [
+      "International Organization for Migration (IOM)",
+      "UN Refugee Agency (UNHCR)",
+      "World Bank Migration Data",
+      "Pew Research Center"
+    ]
+  }
+}

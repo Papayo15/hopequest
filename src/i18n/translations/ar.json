@@ -1,0 +1,63 @@
+{
+  "common": {
+    "welcome": "مرحبا",
+    "continue": "استمر",
+    "cancel": "إلغاء",
+    "confirm": "تأكيد",
+    "back": "رجوع",
+    "next": "التالي",
+    "start": "ابدأ",
+    "restart": "إعادة البدء",
+    "close": "إغلاق",
+    "save": "حفظ",
+    "loading": "جارٍ التحميل...",
+    "error": "خطأ",
+    "success": "نجاح"
+  },
+  "auth": {
+    "title": "مرحبًا بك في رحلة الأمل!",
+    "subtitle": "مغامرة عالمية مليئة بالتعلم",
+    "startAdventure": "ابدأ المغامرة"
+  },
+  "home": {
+    "greeting": "مرحبًا, {{name}}!",
+    "continueAdventure": "متابعة المغامرة"
+  },
+  "game": {
+    "map": "خريطة العالم",
+    "currentCountry": "البلد الحالي",
+    "stats": {
+      "money": "مال",
+      "health": "صحة",
+      "moral": "معنويات",
+      "stars": "نجوم"
+    },
+    "portals": {
+      "aereo": "جوي",
+      "maritimo": "بحري",
+      "terrestre": "بري",
+      "clandestino": "سري",
+      "refugiado": "لاجئ",
+      "familiar": "عائلي"
+    },
+    "activities": {
+      "trivia": "أسئلة",
+      "puzzle": "أحجية",
+      "memory": "ذاكرة"
+    }
+  },
+  "countries": {
+    "venezuela": "فنزويلا",
+    "mexico": "المكسيك",
+    "estadosunidos": "الولايات المتحدة",
+    "espana": "إسبانيا",
+    "china": "الصين",
+    "india": "الهند",
+    "australia": "أستراليا"
+  },
+  "messages": {
+    "levelComplete": "اكتمل المستوى!",
+    "tryAgain": "حاول مرة أخرى",
+    "congratulations": "تهانينا!"
+  }
+}

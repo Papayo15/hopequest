@@ -1,0 +1,610 @@
+{
+  "id": "egypt",
+  "name": {
+    "es": "Egipto",
+    "en": "Egypt",
+    "zh": "埃及",
+    "hi": "मिस्र",
+    "ar": "مصر"
+  },
+  "continent": "africa",
+  "difficulty": 2,
+  "order": 28,
+
+  "culturalObject": {
+    "id": "papiro_refugiado",
+    "name": {
+      "es": "Papiro del Refugiado",
+      "en": "Refugee's Papyrus",
+      "zh": "难民纸莎草",
+      "hi": "शरणार्थी का पेपिरस",
+      "ar": "بردية اللاجئ"
+    },
+    "description": {
+      "es": "Antiguo papiro egipcio que cuenta la historia del Éxodo: cuando el pueblo hebreo huyó de Egipto buscando libertad. Un recordatorio de que las historias de refugiados tienen miles de años.",
+      "en": "Ancient Egyptian papyrus telling the story of the Exodus: when the Hebrew people fled Egypt seeking freedom. A reminder that refugee stories are thousands of years old."
+    },
+    "funFact": {
+      "es": "¡Egipto aparece en historias de migración desde tiempos bíblicos! La Sagrada Familia (José, María y Jesús) huyeron a Egipto escapando de la persecución. Egipto siempre fue refugio y punto de partida.",
+      "en": "Egypt appears in migration stories since biblical times! The Holy Family (Joseph, Mary and Jesus) fled to Egypt escaping persecution. Egypt has always been refuge and departure point."
+    },
+    "image": "objects/egypt_papyrus.png",
+    "model3D": "objects/egypt_papyrus.glb"
+  },
+
+  "adventure": {
+    "intro": {
+      "dialogue": {
+        "es": "Egipto, cuna de civilizaciones. Aquí veo el Nilo, que ha sido testigo de migraciones por milenios. De aquí salió el pueblo hebreo, aquí se refugió la Sagrada Familia. La migración es tan antigua como la humanidad.",
+        "en": "Egypt, cradle of civilizations. Here I see the Nile, which has witnessed migrations for millennia. From here the Hebrew people left, here the Holy Family took refuge. Migration is as old as humanity."
+      },
+      "character": "xolo",
+      "animation": "xolo_wise.json",
+      "duration": 12
+    },
+
+    "locations": [
+      {
+        "id": "cairo",
+        "name": {
+          "es": "El Cairo",
+          "en": "Cairo"
+        },
+        "background": "backgrounds/egypt_cairo.jpg",
+        "interactiveElements": [
+          {
+            "id": "pyramids_giza",
+            "type": "monument",
+            "name": {
+              "es": "Pirámides de Giza",
+              "en": "Pyramids of Giza"
+            },
+            "position": { "x": 400, "y": 250 },
+            "fact": {
+              "es": "Las pirámides fueron construidas hace 4,500 años por miles de trabajadores. Nuevas investigaciones muestran que no eran esclavos, sino trabajadores pagados que migraban estacionalmente desde todo Egipto.",
+              "en": "The pyramids were built 4,500 years ago by thousands of workers. New research shows they weren't slaves, but paid workers who migrated seasonally from all over Egypt."
+            },
+            "image": "monuments/pyramids.png",
+            "sound": "sfx/discovery.mp3"
+          },
+          {
+            "id": "sphinx",
+            "type": "monument",
+            "name": {
+              "es": "La Esfinge",
+              "en": "The Sphinx"
+            },
+            "position": { "x": 550, "y": 350 },
+            "fact": {
+              "es": "La Gran Esfinge ha vigilado el desierto por milenios. Representa al faraón, pero también es símbolo de los misterios que guarda África.",
+              "en": "The Great Sphinx has watched over the desert for millennia. It represents the pharaoh, but it's also a symbol of the mysteries Africa holds."
+            },
+            "image": "monuments/sphinx.png"
+          },
+          {
+            "id": "khan_khalili",
+            "type": "object",
+            "name": {
+              "es": "Bazar Khan el-Khalili",
+              "en": "Khan el-Khalili Bazaar"
+            },
+            "position": { "x": 250, "y": 400 },
+            "fact": {
+              "es": "Este mercado histórico ha sido centro de comercio por 600 años. Aquí se encuentran egipcios, sudaneses, sirios, palestinos... El Cairo siempre fue ciudad de migrantes.",
+              "en": "This historic market has been a trade center for 600 years. Egyptians, Sudanese, Syrians, Palestinians meet here... Cairo has always been a city of migrants."
+            },
+            "image": "places/khan_khalili.png"
+          }
+        ],
+        "activity": {
+          "id": "egypt_activity_1",
+          "type": "trivia",
+          "config": {
+            "question": {
+              "es": "¿Qué río atraviesa Egipto?",
+              "en": "What river crosses Egypt?"
+            },
+            "options": [
+              {
+                "es": "El Nilo",
+                "en": "The Nile"
+              },
+              {
+                "es": "El Amazonas",
+                "en": "The Amazon"
+              },
+              {
+                "es": "El Ganges",
+                "en": "The Ganges"
+              }
+            ],
+            "correctAnswer": 0,
+            "explanation": {
+              "es": "¡Correcto! El Nilo es el río más largo del mundo (6,650 km). El 95% de los egipcios viven cerca de sus orillas. Sin el Nilo, Egipto sería solo desierto.",
+              "en": "Correct! The Nile is the world's longest river (6,650 km). 95% of Egyptians live near its banks. Without the Nile, Egypt would be just desert."
+            },
+            "image": "flags/egypt.png",
+            "difficulty": 2
+          }
+        },
+        "migrationContent": {
+          "historicalContext": {
+            "text": {
+              "es": "Egipto tiene una historia migratoria compleja: fue destino de esclavos nubios, griegos, romanos, árabes. En tiempos modernos, recibió refugiados armenios (genocidio 1915), judíos europeos (holocausto), palestinos (Nakba 1948), y sirios (guerra civil 2011). Siempre ha sido tierra de refugio.",
+              "en": "Egypt has a complex migration history: it was destination for Nubian slaves, Greeks, Romans, Arabs. In modern times, it received Armenian refugees (1915 genocide), European Jews (holocaust), Palestinians (1948 Nakba), and Syrians (2011 civil war). It has always been a land of refuge."
+            },
+            "sensitivityLevel": 4,
+            "parentalControlRequired": true
+          },
+          "hopefulMessage": {
+            "es": "Egipto me enseña que la migración es la historia de la humanidad. No es algo nuevo o extraño. Es lo que los humanos siempre hemos hecho: movernos, buscar, sobrevivir, prosperar.",
+            "en": "Egypt teaches me that migration is the story of humanity. It's not something new or strange. It's what humans have always done: move, seek, survive, prosper."
+          }
+        }
+      },
+
+      {
+        "id": "alexandria",
+        "name": {
+          "es": "Alejandría",
+          "en": "Alexandria"
+        },
+        "background": "backgrounds/egypt_alexandria.jpg",
+        "interactiveElements": [
+          {
+            "id": "bibliotheca_alexandrina",
+            "type": "monument",
+            "name": {
+              "es": "Biblioteca de Alejandría",
+              "en": "Library of Alexandria"
+            },
+            "position": { "x": 400, "y": 300 },
+            "fact": {
+              "es": "La antigua biblioteca fue el centro del conocimiento mundial. Albergaba textos de todas las civilizaciones: griega, egipcia, romana, persa. Era un símbolo de intercambio cultural.",
+              "en": "The ancient library was the center of world knowledge. It housed texts from all civilizations: Greek, Egyptian, Roman, Persian. It was a symbol of cultural exchange."
+            },
+            "image": "monuments/bibliotheca.png"
+          },
+          {
+            "id": "mediterranean_coast",
+            "type": "object",
+            "name": {
+              "es": "Costa Mediterránea",
+              "en": "Mediterranean Coast"
+            },
+            "position": { "x": 250, "y": 420 },
+            "fact": {
+              "es": "Esta costa ha visto partir miles de embarcaciones con migrantes africanos rumbo a Europa. Muchos no llegan. El Mediterráneo es símbolo de esperanza y tragedia.",
+              "en": "This coast has seen thousands of boats depart with African migrants heading to Europe. Many don't arrive. The Mediterranean is a symbol of hope and tragedy."
+            },
+            "image": "places/mediterranean.png"
+          }
+        ],
+        "activity": {
+          "id": "egypt_activity_2",
+          "type": "hidden_objects",
+          "config": {
+            "background": "scenes/egypt_hieroglyphs.jpg",
+            "objects": [
+              {
+                "id": "ankh",
+                "name": { "es": "Anj (vida)", "en": "Ankh (life)" },
+                "position": { "x": 120, "y": 200 },
+                "size": { "width": 40, "height": 60 }
+              },
+              {
+                "id": "eye_horus",
+                "name": { "es": "Ojo de Horus", "en": "Eye of Horus" },
+                "position": { "x": 350, "y": 180 },
+                "size": { "width": 50, "height": 35 }
+              },
+              {
+                "id": "scarab",
+                "name": { "es": "Escarabajo", "en": "Scarab" },
+                "position": { "x": 500, "y": 300 },
+                "size": { "width": 45, "height": 45 }
+              },
+              {
+                "id": "cartouche",
+                "name": { "es": "Cartucho real", "en": "Royal cartouche" },
+                "position": { "x": 200, "y": 400 },
+                "size": { "width": 60, "height": 80 }
+              }
+            ],
+            "timeLimit": 90
+          }
+        },
+        "migrationContent": {
+          "culturalContributions": {
+            "description": {
+              "es": "Egipto dio al mundo los jeroglíficos (base de la escritura), matemáticas (geometría para construir pirámides), medicina (primeros cirujanos), astronomía (calendario solar), y arquitectura monumental. Los griegos, romanos y árabes llevaron este conocimiento a todo el mundo.",
+              "en": "Egypt gave the world hieroglyphics (basis of writing), mathematics (geometry to build pyramids), medicine (first surgeons), astronomy (solar calendar), and monumental architecture. Greeks, Romans and Arabs carried this knowledge to the whole world."
+            },
+            "examples": [
+              "Sistema de escritura (jeroglíficos)",
+              "Matemáticas y geometría",
+              "Medicina y cirugía antigua",
+              "Calendario solar de 365 días",
+              "Arquitectura monumental"
+            ],
+            "sensitivityLevel": 1
+          },
+          "famousMigrants": [
+            {
+              "name": "Moisés (historia bíblica)",
+              "origin": "Egipto → Desierto del Sinaí",
+              "destination": "Tierra Prometida (Canaán)",
+              "achievement": {
+                "es": "Según la tradición, Moisés lideró el Éxodo: la salida de miles de hebreos esclavizados en Egipto. Es la historia de refugiados más antigua y conocida del mundo, compartida por judíos, cristianos y musulmanes.",
+                "en": "According to tradition, Moses led the Exodus: the departure of thousands of enslaved Hebrews from Egypt. It's the oldest and most well-known refugee story in the world, shared by Jews, Christians and Muslims."
+              },
+              "quote": {
+                "es": "Deja ir a mi pueblo. (Éxodo 5:1)",
+                "en": "Let my people go. (Exodus 5:1)"
+              },
+              "image": "migrants/moses.png",
+              "sensitivityLevel": 2
+            }
+          ],
+          "hopefulMessage": {
+            "es": "Alejandría me recuerda que el conocimiento no tiene fronteras. Las ideas viajan con las personas, y cada migración enriquece al mundo entero.",
+            "en": "Alexandria reminds me that knowledge has no borders. Ideas travel with people, and every migration enriches the entire world."
+          }
+        }
+      },
+
+      {
+        "id": "aswan",
+        "name": {
+          "es": "Asuán",
+          "en": "Aswan"
+        },
+        "background": "backgrounds/egypt_aswan.jpg",
+        "interactiveElements": [
+          {
+            "id": "abu_simbel",
+            "type": "monument",
+            "name": {
+              "es": "Templo de Abu Simbel",
+              "en": "Abu Simbel Temple"
+            },
+            "position": { "x": 400, "y": 280 },
+            "fact": {
+              "es": "Este templo fue desmantelado y movido piedra por piedra en los años 60 para salvarlo de las aguas de la presa de Asuán. ¡Hasta los monumentos migran cuando es necesario!",
+              "en": "This temple was dismantled and moved stone by stone in the 1960s to save it from the waters of the Aswan Dam. Even monuments migrate when necessary!"
+            },
+            "image": "monuments/abu_simbel.png"
+          },
+          {
+            "id": "nubian_villages",
+            "type": "object",
+            "name": {
+              "es": "Aldeas Nubias",
+              "en": "Nubian Villages"
+            },
+            "position": { "x": 250, "y": 400 },
+            "fact": {
+              "es": "Los nubios son un pueblo ancestral del sur de Egipto y norte de Sudán. Fueron desplazados por la construcción de la presa de Asuán. Son migrantes forzados dentro de su propio país.",
+              "en": "Nubians are an ancestral people from southern Egypt and northern Sudan. They were displaced by the construction of the Aswan Dam. They are forced migrants within their own country."
+            },
+            "image": "people/nubians.png"
+          }
+        ],
+        "activity": {
+          "id": "egypt_activity_3",
+          "type": "puzzle",
+          "config": {
+            "image": "puzzles/egypt_nile.jpg",
+            "pieces": 15,
+            "canRotate": true
+          }
+        },
+        "migrationContent": {
+          "modernReality": {
+            "text": {
+              "es": "Hoy Egipto es punto de tránsito para migrantes africanos subsaharianos (Etiopía, Eritrea, Somalia, Sudán del Sur) que intentan llegar a Europa vía el Mediterráneo. Miles quedan atrapados en Egipto sin poder avanzar ni regresar. También es refugio para cientos de miles de sirios, sudaneses y yemeníes.",
+              "en": "Today Egypt is a transit point for sub-Saharan African migrants (Ethiopia, Eritrea, Somalia, South Sudan) trying to reach Europe via the Mediterranean. Thousands get trapped in Egypt unable to move forward or return. It's also refuge for hundreds of thousands of Syrians, Sudanese and Yemenis."
+            },
+            "sensitivityLevel": 4,
+            "parentalControlRequired": true
+          },
+          "hopefulMessage": {
+            "es": "Los nubios me enseñan que incluso cuando te quitan tu tierra, no pueden quitarte tu identidad. Tu cultura vive en ti, donde sea que vayas.",
+            "en": "The Nubians teach me that even when your land is taken, they can't take your identity. Your culture lives in you, wherever you go."
+          }
+        }
+      }
+    ],
+
+    "clues": [
+      {
+        "es": "El papiro está donde la historia comenzó",
+        "en": "The papyrus is where history began"
+      },
+      {
+        "es": "Busca entre las piedras que guardan secretos milenarios",
+        "en": "Look among the stones that guard millennial secrets"
+      },
+      {
+        "es": "¡Las pirámides de Giza esconden el papiro del refugiado!",
+        "en": "The Pyramids of Giza hide the refugee's papyrus!"
+      }
+    ],
+
+    "estimatedDuration": 22
+  },
+
+  "bridgeBuilding": {
+    "mode": "destroy",
+    "theme": "Derrumbando el Muro del Olvido",
+    "background": "backgrounds/egypt_desert.jpg",
+    "music": "music/egypt_oud.mp3",
+    "objective": {
+      "es": "Destruye el muro del olvido histórico. El mundo debe recordar que la migración es tan antigua como la humanidad. Egipto ha sido testigo de esto por milenios.",
+      "en": "Destroy the wall of historical forgetfulness. The world must remember that migration is as old as humanity. Egypt has witnessed this for millennia."
+    },
+
+    "structures": [
+      {
+        "id": "wall_1",
+        "type": "wall",
+        "wall": {
+          "width": 300,
+          "height": 200,
+          "position": { "x": 350, "y": 350 },
+          "material": "misinformation_wall",
+          "layers": 5,
+          "blocks": [
+            {
+              "id": "block_1_1",
+              "material": "misinformation_wall",
+              "size": { "width": 58, "height": 38 },
+              "position": { "x": 260, "y": 512 },
+              "health": 80
+            },
+            {
+              "id": "block_1_2",
+              "material": "misinformation_wall",
+              "size": { "width": 58, "height": 38 },
+              "position": { "x": 318, "y": 512 },
+              "health": 80
+            },
+            {
+              "id": "block_1_3",
+              "material": "misinformation_wall",
+              "size": { "width": 58, "height": 38 },
+              "position": { "x": 376, "y": 512 },
+              "health": 80
+            },
+            {
+              "id": "block_1_4",
+              "material": "misinformation_wall",
+              "size": { "width": 58, "height": 38 },
+              "position": { "x": 434, "y": 512 },
+              "health": 80
+            },
+            {
+              "id": "block_1_5",
+              "material": "misinformation_wall",
+              "size": { "width": 58, "height": 38 },
+              "position": { "x": 492, "y": 512 },
+              "health": 80
+            },
+            {
+              "id": "block_2_1",
+              "material": "misinformation_wall",
+              "size": { "width": 58, "height": 38 },
+              "position": { "x": 289, "y": 474 },
+              "health": 85
+            },
+            {
+              "id": "block_2_2",
+              "material": "misinformation_wall",
+              "size": { "width": 58, "height": 38 },
+              "position": { "x": 347, "y": 474 },
+              "health": 85
+            },
+            {
+              "id": "block_2_3",
+              "material": "misinformation_wall",
+              "size": { "width": 58, "height": 38 },
+              "position": { "x": 405, "y": 474 },
+              "health": 85
+            },
+            {
+              "id": "block_2_4",
+              "material": "misinformation_wall",
+              "size": { "width": 58, "height": 38 },
+              "position": { "x": 463, "y": 474 },
+              "health": 85
+            },
+            {
+              "id": "block_3_1",
+              "material": "misinformation_wall",
+              "size": { "width": 58, "height": 38 },
+              "position": { "x": 260, "y": 436 },
+              "health": 90
+            },
+            {
+              "id": "block_3_2",
+              "material": "misinformation_wall",
+              "size": { "width": 58, "height": 38 },
+              "position": { "x": 318, "y": 436 },
+              "health": 90
+            },
+            {
+              "id": "block_3_3",
+              "material": "misinformation_wall",
+              "size": { "width": 58, "height": 38 },
+              "position": { "x": 376, "y": 436 },
+              "health": 90
+            },
+            {
+              "id": "block_3_4",
+              "material": "misinformation_wall",
+              "size": { "width": 58, "height": 38 },
+              "position": { "x": 434, "y": 436 },
+              "health": 90
+            },
+            {
+              "id": "block_3_5",
+              "material": "misinformation_wall",
+              "size": { "width": 58, "height": 38 },
+              "position": { "x": 492, "y": 436 },
+              "health": 90
+            },
+            {
+              "id": "block_4_1",
+              "material": "bureaucracy_wall",
+              "size": { "width": 70, "height": 35 },
+              "position": { "x": 280, "y": 403 },
+              "health": 120
+            },
+            {
+              "id": "block_4_2",
+              "material": "bureaucracy_wall",
+              "size": { "width": 70, "height": 35 },
+              "position": { "x": 350, "y": 403 },
+              "health": 120
+            },
+            {
+              "id": "block_4_3",
+              "material": "bureaucracy_wall",
+              "size": { "width": 70, "height": 35 },
+              "position": { "x": 420, "y": 403 },
+              "health": 120
+            },
+            {
+              "id": "block_4_4",
+              "material": "bureaucracy_wall",
+              "size": { "width": 70, "height": 35 },
+              "position": { "x": 490, "y": 403 },
+              "health": 120
+            },
+            {
+              "id": "block_5_1",
+              "material": "border_wall",
+              "size": { "width": 90, "height": 40 },
+              "position": { "x": 295, "y": 368 },
+              "health": 180,
+              "isKey": true
+            },
+            {
+              "id": "block_5_2",
+              "material": "border_wall",
+              "size": { "width": 90, "height": 40 },
+              "position": { "x": 385, "y": 368 },
+              "health": 180,
+              "isKey": true
+            },
+            {
+              "id": "block_5_3",
+              "material": "border_wall",
+              "size": { "width": 90, "height": 40 },
+              "position": { "x": 475, "y": 368 },
+              "health": 180,
+              "isKey": true
+            }
+          ]
+        },
+        "culturalObjectPosition": { "x": 385, "y": 310 }
+      }
+    ],
+
+    "helpersAvailable": 5,
+    "optimalSolutions": 5,
+    "starThresholds": {
+      "3": 5,
+      "2": 6,
+      "1": 8
+    },
+
+    "specialMechanics": [
+      {
+        "type": "sandstorm",
+        "strength": 0.015,
+        "direction": { "x": -1, "y": 0.3 },
+        "description": {
+          "es": "Tormenta de arena del desierto que desvía trayectorias",
+          "en": "Desert sandstorm that deflects trajectories"
+        }
+      },
+      {
+        "type": "key_blocks",
+        "description": {
+          "es": "Los bloques de frontera (color oscuro) en la cima son los más duros. Representan las barreras actuales del Mediterráneo.",
+          "en": "Border blocks (dark color) at the top are the toughest. They represent current Mediterranean barriers."
+        }
+      }
+    ],
+
+    "tutorial": {
+      "es": "Este muro tiene 5 capas y es más complejo. La tormenta de arena puede desviar tus lanzamientos. Usa a toda la familia estratégicamente: Teo es pequeño y rápido para penetrar, Marco tiene fuerza bruta.",
+      "en": "This wall has 5 layers and is more complex. The sandstorm can deflect your launches. Use the whole family strategically: Teo is small and fast to penetrate, Marco has brute strength."
+    }
+  },
+
+  "familyDialogue": [
+    {
+      "character": "teo",
+      "text": {
+        "es": "¡Wow! Las pirámides son enormes. ¿Quién las construyó, Marco?",
+        "en": "Wow! The pyramids are huge. Who built them, Marco?"
+      }
+    },
+    {
+      "character": "marco",
+      "text": {
+        "es": "Trabajadores egipcios, Teo. Nuevos estudios muestran que no eran esclavos, sino trabajadores que venían de todo Egipto. ¡Era como una migración laboral hace 4,500 años!",
+        "en": "Egyptian workers, Teo. New studies show they weren't slaves, but workers who came from all over Egypt. It was like labor migration 4,500 years ago!"
+      }
+    },
+    {
+      "character": "xolo",
+      "text": {
+        "es": "Exacto, Marco. La humanidad siempre se ha movido buscando trabajo, comida, seguridad. Lo que hacen ustedes ahora no es diferente de lo que hicieron los constructores de pirámides.",
+        "en": "Exactly, Marco. Humanity has always moved seeking work, food, security. What you're doing now is no different from what the pyramid builders did."
+      }
+    },
+    {
+      "character": "teo",
+      "text": {
+        "es": "Entonces... ¿migrar no es algo malo? ¿Es algo que las personas siempre hemos hecho?",
+        "en": "So... migrating isn't something bad? It's something people have always done?"
+      }
+    },
+    {
+      "character": "xolo",
+      "text": {
+        "es": "Así es, pequeño Teo. Es parte de ser humano. Este papiro cuenta la historia del Éxodo, cuando miles de personas huyeron buscando libertad. Tu historia es antigua y honorable.",
+        "en": "That's right, little Teo. It's part of being human. This papyrus tells the story of the Exodus, when thousands of people fled seeking freedom. Your story is ancient and honorable."
+      }
+    }
+  ],
+
+  "metadata": {
+    "releaseVersion": "2.0_HopeQuest",
+    "premium": false,
+    "requiredLevel": 4,
+    "isStartingCountry": false,
+    "characterIntroductions": ["teo"],
+    "migrationThemes": [
+      "ancient_migration",
+      "biblical_refugees",
+      "forced_displacement",
+      "transit_country",
+      "mediterranean_crisis",
+      "cultural_crossroads"
+    ],
+    "educationalFocus": [
+      "geography",
+      "ancient_history",
+      "civilization",
+      "migration_history",
+      "refugee_crisis",
+      "mediterranean_migration",
+      "human_dignity",
+      "historical_perspective"
+    ]
+  }
+}

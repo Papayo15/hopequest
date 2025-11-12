@@ -1,0 +1,293 @@
+{
+  "id": "mexico",
+  "name": {
+    "es": "México",
+    "en": "Mexico",
+    "pt": "México",
+    "fr": "Mexique",
+    "zh": "墨西哥",
+    "hi": "मेक्सिको",
+    "ar": "المكسيك",
+    "de": "Mexiko",
+    "ja": "メキシコ",
+    "ru": "Мексика"
+  },
+  "continent": "americas",
+  "difficulty": 1,
+  "order": 1,
+
+  "culturalObject": {
+    "id": "calavera_azucar",
+    "name": {
+      "es": "Calavera de Azúcar",
+      "en": "Sugar Skull",
+      "pt": "Caveira de Açúcar",
+      "fr": "Crâne en Sucre",
+      "zh": "糖骷髅",
+      "hi": "चीनी की खोपड़ी",
+      "ar": "جمجمة السكر",
+      "de": "Zuckerschädel",
+      "ja": "砂糖の頭蓋骨",
+      "ru": "Сахарный череп"
+    },
+    "description": {
+      "es": "Decoración tradicional del Día de Muertos, hecha de azúcar colorida",
+      "en": "Traditional Day of the Dead decoration, made of colorful sugar"
+    },
+    "funFact": {
+      "es": "¡Se hacen para honrar a los seres queridos que ya no están con nosotros!",
+      "en": "They're made to honor loved ones who are no longer with us!"
+    },
+    "image": "objects/mexico_calavera.png",
+    "model3D": "objects/mexico_calavera.glb"
+  },
+
+  "adventure": {
+    "intro": {
+      "dialogue": {
+        "es": "¡Hola! Soy Kiko. Misterio escondió una hermosa calavera de azúcar en México. ¿Me ayudas a encontrarla explorando este fascinante país?",
+        "en": "Hi! I'm Kiko. Misterio hid a beautiful sugar skull in Mexico. Will you help me find it by exploring this fascinating country?"
+      },
+      "character": "kiko",
+      "animation": "kiko_wave.json",
+      "duration": 5
+    },
+
+    "locations": [
+      {
+        "id": "ciudad_mexico",
+        "name": {
+          "es": "Ciudad de México",
+          "en": "Mexico City"
+        },
+        "background": "backgrounds/mexico_city.jpg",
+        "interactiveElements": [
+          {
+            "id": "angel_independencia",
+            "type": "monument",
+            "name": {
+              "es": "Ángel de la Independencia",
+              "en": "Angel of Independence"
+            },
+            "position": { "x": 400, "y": 300 },
+            "fact": {
+              "es": "¡Este monumento dorado fue construido en 1910 para celebrar 100 años de la independencia de México!",
+              "en": "This golden monument was built in 1910 to celebrate 100 years of Mexico's independence!"
+            },
+            "image": "monuments/angel.png",
+            "sound": "sfx/discovery.mp3"
+          },
+          {
+            "id": "zocalo",
+            "type": "monument",
+            "name": {
+              "es": "El Zócalo",
+              "en": "The Zócalo"
+            },
+            "position": { "x": 200, "y": 400 },
+            "fact": {
+              "es": "¡Es una de las plazas más grandes del mundo!",
+              "en": "It's one of the largest plazas in the world!"
+            },
+            "image": "monuments/zocalo.png"
+          }
+        ],
+        "activity": {
+          "id": "mexico_activity_1",
+          "type": "trivia",
+          "config": {
+            "question": {
+              "es": "¿De qué colores es la bandera de México?",
+              "en": "What colors are on Mexico's flag?"
+            },
+            "options": [
+              {
+                "es": "Verde, blanco y rojo",
+                "en": "Green, white and red"
+              },
+              {
+                "es": "Azul, amarillo y rojo",
+                "en": "Blue, yellow and red"
+              },
+              {
+                "es": "Rojo, blanco y azul",
+                "en": "Red, white and blue"
+              }
+            ],
+            "correctAnswer": 0,
+            "explanation": {
+              "es": "¡Correcto! El verde representa esperanza, el blanco la unidad, y el rojo la sangre de los héroes.",
+              "en": "Correct! Green represents hope, white represents unity, and red represents the blood of heroes."
+            },
+            "image": "flags/mexico.png",
+            "difficulty": 1
+          }
+        }
+      },
+
+      {
+        "id": "mercado_tradicional",
+        "name": {
+          "es": "Mercado Tradicional",
+          "en": "Traditional Market"
+        },
+        "background": "backgrounds/mexico_market.jpg",
+        "activity": {
+          "id": "mexico_activity_2",
+          "type": "memory",
+          "config": {
+            "pairs": 6,
+            "cards": [
+              {
+                "id": "taco",
+                "image": "cards/taco.png",
+                "name": { "es": "Taco", "en": "Taco" }
+              },
+              {
+                "id": "sombrero",
+                "image": "cards/sombrero.png",
+                "name": { "es": "Sombrero", "en": "Sombrero" }
+              },
+              {
+                "id": "piñata",
+                "image": "cards/pinata.png",
+                "name": { "es": "Piñata", "en": "Piñata" }
+              },
+              {
+                "id": "maracas",
+                "image": "cards/maracas.png",
+                "name": { "es": "Maracas", "en": "Maracas" }
+              },
+              {
+                "id": "aguacate",
+                "image": "cards/avocado.png",
+                "name": { "es": "Aguacate", "en": "Avocado" }
+              },
+              {
+                "id": "mariachi",
+                "image": "cards/mariachi.png",
+                "name": { "es": "Mariachi", "en": "Mariachi" }
+              }
+            ]
+          }
+        }
+      },
+
+      {
+        "id": "celebracion",
+        "name": {
+          "es": "Celebración del Día de Muertos",
+          "en": "Day of the Dead Celebration"
+        },
+        "background": "backgrounds/mexico_dia_muertos.jpg",
+        "activity": {
+          "id": "mexico_activity_3",
+          "type": "puzzle",
+          "config": {
+            "image": "puzzles/mexico_altar.jpg",
+            "pieces": 6,
+            "canRotate": false
+          }
+        }
+      }
+    ],
+
+    "clues": [
+      {
+        "es": "La calavera está en un lugar lleno de dulces",
+        "en": "The skull is in a place full of sweets"
+      },
+      {
+        "es": "Se cuelga del techo y se rompe con un palo",
+        "en": "It hangs from the ceiling and breaks with a stick"
+      },
+      {
+        "es": "¡Los niños la golpean en las fiestas!",
+        "en": "Children hit it at parties!"
+      }
+    ],
+
+    "estimatedDuration": 10
+  },
+
+  "physicsGame": {
+    "theme": "piñata",
+    "background": "backgrounds/mexico_physics.jpg",
+    "music": "music/mexico_mariachi.mp3",
+
+    "structures": [
+      {
+        "id": "tower_1",
+        "type": "tower",
+        "blocks": [
+          {
+            "id": "block_1",
+            "shape": "rectangle",
+            "material": "paper",
+            "size": { "width": 100, "height": 30 },
+            "position": { "x": 500, "y": 520 },
+            "rotation": 0,
+            "isStatic": false
+          },
+          {
+            "id": "block_2",
+            "shape": "rectangle",
+            "material": "paper",
+            "size": { "width": 100, "height": 30 },
+            "position": { "x": 500, "y": 480 },
+            "rotation": 0
+          },
+          {
+            "id": "block_3",
+            "shape": "square",
+            "material": "cloth",
+            "size": { "width": 50, "height": 50 },
+            "position": { "x": 500, "y": 430 },
+            "rotation": 0
+          },
+          {
+            "id": "pinata_1",
+            "shape": "circle",
+            "material": "paper",
+            "size": { "width": 60, "height": 60 },
+            "position": { "x": 500, "y": 380 },
+            "rotation": 0
+          }
+        ],
+        "culturalObjectPosition": { "x": 500, "y": 350 }
+      },
+
+      {
+        "id": "tnt_maraca",
+        "type": "custom",
+        "blocks": [
+          {
+            "id": "tnt_1",
+            "shape": "circle",
+            "material": "tnt",
+            "size": { "width": 40, "height": 40 },
+            "position": { "x": 650, "y": 540 },
+            "rotation": 0
+          }
+        ]
+      }
+    ],
+
+    "sagesAvailable": 5,
+    "optimalLaunches": 3,
+
+    "starThresholds": {
+      "3": 3,
+      "2": 4,
+      "1": 5
+    },
+
+    "specialMechanics": []
+  },
+
+  "metadata": {
+    "releaseVersion": "1.0",
+    "premium": false,
+    "requiredLevel": null
+  }
+}

@@ -1,0 +1,510 @@
+{
+  "id": "spain",
+  "name": {
+    "es": "España",
+    "en": "Spain",
+    "zh": "西班牙",
+    "hi": "स्पेन",
+    "ar": "إسبانيا"
+  },
+  "continent": "europe",
+  "difficulty": 2,
+  "order": 15,
+
+  "culturalObject": {
+    "id": "zapato_emigrante",
+    "name": {
+      "es": "Zapato del Emigrante",
+      "en": "Emigrant's Shoe",
+      "zh": "移民的鞋子",
+      "hi": "प्रवासी का जूता",
+      "ar": "حذاء المهاجر"
+    },
+    "description": {
+      "es": "Un zapato gastado de los millones de españoles que emigraron a América Latina en el siglo XX. Símbolo de los viajes difíciles y la búsqueda de una vida mejor.",
+      "en": "A worn shoe from the millions of Spaniards who emigrated to Latin America in the 20th century. Symbol of difficult journeys and the search for a better life."
+    },
+    "funFact": {
+      "es": "¡Entre 1850-1950, más de 5 millones de españoles emigraron a América! Muchos eran de Galicia, buscando escapar de la pobreza. Hoy, sus descendientes vuelven a España como inmigrantes.",
+      "en": "Between 1850-1950, over 5 million Spaniards emigrated to America! Many were from Galicia, seeking to escape poverty. Today, their descendants return to Spain as immigrants."
+    },
+    "image": "objects/spain_shoe.png",
+    "model3D": "objects/spain_shoe.glb"
+  },
+
+  "adventure": {
+    "intro": {
+      "dialogue": {
+        "es": "España... el país de donde vinieron los conquistadores a México. Pero también un país que conoce la migración. Millones de españoles salieron buscando un futuro mejor, igual que yo ahora.",
+        "en": "Spain... the country from which the conquistadors came to Mexico. But also a country that knows migration. Millions of Spaniards left seeking a better future, just like me now."
+      },
+      "character": "luis",
+      "animation": "luis_thoughtful.json",
+      "duration": 10
+    },
+
+    "locations": [
+      {
+        "id": "madrid",
+        "name": {
+          "es": "Madrid",
+          "en": "Madrid"
+        },
+        "background": "backgrounds/spain_madrid.jpg",
+        "interactiveElements": [
+          {
+            "id": "puerta_sol",
+            "type": "monument",
+            "name": {
+              "es": "Puerta del Sol",
+              "en": "Puerta del Sol"
+            },
+            "position": { "x": 400, "y": 300 },
+            "fact": {
+              "es": "El kilómetro cero de España. Desde aquí se miden todas las distancias del país. También es donde los españoles celebran el Año Nuevo comiendo 12 uvas.",
+              "en": "Spain's kilometer zero. All distances in the country are measured from here. It's also where Spaniards celebrate New Year by eating 12 grapes."
+            },
+            "image": "monuments/puerta_sol.png",
+            "sound": "sfx/discovery.mp3"
+          },
+          {
+            "id": "museo_prado",
+            "type": "monument",
+            "name": {
+              "es": "Museo del Prado",
+              "en": "Prado Museum"
+            },
+            "position": { "x": 250, "y": 380 },
+            "fact": {
+              "es": "Uno de los museos de arte más importantes del mundo. Alberga obras de Velázquez, Goya y El Greco. ¡Tiene más de 8,000 pinturas!",
+              "en": "One of the world's most important art museums. It houses works by Velázquez, Goya and El Greco. It has over 8,000 paintings!"
+            },
+            "image": "monuments/prado.png"
+          },
+          {
+            "id": "lavapies",
+            "type": "object",
+            "name": {
+              "es": "Barrio de Lavapiés",
+              "en": "Lavapiés Neighborhood"
+            },
+            "position": { "x": 600, "y": 350 },
+            "fact": {
+              "es": "El barrio más multicultural de Madrid. Aquí viven personas de más de 100 países diferentes. Es un ejemplo vivo de cómo la inmigración enriquece una ciudad.",
+              "en": "Madrid's most multicultural neighborhood. People from over 100 different countries live here. It's a living example of how immigration enriches a city."
+            },
+            "image": "places/lavapies.png"
+          }
+        ],
+        "activity": {
+          "id": "spain_activity_1",
+          "type": "trivia",
+          "config": {
+            "question": {
+              "es": "¿Cuántos idiomas oficiales tiene España?",
+              "en": "How many official languages does Spain have?"
+            },
+            "options": [
+              {
+                "es": "Uno (español)",
+                "en": "One (Spanish)"
+              },
+              {
+                "es": "Cuatro (español, catalán, gallego, euskera)",
+                "en": "Four (Spanish, Catalan, Galician, Basque)"
+              },
+              {
+                "es": "Dos (español e inglés)",
+                "en": "Two (Spanish and English)"
+              }
+            ],
+            "correctAnswer": 1,
+            "explanation": {
+              "es": "¡Correcto! España tiene 4 idiomas oficiales. El español (castellano) es oficial en todo el país, mientras que catalán, gallego y euskera son oficiales en sus regiones respectivas.",
+              "en": "Correct! Spain has 4 official languages. Spanish (Castilian) is official throughout the country, while Catalan, Galician and Basque are official in their respective regions."
+            },
+            "image": "flags/spain.png",
+            "difficulty": 2
+          }
+        },
+        "migrationContent": {
+          "historicalContext": {
+            "text": {
+              "es": "Entre 1880-1960, más de 5 millones de españoles emigraron a América (Argentina, Cuba, México, Venezuela, Brasil). Escapaban de la pobreza, guerras civiles y dictadura. Los llamaban 'gallegos' aunque vinieran de toda España.",
+              "en": "Between 1880-1960, over 5 million Spaniards emigrated to America (Argentina, Cuba, Mexico, Venezuela, Brazil). They escaped poverty, civil wars and dictatorship. They were called 'gallegos' even if they came from all over Spain."
+            },
+            "sensitivityLevel": 3,
+            "parentalControlRequired": false
+          },
+          "hopefulMessage": {
+            "es": "España me enseña que la historia da vueltas. Los que ayer emigraban, hoy reciben inmigrantes. La empatía nace de recordar nuestro propio pasado.",
+            "en": "Spain teaches me that history comes full circle. Those who emigrated yesterday, today receive immigrants. Empathy is born from remembering our own past."
+          }
+        }
+      },
+
+      {
+        "id": "barcelona",
+        "name": {
+          "es": "Barcelona",
+          "en": "Barcelona"
+        },
+        "background": "backgrounds/spain_barcelona.jpg",
+        "interactiveElements": [
+          {
+            "id": "sagrada_familia",
+            "type": "monument",
+            "name": {
+              "es": "Sagrada Familia",
+              "en": "Sagrada Familia"
+            },
+            "position": { "x": 400, "y": 250 },
+            "fact": {
+              "es": "La obra maestra de Antoni Gaudí lleva más de 140 años en construcción. Trabajadores de todo el mundo ayudan a completarla. ¡Un proyecto verdaderamente internacional!",
+              "en": "Antoni Gaudí's masterpiece has been under construction for over 140 years. Workers from around the world help complete it. A truly international project!"
+            },
+            "image": "monuments/sagrada_familia.png"
+          },
+          {
+            "id": "raval",
+            "type": "object",
+            "name": {
+              "es": "El Raval",
+              "en": "El Raval"
+            },
+            "position": { "x": 250, "y": 400 },
+            "fact": {
+              "es": "Barrio histórico que acoge a inmigrantes desde hace siglos. Primero filipinos, luego marroquíes, paquistaníes, latinos. La diversidad es su identidad.",
+              "en": "Historic neighborhood that has welcomed immigrants for centuries. First Filipinos, then Moroccans, Pakistanis, Latinos. Diversity is its identity."
+            },
+            "image": "places/raval.png"
+          }
+        ],
+        "activity": {
+          "id": "spain_activity_2",
+          "type": "memory",
+          "config": {
+            "pairs": 8,
+            "cards": [
+              {
+                "id": "paella",
+                "image": "cards/paella.png",
+                "name": { "es": "Paella", "en": "Paella" }
+              },
+              {
+                "id": "flamenco",
+                "image": "cards/flamenco.png",
+                "name": { "es": "Flamenco", "en": "Flamenco" }
+              },
+              {
+                "id": "toros",
+                "image": "cards/bullfighting.png",
+                "name": { "es": "Tauromaquia", "en": "Bullfighting" }
+              },
+              {
+                "id": "gaudi",
+                "image": "cards/gaudi.png",
+                "name": { "es": "Gaudí", "en": "Gaudí" }
+              },
+              {
+                "id": "jamon",
+                "image": "cards/jamon.png",
+                "name": { "es": "Jamón Ibérico", "en": "Iberian Ham" }
+              },
+              {
+                "id": "siesta",
+                "image": "cards/siesta.png",
+                "name": { "es": "Siesta", "en": "Siesta" }
+              },
+              {
+                "id": "futbol",
+                "image": "cards/soccer_spain.png",
+                "name": { "es": "Fútbol", "en": "Soccer" }
+              },
+              {
+                "id": "guitarra",
+                "image": "cards/guitar.png",
+                "name": { "es": "Guitarra Española", "en": "Spanish Guitar" }
+              }
+            ]
+          }
+        },
+        "migrationContent": {
+          "culturalContributions": {
+            "description": {
+              "es": "Los emigrantes españoles llevaron su idioma, gastronomía, arquitectura y tradiciones a América. Fundaron ciudades, construyeron ferrocarriles, abrieron comercios. Hoy, España recibe de vuelta esas influencias mezcladas con culturas latinoamericanas.",
+              "en": "Spanish emigrants brought their language, gastronomy, architecture and traditions to America. They founded cities, built railroads, opened businesses. Today, Spain receives back those influences mixed with Latin American cultures."
+            },
+            "examples": [
+              "Idioma español (500 millones de hablantes)",
+              "Arquitectura colonial",
+              "Gastronomía (tapas, paella, jamón)",
+              "Flamenco (mezcla gitana-andaluza-árabe)",
+              "Literatura (Cervantes, García Lorca)"
+            ],
+            "sensitivityLevel": 1
+          },
+          "famousMigrants": [
+            {
+              "name": "Familia de Gabriel García Márquez",
+              "origin": "España → Colombia (siglo XIX)",
+              "destination": "Colombia, luego México",
+              "achievement": {
+                "es": "Los abuelos del escritor Nobel emigraron de España a Colombia durante las guerras. García Márquez luego emigraría a México, cerrando el círculo migratorio España-América-España.",
+                "en": "The Nobel writer's grandparents emigrated from Spain to Colombia during the wars. García Márquez would later emigrate to Mexico, closing the Spain-America-Spain migratory circle."
+              },
+              "quote": {
+                "es": "Todos somos hijos de la migración. Mi historia es la historia de millones.",
+                "en": "We are all children of migration. My story is the story of millions."
+              },
+              "image": "migrants/garcia_marquez_family.png",
+              "sensitivityLevel": 2
+            }
+          ],
+          "hopefulMessage": {
+            "es": "Ver a españoles recordar su pasado migrante me da esperanza. Si ellos superaron la adversidad, yo también puedo.",
+            "en": "Seeing Spaniards remember their migrant past gives me hope. If they overcame adversity, I can too."
+          }
+        }
+      },
+
+      {
+        "id": "andalucia",
+        "name": {
+          "es": "Andalucía",
+          "en": "Andalusia"
+        },
+        "background": "backgrounds/spain_andalucia.jpg",
+        "interactiveElements": [
+          {
+            "id": "alhambra",
+            "type": "monument",
+            "name": {
+              "es": "La Alhambra",
+              "en": "The Alhambra"
+            },
+            "position": { "x": 400, "y": 280 },
+            "fact": {
+              "es": "Palacio morisco construido por musulmanes que vivieron en España durante 800 años. Es un recordatorio de que España fue multicultural mucho antes de la era moderna.",
+              "en": "Moorish palace built by Muslims who lived in Spain for 800 years. It's a reminder that Spain was multicultural long before the modern era."
+            },
+            "image": "monuments/alhambra.png"
+          },
+          {
+            "id": "estrecho_gibraltar",
+            "type": "object",
+            "name": {
+              "es": "Estrecho de Gibraltar",
+              "en": "Strait of Gibraltar"
+            },
+            "position": { "x": 550, "y": 400 },
+            "fact": {
+              "es": "Solo 14 kilómetros separan España de África. Miles de personas arriesgan su vida cruzando estas aguas buscando una vida mejor en Europa.",
+              "en": "Only 14 kilometers separate Spain from Africa. Thousands of people risk their lives crossing these waters seeking a better life in Europe."
+            },
+            "image": "places/gibraltar.png"
+          }
+        ],
+        "activity": {
+          "id": "spain_activity_3",
+          "type": "puzzle",
+          "config": {
+            "image": "puzzles/spain_flamenco.jpg",
+            "pieces": 12,
+            "canRotate": false
+          }
+        },
+        "migrationContent": {
+          "modernReality": {
+            "text": {
+              "es": "Hoy España recibe inmigrantes de América Latina (muchos descendientes de españoles que regresan), África del Norte (cruzando el Mediterráneo), y Europa del Este. Es ahora un país de destino, no de origen.",
+              "en": "Today Spain receives immigrants from Latin America (many descendants of Spaniards returning), North Africa (crossing the Mediterranean), and Eastern Europe. It's now a destination country, not an origin one."
+            },
+            "sensitivityLevel": 4,
+            "parentalControlRequired": true
+          },
+          "hopefulMessage": {
+            "es": "España me muestra que la identidad no es fija. Un país puede ser de emigrantes y de inmigrantes. Lo importante es la humanidad con la que tratamos a quienes llegan.",
+            "en": "Spain shows me that identity isn't fixed. A country can be of emigrants and immigrants. What matters is the humanity with which we treat those who arrive."
+          }
+        }
+      }
+    ],
+
+    "clues": [
+      {
+        "es": "El zapato está donde los caminos se encuentran",
+        "en": "The shoe is where the paths meet"
+      },
+      {
+        "es": "Busca en el kilómetro cero, donde todo comienza",
+        "en": "Look at kilometer zero, where everything begins"
+      },
+      {
+        "es": "¡La Puerta del Sol guarda el secreto del emigrante!",
+        "en": "Puerta del Sol holds the emigrant's secret!"
+      }
+    ],
+
+    "estimatedDuration": 18
+  },
+
+  "bridgeBuilding": {
+    "mode": "build",
+    "theme": "Puente Transatlántico",
+    "background": "backgrounds/spain_port.jpg",
+    "music": "music/spain_guitar.mp3",
+    "objective": {
+      "es": "Construye un puente desde el puerto español hacia el barco que va a América. Marco, Luis y Xolo necesitan cruzar para continuar su viaje.",
+      "en": "Build a bridge from the Spanish port to the ship going to America. Marco, Luis and Xolo need to cross to continue their journey."
+    },
+
+    "structures": [
+      {
+        "id": "gap_1",
+        "type": "gap",
+        "gap": {
+          "width": 280,
+          "height": 150,
+          "startPosition": { "x": 150, "y": 400 },
+          "endPosition": { "x": 430, "y": 400 }
+        },
+        "blocks": [
+          {
+            "id": "steel_1",
+            "shape": "rectangle",
+            "material": "steel_beam",
+            "size": { "width": 150, "height": 18 },
+            "position": { "x": 100, "y": 500 },
+            "rotation": 0,
+            "isStatic": true,
+            "canConnect": true
+          },
+          {
+            "id": "steel_2",
+            "shape": "rectangle",
+            "material": "steel_beam",
+            "size": { "width": 150, "height": 18 },
+            "position": { "x": 100, "y": 530 },
+            "rotation": 0,
+            "isStatic": true,
+            "canConnect": true
+          },
+          {
+            "id": "plank_1",
+            "shape": "rectangle",
+            "material": "wood_plank",
+            "size": { "width": 120, "height": 20 },
+            "position": { "x": 100, "y": 560 },
+            "rotation": 0,
+            "isStatic": true,
+            "canConnect": true
+          },
+          {
+            "id": "rope_1",
+            "shape": "rectangle",
+            "material": "rope",
+            "size": { "width": 100, "height": 8 },
+            "position": { "x": 100, "y": 585 },
+            "rotation": 0,
+            "isStatic": true,
+            "canConnect": true
+          },
+          {
+            "id": "rope_2",
+            "shape": "rectangle",
+            "material": "rope",
+            "size": { "width": 80, "height": 8 },
+            "position": { "x": 100, "y": 605 },
+            "rotation": 0,
+            "isStatic": true,
+            "canConnect": true
+          }
+        ],
+        "culturalObjectPosition": { "x": 450, "y": 380 }
+      }
+    ],
+
+    "helpersAvailable": 3,
+    "optimalSolutions": 3,
+    "starThresholds": {
+      "3": 3,
+      "2": 4,
+      "1": 6
+    },
+
+    "specialMechanics": [
+      {
+        "type": "wind",
+        "strength": 0.02,
+        "direction": { "x": 1, "y": 0 },
+        "description": {
+          "es": "Vientos del Atlántico que complican la construcción",
+          "en": "Atlantic winds that complicate construction"
+        }
+      }
+    ],
+
+    "tutorial": {
+      "es": "¡Cuidado con el viento! El Atlántico sopla fuerte. Usa las vigas de acero para crear una base sólida antes de añadir tablas de madera.",
+      "en": "Watch out for the wind! The Atlantic blows strong. Use steel beams to create a solid base before adding wooden planks."
+    }
+  },
+
+  "familyDialogue": [
+    {
+      "character": "luis",
+      "text": {
+        "es": "Marco, ¿sabías que nuestros tatara-tatara-abuelos quizá vinieron de España? Muchos mexicanos tenemos raíces españolas.",
+        "en": "Marco, did you know our great-great-great-grandparents might have come from Spain? Many Mexicans have Spanish roots."
+      }
+    },
+    {
+      "character": "marco",
+      "text": {
+        "es": "Es extraño estar aquí, Luis. España conquistó México, pero también millones de españoles pobres emigraron buscando lo mismo que nosotros: una vida mejor.",
+        "en": "It's strange to be here, Luis. Spain conquered Mexico, but also millions of poor Spaniards emigrated seeking the same thing as us: a better life."
+      }
+    },
+    {
+      "character": "xolo",
+      "text": {
+        "es": "La historia es compleja, amigos. No hay villanos ni héroes puros. Solo personas tratando de sobrevivir, de prosperar, de proteger a sus familias.",
+        "en": "History is complex, friends. There are no pure villains or heroes. Just people trying to survive, to prosper, to protect their families."
+      }
+    },
+    {
+      "character": "luis",
+      "text": {
+        "es": "Mira este zapato viejo. Representa a millones de españoles que cruzaron el océano con miedo y esperanza. Como nosotros ahora.",
+        "en": "Look at this old shoe. It represents millions of Spaniards who crossed the ocean with fear and hope. Like us now."
+      }
+    }
+  ],
+
+  "metadata": {
+    "releaseVersion": "2.0_HopeQuest",
+    "premium": false,
+    "requiredLevel": 2,
+    "isStartingCountry": false,
+    "characterIntroductions": ["luis"],
+    "migrationThemes": [
+      "historical_emigration",
+      "return_migration",
+      "colonial_legacy",
+      "modern_immigration",
+      "mediterranean_crisis",
+      "cultural_exchange"
+    ],
+    "educationalFocus": [
+      "geography",
+      "culture",
+      "history",
+      "colonial_history",
+      "migration_cycles",
+      "empathy",
+      "identity",
+      "multiculturalism"
+    ]
+  }
+}

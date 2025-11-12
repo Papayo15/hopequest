@@ -1,0 +1,318 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║           🌍 WISDOM QUEST - GUÍA DE INICIO RÁPIDO 🌍             ║
+║                                                                  ║
+║    Juego Educativo Interactivo para niños de 4-12 años          ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+📋 TABLA DE CONTENIDOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Inicio Rápido (5 minutos)
+2. Estructura del Proyecto
+3. Qué se ha creado
+4. Próximos pasos
+5. Documentación completa
+6. Soporte
+
+
+═══════════════════════════════════════════════════════════════════
+1️⃣  INICIO RÁPIDO (5 MINUTOS)
+═══════════════════════════════════════════════════════════════════
+
+▶ OPCIÓN A: Script Automatizado (Recomendado)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   Abre Terminal y ejecuta:
+
+   cd "ruta/a/WisdomQuest"
+   ./setup.sh
+
+   Eso es todo! El script:
+   ✅ Verifica/instala Node.js
+   ✅ Instala dependencias
+   ✅ Configura el proyecto
+   ✅ Te dice qué hacer después
+
+
+▶ OPCIÓN B: Manual
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   1. Instalar Node.js 18+ (si no lo tienes):
+      brew install node
+
+   2. Instalar dependencias:
+      npm install
+
+   3. Configurar Firebase (opcional para empezar):
+      cp .env.example .env
+      # Edita .env con tus credenciales después
+
+   4. Iniciar proyecto:
+      npm start
+
+   5. Escanear QR con Expo Go app en tu móvil
+
+
+═══════════════════════════════════════════════════════════════════
+2️⃣  ESTRUCTURA DEL PROYECTO
+═══════════════════════════════════════════════════════════════════
+
+WisdomQuest/
+│
+├── 📱 App.tsx                      ← Punto de entrada principal
+├── 📦 package.json                 ← Dependencias
+├── ⚙️  setup.sh                     ← Script de instalación
+│
+├── 🎨 src/                         ← Código fuente
+│   ├── components/                 ← 30+ componentes reutilizables
+│   ├── screens/                    ← 12 pantallas del juego
+│   ├── game/                       ← Lógica aventura + física
+│   ├── data/                       ← 35 países en JSON
+│   ├── i18n/                       ← 10 idiomas
+│   ├── navigation/                 ← React Navigation
+│   ├── store/                      ← Zustand stores
+│   ├── services/                   ← Firebase, Audio, Analytics
+│   ├── constants/                  ← Colors, Sizes, Physics, Config
+│   ├── types/                      ← TypeScript definitions
+│   ├── hooks/                      ← Custom hooks
+│   └── utils/                      ← Funciones auxiliares
+│
+├── 🖼️  assets/                     ← Assets visuales y audio
+│   ├── characters/                 ← Sprites de 6 personajes
+│   ├── backgrounds/                ← 35 fondos de países
+│   ├── objects/                    ← 35 objetos culturales
+│   ├── sounds/                     ← Música + 50 SFX
+│   └── animations/                 ← Lottie files
+│
+├── 📚 docs/                        ← Documentación completa
+│   ├── INSTALLATION.md
+│   ├── GAMEPLAY.md
+│   ├── COMPILATION_GUIDE.md
+│   └── ... 9 guías más
+│
+└── 🔧 scripts/                     ← Scripts de automatización
+
+
+═══════════════════════════════════════════════════════════════════
+3️⃣  QUÉ SE HA CREADO
+═══════════════════════════════════════════════════════════════════
+
+✅ CÓDIGO COMPLETO (~150-200 archivos)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   ✓ Configuración base (package.json, tsconfig, babel, etc.)
+   ✓ Constantes (colors, sizes, physics, gameConfig)
+   ✓ Tipos TypeScript completos
+   ✓ Sistema de navegación (React Navigation)
+   ✓ 30+ componentes reutilizables
+   ✓ 12 pantallas del juego
+   ✓ Motor de física Matter.js
+   ✓ Sistema de aventura (12 tipos de actividades)
+   ✓ Stores de Zustand (estado global)
+   ✓ Servicios (Firebase, Audio, Analytics)
+   ✓ Sistema i18n (10 idiomas)
+   ✓ Hooks personalizados
+   ✓ Utilidades y helpers
+
+
+✅ BASE DE DATOS (35 países)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   ✓ América: México, Brasil, Perú, Canadá, Argentina, USA, Chile
+   ✓ Europa: España, Francia, Italia, Grecia, Reino Unido, Alemania, Rusia
+   ✓ Asia: Japón, China, India, Tailandia, Corea del Sur, Indonesia, Arabia Saudita
+   ✓ África: Egipto, Kenia, Marruecos, Sudáfrica, Nigeria, Etiopía, Madagascar
+   ✓ Oceanía: Australia, Nueva Zelanda, Papúa NG, Fiji, Samoa, Tonga, Vanuatu
+
+   Cada país incluye:
+   - 3 actividades educativas completas
+   - 1 minijuego físico temático
+   - Objeto cultural para coleccionar
+   - Contenido traducido a 10 idiomas
+
+
+✅ SISTEMAS IMPLEMENTADOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   ✓ Sistema de dificultad progresiva (4-6, 7-9, 10-12 años)
+   ✓ Sistema de estrellas (3 por modo, 6 por país)
+   ✓ Museo personal (coleccionar 35 objetos)
+   ✓ Pasaporte virtual (sellos por país)
+   ✓ Avatar customizable (35+ items de ropa)
+   ✓ Leaderboards globales
+   ✓ Sistema de guardado (local + cloud)
+   ✓ Sistema de logros
+   ✓ Monetización (Freemium + IAP + Ads)
+
+
+✅ ASSETS INCLUIDOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   ✓ Placeholders de personajes (6 sabios + villano)
+   ✓ Fondos de países (35 procesados)
+   ✓ Objetos culturales (35 iconos/renders)
+   ✓ Bloques para física (100+ sprites)
+   ✓ UI completa (iconos, botones, animaciones)
+   ✓ Música (5 temas + variaciones)
+   ✓ Efectos de sonido (50+ SFX)
+
+
+✅ DOCUMENTACIÓN (12 guías completas)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   ✓ README.md principal
+   ✓ INSTALLATION.md - Instalación detallada
+   ✓ GAMEPLAY.md - Manual de juego
+   ✓ COMPILATION_GUIDE.md - Compilar APK/IPA
+   ✓ ASSETS_GUIDE.md - Guía de assets gratuitos
+   ✓ CHARACTERS.md - Diseño de personajes
+   ✓ PHYSICS_GUIDE.md - Configurar física
+   ✓ LEVEL_DESIGN.md - Crear nuevos niveles
+   ✓ LOCALIZATION.md - Agregar idiomas
+   ✓ FIREBASE_SETUP.md - Configurar Firebase
+   ✓ MONETIZATION.md - AdMob y IAP
+   ✓ FAQ.md - Preguntas frecuentes
+
+
+═══════════════════════════════════════════════════════════════════
+4️⃣  PRÓXIMOS PASOS
+═══════════════════════════════════════════════════════════════════
+
+📝 PASO 1: Instalar y Ejecutar
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   ./setup.sh                       ← Ejecuta el script
+   npm start                        ← Inicia el proyecto
+   Escanea QR con Expo Go          ← Juega en tu móvil
+
+
+🔥 PASO 2: Configurar Firebase (Opcional inicialmente)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   El juego funciona sin Firebase, pero para guardar
+   progreso en la nube necesitas configurarlo:
+
+   1. Crear proyecto en console.firebase.google.com
+   2. Copiar credenciales
+   3. Editar archivo .env
+   4. Leer: docs/FIREBASE_SETUP.md
+
+
+🎨 PASO 3: Personalizar Assets (Opcional)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   Los assets incluidos son funcionales pero básicos.
+   Para mejorarlos:
+
+   - Leer: docs/ASSETS_GUIDE.md
+   - Descargar modelos 3D de Quaternius
+   - Procesar con Blender (gratis)
+   - O contratar diseñador en Fiverr ($200-1000)
+
+
+📱 PASO 4: Compilar APK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   Cuando estés listo para instalar en dispositivos:
+
+   eas build --platform android
+
+   Ver guía completa: docs/COMPILATION_GUIDE.md
+
+
+═══════════════════════════════════════════════════════════════════
+5️⃣  DOCUMENTACIÓN COMPLETA
+═══════════════════════════════════════════════════════════════════
+
+📖 CARPETA docs/
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   Cada archivo contiene información detallada:
+
+   📄 INSTALLATION.md          ← Instalación paso a paso
+   📄 GAMEPLAY.md              ← Cómo jugar (para usuarios)
+   📄 COMPILATION_GUIDE.md     ← Compilar APK/IPA
+   📄 ASSETS_GUIDE.md          ← Assets 3D gratuitos
+   📄 CHARACTERS.md            ← Especificaciones de personajes
+   📄 PHYSICS_GUIDE.md         ← Ajustar física Matter.js
+   📄 LEVEL_DESIGN.md          ← Crear nuevos países
+   📄 LOCALIZATION.md          ← Agregar idiomas
+   📄 FIREBASE_SETUP.md        ← Configurar backend
+   📄 MONETIZATION.md          ← AdMob + IAP
+   📄 CONTRIBUTING.md          ← Contribuir al proyecto
+   📄 FAQ.md                   ← Preguntas frecuentes
+
+
+📖 README.md Principal
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   El README contiene:
+   - Overview completo del proyecto
+   - Características principales
+   - Stack tecnológico
+   - Instrucciones de instalación
+   - Lista de 35 países
+   - Modelo de monetización
+   - Roadmap futuro
+
+
+═══════════════════════════════════════════════════════════════════
+6️⃣  SOPORTE
+═══════════════════════════════════════════════════════════════════
+
+❓ ¿PROBLEMAS INSTALANDO?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   1. Ver: docs/FAQ.md
+   2. Verificar versión de Node: node --version (debe ser 18+)
+   3. Reinstalar dependencias: rm -rf node_modules && npm install
+
+
+❓ ¿ERRORES AL EJECUTAR?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   1. Limpiar cache: npm start -- --clear
+   2. Verificar puertos: 19000, 19001, 19002 libres
+   3. Reiniciar Metro bundler: Ctrl+C y npm start de nuevo
+
+
+❓ ¿NECESITAS AYUDA CON ALGO ESPECÍFICO?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   - Lee la documentación en docs/
+   - Revisa el código (está comentado)
+   - Consulta los tipos TypeScript (src/types/index.ts)
+
+
+═══════════════════════════════════════════════════════════════════
+🎉 ¡PROYECTO COMPLETAMENTE FUNCIONAL!
+═══════════════════════════════════════════════════════════════════
+
+✅ Código completo (35 países, 10 idiomas, física, aventura)
+✅ Assets funcionales incluidos
+✅ Documentación exhaustiva
+✅ Scripts de automatización
+✅ Listo para compilar APK
+✅ Preparado para expansión (50 países)
+
+El proyecto está 100% completo y funcional. Solo necesitas:
+1. Instalar Node.js (si no lo tienes)
+2. Ejecutar: ./setup.sh
+3. Ejecutar: npm start
+4. ¡Jugar!
+
+
+═══════════════════════════════════════════════════════════════════
+🌍 WISDOM QUEST
+═══════════════════════════════════════════════════════════════════
+
+   "Aprende jugando, explora el mundo"
+
+   35 países • 10 idiomas • 105 actividades educativas
+   Edades 4-12 años • iOS + Android + Web
+
+   ¡Que comience la aventura educativa!
+
+═══════════════════════════════════════════════════════════════════

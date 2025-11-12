@@ -1,0 +1,63 @@
+{
+  "common": {
+    "welcome": "欢迎",
+    "continue": "继续",
+    "cancel": "取消",
+    "confirm": "确认",
+    "back": "返回",
+    "next": "下一步",
+    "start": "开始",
+    "restart": "重新开始",
+    "close": "关闭",
+    "save": "保存",
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功"
+  },
+  "auth": {
+    "title": "欢迎来到希望之旅！",
+    "subtitle": "充满学习的世界冒险",
+    "startAdventure": "开始冒险"
+  },
+  "home": {
+    "greeting": "你好, {{name}}!",
+    "continueAdventure": "继续冒险"
+  },
+  "game": {
+    "map": "世界地图",
+    "currentCountry": "当前国家",
+    "stats": {
+      "money": "金钱",
+      "health": "健康",
+      "moral": "士气",
+      "stars": "星星"
+    },
+    "portals": {
+      "aereo": "航空",
+      "maritimo": "海运",
+      "terrestre": "陆路",
+      "clandestino": "秘密",
+      "refugiado": "难民",
+      "familiar": "家庭"
+    },
+    "activities": {
+      "trivia": "问答",
+      "puzzle": "拼图",
+      "memory": "记忆"
+    }
+  },
+  "countries": {
+    "venezuela": "委内瑞拉",
+    "mexico": "墨西哥",
+    "estadosunidos": "美国",
+    "espana": "西班牙",
+    "china": "中国",
+    "india": "印度",
+    "australia": "澳大利亚"
+  },
+  "messages": {
+    "levelComplete": "关卡完成！",
+    "tryAgain": "再试一次",
+    "congratulations": "恭喜！"
+  }
+}

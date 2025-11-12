@@ -1,0 +1,587 @@
+{
+  "portals": {
+    "aereo": {
+      "id": "aereo",
+      "type": "aereo",
+      "name": {
+        "es": "Portal Aéreo",
+        "en": "Aerial Portal",
+        "zh": "航空门户",
+        "hi": "हवाई पोर्टल",
+        "ar": "بوابة جوية"
+      },
+      "description": {
+        "es": "Viaja en avión a tu destino. Rápido y seguro, pero requiere documentos y dinero.",
+        "en": "Travel by plane to your destination. Fast and safe, but requires documents and money."
+      },
+      "visual": {
+        "entranceImage": "portals/aereo_entrance.png",
+        "tunnelAnimation": "portals/animations/aereo_tunnel.json",
+        "exitImage": "portals/aereo_exit.png",
+        "particleEffects": [
+          {
+            "type": "clouds",
+            "density": 0.7,
+            "speed": 0.5,
+            "color": "#FFFFFF"
+          }
+        ],
+        "colorScheme": {
+          "primary": "#87CEEB",
+          "secondary": "#FFFFFF",
+          "accent": "#FFD700"
+        }
+      },
+      "audio": {
+        "ambient": "audio/portals/airport_ambient.mp3",
+        "enter": "audio/sfx/plane_boarding.mp3",
+        "travel": "audio/music/flight_journey.mp3",
+        "exit": "audio/sfx/plane_landing.mp3",
+        "voiceNarration": {
+          "es": "audio/narration/es/aereo_narration.mp3",
+          "en": "audio/narration/en/aereo_narration.mp3"
+        }
+      },
+      "requirements": {
+        "documents": ["passport", "visa"],
+        "minLevel": 5,
+        "completedCountries": [],
+        "familyMembers": [],
+        "specialConditions": []
+      },
+      "costs": {
+        "money": 500,
+        "time": 1,
+        "documents": ["passport", "visa"],
+        "emotional": 20
+      },
+      "risks": {
+        "failureChance": 0.05,
+        "consequences": [
+          {
+            "type": "success",
+            "probability": 0.9,
+            "description": {
+              "es": "Llegas sin problemas a tu destino. El vuelo fue tranquilo.",
+              "en": "You arrive at your destination without problems. The flight was smooth."
+            },
+            "outcome": {
+              "healthChange": 0,
+              "moralChange": 10,
+              "moneyChange": 0
+            }
+          },
+          {
+            "type": "partial_success",
+            "probability": 0.08,
+            "description": {
+              "es": "Problemas en migración. Te retienen 12 horas para verificar documentos.",
+              "en": "Problems at immigration. You're held for 12 hours to verify documents."
+            },
+            "outcome": {
+              "healthChange": -5,
+              "moralChange": -10,
+              "moneyChange": -50
+            }
+          },
+          {
+            "type": "deportation",
+            "probability": 0.02,
+            "description": {
+              "es": "Tu visa no fue aceptada. Te deportan al país anterior.",
+              "en": "Your visa wasn't accepted. You're deported to the previous country."
+            },
+            "outcome": {
+              "nextCountry": null,
+              "healthChange": -10,
+              "moralChange": -30,
+              "moneyChange": -200
+            }
+          }
+        ],
+        "canRetry": true,
+        "maxAttempts": 3
+      },
+      "educationalContent": {
+        "statistics": [
+          {
+            "label": {
+              "es": "Migrantes aéreos por año (2023)",
+              "en": "Air migrants per year (2023)"
+            },
+            "value": "280 millones",
+            "source": "International Air Transport Association (IATA) 2023",
+            "icon": "icons/stats/plane.png"
+          },
+          {
+            "label": {
+              "es": "Costo promedio de visa",
+              "en": "Average visa cost"
+            },
+            "value": "$160 USD",
+            "source": "US State Department 2024"
+          }
+        ],
+        "testimonials": [
+          {
+            "name": "Ana M.",
+            "origin": "Guatemala",
+            "destination": "Canada",
+            "year": 2019,
+            "quote": {
+              "es": "Ahorré 3 años para comprar mi boleto de avión. Cuando despegamos, lloré de alegría y miedo. Dejaba todo lo que conocía, pero iba hacia un futuro mejor.",
+              "en": "I saved for 3 years to buy my plane ticket. When we took off, I cried with joy and fear. I was leaving everything I knew, but I was heading toward a better future."
+            },
+            "photo": "testimonials/ana_m_illustration.png",
+            "context": {
+              "es": "Ana migró legalmente con visa de trabajo como enfermera. Hoy ayuda a otros inmigrantes en Toronto.",
+              "en": "Ana migrated legally with a work visa as a nurse. Today she helps other immigrants in Toronto."
+            },
+            "sensitivityLevel": 2
+          }
+        ],
+        "historicalContext": {
+          "es": "La migración aérea se popularizó en los años 1960-70, cuando los vuelos se volvieron más accesibles. Antes, migrar tomaba semanas en barco. Hoy, puedes cruzar el mundo en horas, pero las fronteras burocráticas se han vuelto más complejas.",
+          "en": "Air migration became popular in the 1960s-70s, when flights became more accessible. Before, migrating took weeks by ship. Today, you can cross the world in hours, but bureaucratic borders have become more complex."
+        },
+        "funFacts": [
+          {
+            "es": "El primer vuelo comercial internacional fue en 1919, de Londres a París. Costaba lo mismo que un auto nuevo.",
+            "en": "The first international commercial flight was in 1919, from London to Paris. It cost the same as a new car."
+          },
+          {
+            "es": "Más de 12 millones de personas viajan en avión cada día. Muchos son migrantes visitando familia o yendo a trabajar.",
+            "en": "Over 12 million people fly every day. Many are migrants visiting family or going to work."
+          }
+        ],
+        "reflectionQuestion": {
+          "question": {
+            "es": "Si tuvieras que dejar tu país, ¿qué sentirías en el momento de despegar?",
+            "en": "If you had to leave your country, what would you feel at the moment of takeoff?"
+          },
+          "type": "open",
+          "educationalNote": {
+            "es": "No hay respuesta correcta. Migrar es una mezcla de emociones: esperanza, miedo, emoción, tristeza. Todas son válidas.",
+            "en": "There's no right answer. Migrating is a mix of emotions: hope, fear, excitement, sadness. All are valid."
+          }
+        },
+        "culturalPreparation": {
+          "language": {
+            "basicPhrases": [
+              {
+                "phrase": {
+                  "es": "Hello / Hola",
+                  "en": "Hello / Hola"
+                },
+                "pronunciation": "je-LOU",
+                "context": {
+                  "es": "Saludo básico en inglés",
+                  "en": "Basic greeting in English"
+                }
+              },
+              {
+                "phrase": {
+                  "es": "Where is...? / ¿Dónde está...?",
+                  "en": "Where is...? / ¿Dónde está...?"
+                },
+                "pronunciation": "UER is",
+                "context": {
+                  "es": "Para pedir direcciones",
+                  "en": "To ask for directions"
+                }
+              }
+            ]
+          },
+          "customs": {
+            "dos": [
+              {
+                "es": "Llega temprano al aeropuerto (2-3 horas antes)",
+                "en": "Arrive early at the airport (2-3 hours before)"
+              },
+              {
+                "es": "Ten tus documentos siempre a mano",
+                "en": "Keep your documents always at hand"
+              }
+            ],
+            "donts": [
+              {
+                "es": "No hagas bromas sobre bombas o seguridad",
+                "en": "Don't joke about bombs or security"
+              },
+              {
+                "es": "No lleves líquidos de más de 100ml en equipaje de mano",
+                "en": "Don't carry liquids over 100ml in hand luggage"
+              }
+            ]
+          },
+          "practicalInfo": [
+            {
+              "es": "Proceso: Check-in → Seguridad → Migración → Abordaje → Vuelo → Migración destino → Aduana → Salida",
+              "en": "Process: Check-in → Security → Immigration → Boarding → Flight → Destination Immigration → Customs → Exit"
+            }
+          ]
+        }
+      },
+      "unlockAtCountry": 10,
+      "sensitivityLevel": 1,
+      "requiresParentalControl": false
+    },
+
+    "maritimo": {
+      "id": "maritimo",
+      "type": "maritimo",
+      "name": {
+        "es": "Portal Marítimo",
+        "en": "Maritime Portal",
+        "zh": "海上门户",
+        "hi": "समुद्री पोर्टल",
+        "ar": "بوابة بحرية"
+      },
+      "description": {
+        "es": "Viaja en barco como lo hicieron millones en el siglo XX. Lento pero económico.",
+        "en": "Travel by ship as millions did in the 20th century. Slow but economical."
+      },
+      "visual": {
+        "entranceImage": "portals/maritimo_entrance.png",
+        "tunnelAnimation": "portals/animations/maritimo_tunnel.json",
+        "exitImage": "portals/maritimo_exit.png",
+        "particleEffects": [
+          {
+            "type": "waves",
+            "density": 0.8,
+            "speed": 0.3,
+            "color": "#1E90FF"
+          }
+        ],
+        "colorScheme": {
+          "primary": "#006994",
+          "secondary": "#FFFFFF",
+          "accent": "#FFD700"
+        }
+      },
+      "audio": {
+        "ambient": "audio/portals/ocean_waves.mp3",
+        "enter": "audio/sfx/ship_horn.mp3",
+        "travel": "audio/music/sea_journey.mp3",
+        "exit": "audio/sfx/ship_docking.mp3"
+      },
+      "requirements": {
+        "documents": ["passport"],
+        "minLevel": 5,
+        "completedCountries": [],
+        "familyMembers": [],
+        "specialConditions": []
+      },
+      "costs": {
+        "money": 200,
+        "time": 15,
+        "documents": ["passport"],
+        "emotional": 40
+      },
+      "risks": {
+        "failureChance": 0.1,
+        "consequences": [
+          {
+            "type": "success",
+            "probability": 0.85,
+            "description": {
+              "es": "El viaje fue largo pero llegaste sano y salvo.",
+              "en": "The journey was long but you arrived safe and sound."
+            },
+            "outcome": {
+              "healthChange": -10,
+              "moralChange": 5,
+              "moneyChange": 0
+            }
+          },
+          {
+            "type": "partial_success",
+            "probability": 0.12,
+            "description": {
+              "es": "Tormenta en el mar. El viaje tomó 5 días extra. Te mareas mucho.",
+              "en": "Storm at sea. The journey took 5 extra days. You got very seasick."
+            },
+            "outcome": {
+              "healthChange": -25,
+              "moralChange": -15,
+              "moneyChange": -50
+            }
+          },
+          {
+            "type": "injury",
+            "probability": 0.03,
+            "description": {
+              "es": "Condiciones difíciles en el barco. Te enfermas durante el viaje.",
+              "en": "Difficult conditions on the ship. You get sick during the journey."
+            },
+            "outcome": {
+              "healthChange": -30,
+              "moralChange": -20,
+              "moneyChange": -100
+            }
+          }
+        ],
+        "canRetry": true,
+        "maxAttempts": 2
+      },
+      "educationalContent": {
+        "statistics": [
+          {
+            "label": {
+              "es": "Inmigrantes por barco a América (1880-1930)",
+              "en": "Ship immigrants to America (1880-1930)"
+            },
+            "value": "37 millones",
+            "source": "Ellis Island Foundation",
+            "icon": "icons/stats/ship.png"
+          },
+          {
+            "label": {
+              "es": "Duración promedio del viaje transatlántico (1900)",
+              "en": "Average transatlantic journey duration (1900)"
+            },
+            "value": "12-18 días",
+            "source": "Maritime History"
+          }
+        ],
+        "testimonials": [
+          {
+            "name": "Giuseppe R.",
+            "origin": "Italia",
+            "destination": "Argentina",
+            "year": 1910,
+            "quote": {
+              "es": "Viajamos 200 personas en la bodega del barco. Dormíamos en literas de tres pisos. Pero cantábamos canciones de nuestra tierra. La esperanza nos mantenía vivos.",
+              "en": "We traveled 200 people in the ship's hold. We slept in three-tier bunks. But we sang songs from our homeland. Hope kept us alive."
+            },
+            "photo": "testimonials/giuseppe_r_illustration.png",
+            "context": {
+              "es": "Giuseppe era campesino italiano. Llegó a Buenos Aires y trabajó en la construcción. Sus nietos hoy son argentinos exitosos.",
+              "en": "Giuseppe was an Italian farmer. He arrived in Buenos Aires and worked in construction. His grandchildren are successful Argentinians today."
+            },
+            "sensitivityLevel": 2
+          }
+        ],
+        "historicalContext": {
+          "es": "Entre 1880-1930, más de 60 millones de europeos emigraron a América por barco. Escapaban de guerras, hambre y pobreza. Muchos viajaban en 'tercera clase' en condiciones duras, pero era su única opción. Hoy, estos viajes históricos están en la memoria colectiva de Argentina, Brasil, Uruguay y USA.",
+          "en": "Between 1880-1930, over 60 million Europeans emigrated to America by ship. They escaped wars, famine and poverty. Many traveled in 'third class' in harsh conditions, but it was their only option. Today, these historic journeys are in the collective memory of Argentina, Brazil, Uruguay and USA."
+        },
+        "funFacts": [
+          {
+            "es": "El Titanic iba lleno de inmigrantes en tercera clase buscando una nueva vida en América. Muchos no sobrevivieron.",
+            "en": "The Titanic was full of third-class immigrants seeking a new life in America. Many didn't survive."
+          },
+          {
+            "es": "Ellis Island (Nueva York) procesó 12 millones de inmigrantes entre 1892-1954. Hoy es un museo de la inmigración.",
+            "en": "Ellis Island (New York) processed 12 million immigrants between 1892-1954. Today it's an immigration museum."
+          }
+        ],
+        "reflectionQuestion": {
+          "question": {
+            "es": "¿Dejarías tu país si el viaje tomara 2 semanas en un barco abarrotado?",
+            "en": "Would you leave your country if the journey took 2 weeks on a crowded ship?"
+          },
+          "type": "multiple_choice",
+          "options": [
+            { "es": "Sí, si es mi única opción", "en": "Yes, if it's my only option" },
+            { "es": "No, es demasiado peligroso", "en": "No, it's too dangerous" },
+            { "es": "Depende de qué estoy escapando", "en": "Depends on what I'm escaping from" }
+          ],
+          "educationalNote": {
+            "es": "Millones tomaron esta decisión en el pasado. No había aviones. El barco era la única forma de buscar un futuro mejor.",
+            "en": "Millions made this decision in the past. There were no planes. The ship was the only way to seek a better future."
+          }
+        }
+      },
+      "unlockAtCountry": 5,
+      "sensitivityLevel": 2,
+      "requiresParentalControl": false
+    },
+
+    "clandestino": {
+      "id": "clandestino",
+      "type": "clandestino",
+      "name": {
+        "es": "Ruta Clandestina",
+        "en": "Clandestine Route",
+        "zh": "秘密路线",
+        "hi": "गुप्त मार्ग",
+        "ar": "طريق سري"
+      },
+      "description": {
+        "es": "Un camino peligroso cuando no hay opciones legales. Real pero lleno de riesgos.",
+        "en": "A dangerous path when there are no legal options. Real but full of risks."
+      },
+      "visual": {
+        "entranceImage": "portals/clandestino_entrance.png",
+        "tunnelAnimation": "portals/animations/clandestino_tunnel.json",
+        "exitImage": "portals/clandestino_exit.png",
+        "particleEffects": [
+          {
+            "type": "dust",
+            "density": 0.6,
+            "speed": 0.7,
+            "color": "#808080"
+          }
+        ],
+        "colorScheme": {
+          "primary": "#2F4F4F",
+          "secondary": "#696969",
+          "accent": "#DC143C"
+        }
+      },
+      "audio": {
+        "ambient": "audio/portals/desert_wind.mp3",
+        "enter": "audio/sfx/footsteps_heavy.mp3",
+        "travel": "audio/music/tense_journey.mp3",
+        "exit": "audio/sfx/relief_breath.mp3"
+      },
+      "requirements": {
+        "documents": [],
+        "minLevel": 15,
+        "completedCountries": [],
+        "familyMembers": [],
+        "specialConditions": [
+          {
+            "type": "savings_amount",
+            "value": 300,
+            "description": {
+              "es": "Necesitas dinero para pagar al 'coyote' (traficante de personas)",
+              "en": "You need money to pay the 'coyote' (people smuggler)"
+            }
+          }
+        ]
+      },
+      "costs": {
+        "money": 300,
+        "time": 7,
+        "documents": [],
+        "emotional": 80
+      },
+      "risks": {
+        "failureChance": 0.3,
+        "consequences": [
+          {
+            "type": "success",
+            "probability": 0.6,
+            "description": {
+              "es": "Lograste cruzar después de 7 días difíciles. Estás exhausto pero vivo.",
+              "en": "You managed to cross after 7 difficult days. You're exhausted but alive."
+            },
+            "outcome": {
+              "healthChange": -30,
+              "moralChange": -20,
+              "moneyChange": 0,
+              "storyEvent": "clandestine_trauma"
+            }
+          },
+          {
+            "type": "deportation",
+            "probability": 0.25,
+            "description": {
+              "es": "Te capturaron las autoridades. Pasaste 48 horas detenido antes de ser deportado.",
+              "en": "You were caught by authorities. You spent 48 hours detained before being deported."
+            },
+            "outcome": {
+              "nextCountry": null,
+              "healthChange": -20,
+              "moralChange": -40,
+              "moneyChange": 0,
+              "storyEvent": "detention_experience"
+            }
+          },
+          {
+            "type": "injury",
+            "probability": 0.1,
+            "description": {
+              "es": "El desierto fue brutal. Te deshidrataste severamente. Necesitas atención médica urgente.",
+              "en": "The desert was brutal. You became severely dehydrated. You need urgent medical attention."
+            },
+            "outcome": {
+              "nextCountry": null,
+              "healthChange": -50,
+              "moralChange": -35,
+              "moneyChange": -150,
+              "storyEvent": "medical_emergency"
+            }
+          },
+          {
+            "type": "partial_success",
+            "probability": 0.05,
+            "description": {
+              "es": "El 'coyote' te abandonó a mitad del camino. Lograste llegar por tu cuenta, pero perdiste todo tu dinero.",
+              "en": "The 'coyote' abandoned you halfway. You managed to arrive on your own, but lost all your money."
+            },
+            "outcome": {
+              "healthChange": -40,
+              "moralChange": -30,
+              "moneyChange": -300,
+              "lostItems": ["money"],
+              "storyEvent": "abandoned_by_smuggler"
+            }
+          }
+        ],
+        "canRetry": true,
+        "maxAttempts": 2
+      },
+      "educationalContent": {
+        "statistics": [
+          {
+            "label": {
+              "es": "Personas desaparecidas en el desierto USA-México (2000-2023)",
+              "en": "Missing persons in USA-Mexico desert (2000-2023)"
+            },
+            "value": "8,000+",
+            "source": "International Organization for Migration (IOM)",
+            "icon": "icons/stats/warning.png"
+          },
+          {
+            "label": {
+              "es": "Costo promedio de cruce clandestino",
+              "en": "Average cost of clandestine crossing"
+            },
+            "value": "$5,000-$15,000 USD",
+            "source": "Humanitarian Border Program 2023"
+          }
+        ],
+        "testimonials": [
+          {
+            "name": "Anónimo",
+            "origin": "Honduras",
+            "destination": "USA",
+            "year": 2021,
+            "quote": {
+              "es": "Caminamos 5 días por el desierto. Sin agua suficiente. Vi a gente morir. Nadie debería tener que hacer esto. Pero cuando huyes de la muerte, arriesgas tu vida por una oportunidad.",
+              "en": "We walked 5 days through the desert. Without enough water. I saw people die. No one should have to do this. But when you're fleeing death, you risk your life for a chance."
+            },
+            "photo": "testimonials/anonymous_silhouette.png",
+            "context": {
+              "es": "Este testimonio representa a miles. Muchos prefieren permanecer anónimos por miedo a represalias.",
+              "en": "This testimony represents thousands. Many prefer to remain anonymous for fear of reprisals."
+            },
+            "sensitivityLevel": 5
+          }
+        ],
+        "historicalContext": {
+          "es": "Las rutas clandestinas existen porque las opciones legales son limitadas o inexistentes para muchas personas. No es una elección, es una necesidad desesperada. Desde los años 90, más de 8,000 personas han muerto intentando cruzar la frontera USA-México. El Mediterráneo es aún más mortal: más de 25,000 muertes desde 2014. IMPORTANTE: Este no es el camino correcto. Todos deberían tener formas seguras y legales de migrar.",
+          "en": "Clandestine routes exist because legal options are limited or non-existent for many people. It's not a choice, it's a desperate necessity. Since the 1990s, over 8,000 people have died trying to cross the USA-Mexico border. The Mediterranean is even deadlier: over 25,000 deaths since 2014. IMPORTANT: This is not the right path. Everyone should have safe and legal ways to migrate."
+        },
+        "funFacts": [],
+        "reflectionQuestion": {
+          "question": {
+            "es": "¿Por qué crees que las personas arriesgan su vida de esta manera?",
+            "en": "Why do you think people risk their lives this way?"
+          },
+          "type": "open",
+          "educationalNote": {
+            "es": "Nadie quiere migrar de forma peligrosa. Lo hacen porque: 1) Están escapando de violencia extrema, 2) No tienen visa ni forma legal de migrar, 3) Su familia está muriendo de hambre, 4) No tienen nada que perder. La migración segura y legal debería ser un derecho humano.",
+            "en": "No one wants to migrate dangerously. They do it because: 1) They're escaping extreme violence, 2) They have no visa or legal way to migrate, 3) Their family is starving, 4) They have nothing to lose. Safe and legal migration should be a human right."
+          }
+        }
+      },
+      "unlockAtCountry": 20,
+      "sensitivityLevel": 5,
+      "requiresParentalControl": true
+    }
+  }
+}

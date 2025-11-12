@@ -1,0 +1,631 @@
+{
+  "family": {
+    "marco": {
+      "id": "marco",
+      "type": "protagonist",
+      "species": "fox",
+      "name": {
+        "es": "Marco",
+        "en": "Marco",
+        "zh": "马可",
+        "hi": "मार्को",
+        "ar": "ماركو"
+      },
+      "title": {
+        "es": "El Agricultor Valiente",
+        "en": "The Brave Farmer",
+        "zh": "勇敢的农民",
+        "hi": "बहादुर किसान",
+        "ar": "المزارع الشجاع"
+      },
+      "age": 28,
+      "origin": {
+        "country": "mexico",
+        "region": "Michoacán",
+        "es": "Un pequeño pueblo en Michoacán, México",
+        "en": "A small town in Michoacán, Mexico"
+      },
+      "occupation": {
+        "es": "Agricultor",
+        "en": "Farmer",
+        "zh": "农民",
+        "hi": "किसान",
+        "ar": "مزارع"
+      },
+      "personality": {
+        "es": "Valiente, trabajador, optimista, protector de su familia. Siempre ve el lado positivo incluso en momentos difíciles.",
+        "en": "Brave, hardworking, optimistic, protective of his family. Always sees the positive side even in difficult times."
+      },
+      "backstory": {
+        "es": "Marco cultivaba aguacates en Michoacán hasta que la violencia del narco llegó a su pueblo. Decidió emprender un viaje alrededor del mundo para aprender y encontrar un lugar seguro para su familia. Su sueño es tener una granja donde todos puedan vivir en paz.",
+        "en": "Marco grew avocados in Michoacán until cartel violence reached his town. He decided to journey around the world to learn and find a safe place for his family. His dream is to have a farm where everyone can live in peace."
+      },
+      "motivations": [
+        {
+          "es": "Proteger a su familia",
+          "en": "Protect his family"
+        },
+        {
+          "es": "Encontrar un lugar seguro para vivir",
+          "en": "Find a safe place to live"
+        },
+        {
+          "es": "Aprender del mundo para ser mejor persona",
+          "en": "Learn from the world to become a better person"
+        }
+      ],
+      "appearance": {
+        "fur": "#FF6347",
+        "outfit": "Blue overalls with patches, red cap with 'M', work boots",
+        "accessories": "Backpack with country flag pins, black mustache",
+        "height": "medium",
+        "build": "strong but not bulky"
+      },
+      "abilities": {
+        "gameplay": {
+          "specialAbility": "punch",
+          "description": {
+            "es": "Golpe Potente - Marco puede dar un golpe devastador al impactar",
+            "en": "Powerful Punch - Marco can deliver a devastating blow upon impact"
+          },
+          "activation": "automatic_on_impact",
+          "effectRadius": 30,
+          "damageMultiplier": 1.5
+        },
+        "realWorld": [
+          {
+            "es": "Experto en agricultura",
+            "en": "Expert in agriculture"
+          },
+          {
+            "es": "Gran resistencia física",
+            "en": "Great physical endurance"
+          },
+          {
+            "es": "Liderazgo natural",
+            "en": "Natural leadership"
+          }
+        ]
+      },
+      "voiceStyle": {
+        "es": "Voz cálida y determinada, acento mexicano",
+        "en": "Warm and determined voice, Mexican accent"
+      },
+      "inspiredBy": "Mario (Nintendo) - but 100% original character"
+    },
+
+    "luis": {
+      "id": "luis",
+      "type": "ally",
+      "species": "fox",
+      "name": {
+        "es": "Luis",
+        "en": "Luis",
+        "zh": "路易斯",
+        "hi": "लुइस",
+        "ar": "لويس"
+      },
+      "title": {
+        "es": "El Hermano Leal",
+        "en": "The Loyal Brother",
+        "zh": "忠诚的兄弟",
+        "hi": "वफादार भाई",
+        "ar": "الأخ المخلص"
+      },
+      "age": 25,
+      "origin": {
+        "country": "mexico",
+        "region": "Michoacán",
+        "es": "Mismo pueblo que Marco",
+        "en": "Same town as Marco"
+      },
+      "occupation": {
+        "es": "Mecánico / Ingeniero",
+        "en": "Mechanic / Engineer",
+        "zh": "机械师",
+        "hi": "मैकेनिक",
+        "ar": "ميكانيكي"
+      },
+      "personality": {
+        "es": "Cauteloso pero leal, inteligente, estratega. Aunque tímido, siempre apoya a su hermano en momentos cruciales.",
+        "en": "Cautious but loyal, intelligent, strategic. Though shy, always supports his brother in crucial moments."
+      },
+      "backstory": {
+        "es": "Luis se quedó en México intentando proteger la granja familiar. Cuando las cosas empeoraron, decidió buscar a Marco en Europa. Se reunieron en España y desde entonces viajan juntos.",
+        "en": "Luis stayed in Mexico trying to protect the family farm. When things got worse, he decided to find Marco in Europe. They reunited in Spain and have traveled together since."
+      },
+      "relationship": {
+        "marco": {
+          "es": "Hermano menor, admiración y lealtad incondicional",
+          "en": "Younger brother, admiration and unconditional loyalty"
+        }
+      },
+      "appearance": {
+        "fur": "#32CD32",
+        "outfit": "Blue overalls, green cap with 'L', tool belt",
+        "accessories": "Compass, rolled maps, wrench",
+        "height": "taller than Marco",
+        "build": "slimmer and lankier"
+      },
+      "abilities": {
+        "gameplay": {
+          "specialAbility": "jump",
+          "description": {
+            "es": "Salto Alto - Luis puede alcanzar lugares difíciles con su salto potente",
+            "en": "High Jump - Luis can reach difficult places with his powerful jump"
+          },
+          "activation": "tap_during_flight",
+          "jumpHeight": 150,
+          "precision": "high"
+        },
+        "realWorld": [
+          {
+            "es": "Ingeniero mecánico talentoso",
+            "en": "Talented mechanical engineer"
+          },
+          {
+            "es": "Navegación y orientación",
+            "en": "Navigation and orientation"
+          },
+          {
+            "es": "Resolución de problemas",
+            "en": "Problem solving"
+          }
+        ]
+      },
+      "voiceStyle": {
+        "es": "Voz suave pero firme, acento mexicano",
+        "en": "Soft but firm voice, Mexican accent"
+      },
+      "inspiredBy": "Luigi (Nintendo) - but 100% original character"
+    },
+
+    "patricia": {
+      "id": "patricia",
+      "type": "ally",
+      "species": "rabbit",
+      "name": {
+        "es": "Patricia",
+        "en": "Patricia",
+        "zh": "帕特里夏",
+        "hi": "पेट्रीसिया",
+        "ar": "باتريسيا"
+      },
+      "title": {
+        "es": "La Guerrera Independiente",
+        "en": "The Independent Warrior",
+        "zh": "独立战士",
+        "hi": "स्वतंत्र योद्धा",
+        "ar": "المحاربة المستقلة"
+      },
+      "age": 27,
+      "origin": {
+        "country": "mexico",
+        "region": "Ciudad de México",
+        "es": "Ciudad de México, México",
+        "en": "Mexico City, Mexico"
+      },
+      "occupation": {
+        "es": "Intérprete / Comunicadora",
+        "en": "Interpreter / Communicator",
+        "zh": "翻译",
+        "hi": "अनुवादक",
+        "ar": "مترجمة"
+      },
+      "personality": {
+        "es": "Fuerte, independiente, empática, apasionada por los idiomas. No necesita ser rescatada, ella rescata a otros.",
+        "en": "Strong, independent, empathetic, passionate about languages. Doesn't need rescuing, she rescues others."
+      },
+      "backstory": {
+        "es": "Patricia trabajaba como intérprete en la Ciudad de México. Al escuchar sobre el viaje de Marco, decidió unirse para documentar las historias de migrantes alrededor del mundo. Se enamoraron durante el viaje y se convirtieron en pareja.",
+        "en": "Patricia worked as an interpreter in Mexico City. Hearing about Marco's journey, she decided to join to document migrant stories around the world. They fell in love during the journey and became partners."
+      },
+      "relationship": {
+        "marco": {
+          "es": "Pareja romántica, apoyo emocional y estratégico",
+          "en": "Romantic partner, emotional and strategic support"
+        },
+        "luis": {
+          "es": "Cuñada, relación de confianza y amistad",
+          "en": "Sister-in-law, trusting friendship"
+        }
+      },
+      "appearance": {
+        "fur": "#FF69B4",
+        "outfit": "Practical jeans, travel jacket, small crown headband (subtle)",
+        "accessories": "Multilingual phrase book, camera, small tiara as headband",
+        "height": "medium",
+        "build": "athletic and strong",
+        "note": "NOT a damsel in distress - she's a hero"
+      },
+      "abilities": {
+        "gameplay": {
+          "specialAbility": "sonic",
+          "description": {
+            "es": "Onda Sónica - Patricia grita con fuerza, derribando estructuras en un área",
+            "en": "Sonic Wave - Patricia shouts forcefully, toppling structures in an area"
+          },
+          "activation": "tap_during_flight",
+          "effectRadius": 120,
+          "knockbackForce": "high"
+        },
+        "realWorld": [
+          {
+            "es": "Habla 5 idiomas fluidamente",
+            "en": "Speaks 5 languages fluently"
+          },
+          {
+            "es": "Diplomacia y negociación",
+            "en": "Diplomacy and negotiation"
+          },
+          {
+            "es": "Documentalista social",
+            "en": "Social documentarian"
+          }
+        ]
+      },
+      "voiceStyle": {
+        "es": "Voz fuerte y clara, acento mexicano urbano",
+        "en": "Strong and clear voice, urban Mexican accent"
+      },
+      "inspiredBy": "Princess Peach (Nintendo) - but reimagined as strong, independent hero"
+    },
+
+    "teo": {
+      "id": "teo",
+      "type": "ally",
+      "species": "raccoon",
+      "name": {
+        "es": "Teo",
+        "en": "Teo",
+        "zh": "泰奥",
+        "hi": "टियो",
+        "ar": "تيو"
+      },
+      "title": {
+        "es": "El Niño de la Esperanza",
+        "en": "The Child of Hope",
+        "zh": "希望之子",
+        "hi": "आशा का बच्चा",
+        "ar": "طفل الأمل"
+      },
+      "age": 10,
+      "origin": {
+        "country": "honduras",
+        "region": "Tegucigalpa",
+        "es": "Tegucigalpa, Honduras",
+        "en": "Tegucigalpa, Honduras"
+      },
+      "occupation": {
+        "es": "Estudiante (sueña con ser científico)",
+        "en": "Student (dreams of being a scientist)",
+        "zh": "学生",
+        "hi": "छात्र",
+        "ar": "طالب"
+      },
+      "personality": {
+        "es": "Inocente, curioso, resiliente, lleno de esperanza. Representa a los niños migrantes (Dreamers) que buscan oportunidades.",
+        "en": "Innocent, curious, resilient, full of hope. Represents migrant children (Dreamers) seeking opportunities."
+      },
+      "backstory": {
+        "es": "Teo viajaba con su familia desde Honduras cuando se separaron en un mercado africano. Marco y Patricia lo encontraron solo y decidieron ayudarlo a encontrar a su familia. Mientras tanto, Teo se convirtió en parte de la familia de viajeros.",
+        "en": "Teo was traveling with his family from Honduras when they got separated in an African market. Marco and Patricia found him alone and decided to help him find his family. Meanwhile, Teo became part of the travelers' family."
+      },
+      "relationship": {
+        "marco": {
+          "es": "Figura paterna adoptiva, protección",
+          "en": "Adoptive father figure, protection"
+        },
+        "patricia": {
+          "es": "Figura materna adoptiva, cuidado",
+          "en": "Adoptive mother figure, care"
+        }
+      },
+      "appearance": {
+        "fur": "gray and black (raccoon markings)",
+        "outfit": "Mushroom-spotted cap, small backpack, simple clothes",
+        "accessories": "Notebook for drawings, toy compass",
+        "height": "small (child)",
+        "build": "small and cute"
+      },
+      "abilities": {
+        "gameplay": {
+          "specialAbility": "hope_burst",
+          "description": {
+            "es": "Explosión de Esperanza - Teo libera una onda de energía positiva que afecta un área grande",
+            "en": "Hope Burst - Teo releases a wave of positive energy affecting a large area"
+          },
+          "activation": "tap_during_flight",
+          "effectRadius": 100,
+          "effectType": "area_of_effect",
+          "visualEffect": "golden sparkles"
+        },
+        "realWorld": [
+          {
+            "es": "Curiosidad científica innata",
+            "en": "Innate scientific curiosity"
+          },
+          {
+            "es": "Resiliencia emocional",
+            "en": "Emotional resilience"
+          },
+          {
+            "es": "Optimismo contagioso",
+            "en": "Contagious optimism"
+          }
+        ]
+      },
+      "voiceStyle": {
+        "es": "Voz infantil alegre, acento hondureño",
+        "en": "Cheerful child voice, Honduran accent"
+      },
+      "theme": "Represents Dreamers and migrant children seeking better opportunities",
+      "inspiredBy": "Toad (Nintendo) - but reimagined as migrant child with powerful story"
+    },
+
+    "xolo": {
+      "id": "xolo",
+      "type": "mentor",
+      "species": "axolotl",
+      "name": {
+        "es": "Xolo",
+        "en": "Xolo",
+        "zh": "索洛",
+        "hi": "ज़ोलो",
+        "ar": "زولو"
+      },
+      "title": {
+        "es": "El Guía Sabio",
+        "en": "The Wise Guide",
+        "zh": "智慧向导",
+        "hi": "बुद्धिमान मार्गदर्शक",
+        "ar": "الدليل الحكيم"
+      },
+      "age": "Ancient (appears old and wise)",
+      "origin": {
+        "country": "mexico",
+        "region": "Xochimilco",
+        "es": "Los canales de Xochimilco, Ciudad de México",
+        "en": "The canals of Xochimilco, Mexico City"
+      },
+      "occupation": {
+        "es": "Curandero / Guía Espiritual",
+        "en": "Healer / Spiritual Guide",
+        "zh": "治疗师",
+        "hi": "चिकित्सक",
+        "ar": "معالج"
+      },
+      "personality": {
+        "es": "Sabio, tranquilo, paciente, sanador. Habla en acertijos y enseña lecciones de vida. Representa la sabiduría ancestral mexicana.",
+        "en": "Wise, calm, patient, healer. Speaks in riddles and teaches life lessons. Represents ancient Mexican wisdom."
+      },
+      "backstory": {
+        "es": "Xolo es un ajolote ancestral que ha vivido en los canales de Xochimilco durante siglos. Conoce historias de todos los viajeros que han pasado por México. Se une a la familia en Oceanía para guiarlos en la última parte de su viaje.",
+        "en": "Xolo is an ancient axolotl who has lived in the Xochimilco canals for centuries. He knows stories of all travelers who have passed through Mexico. He joins the family in Oceania to guide them in the final part of their journey."
+      },
+      "relationship": {
+        "everyone": {
+          "es": "Mentor y guía espiritual de toda la familia",
+          "en": "Mentor and spiritual guide to the whole family"
+        }
+      },
+      "appearance": {
+        "skin": "#FF69B4",
+        "features": "Pink with external gills (feathery), bipedal, long tail",
+        "outfit": "Small cloth bag with medicinal plants",
+        "accessories": "Amulet with Aztec symbols",
+        "height": "medium",
+        "build": "chubby and cute but wise"
+      },
+      "abilities": {
+        "gameplay": {
+          "specialAbility": "tongue_grab",
+          "description": {
+            "es": "Lengua de Agarre - Xolo extiende su lengua para agarrar y jalar bloques o estructuras",
+            "en": "Tongue Grab - Xolo extends his tongue to grab and pull blocks or structures"
+          },
+          "activation": "swipe_during_flight",
+          "tongueLength": 150,
+          "pullForce": "high",
+          "canGrabMultiple": true
+        },
+        "realWorld": [
+          {
+            "es": "Conocimiento de plantas medicinales",
+            "en": "Knowledge of medicinal plants"
+          },
+          {
+            "es": "Sabiduría ancestral",
+            "en": "Ancestral wisdom"
+          },
+          {
+            "es": "Regeneración (como los ajolotes reales)",
+            "en": "Regeneration (like real axolotls)"
+          }
+        ]
+      },
+      "voiceStyle": {
+        "es": "Voz profunda y pausada, acento mexicano antiguo",
+        "en": "Deep and slow voice, ancient Mexican accent"
+      },
+      "culturalSignificance": {
+        "es": "El ajolote es un símbolo de México, endémico de Xochimilco. Está en peligro de extinción, lo que añade un mensaje de conservación.",
+        "en": "The axolotl is a symbol of Mexico, endemic to Xochimilco. It's endangered, adding a conservation message."
+      },
+      "inspiredBy": "Yoshi (Nintendo) + Aztec mythology - 100% original character",
+      "nahuatlName": "Xolotl (Aztec god of lightning and death, who transforms into an axolotl)"
+    }
+  },
+
+  "villains": {
+    "don_bowser": {
+      "id": "don_bowser",
+      "type": "antagonist",
+      "species": "turtle",
+      "name": {
+        "es": "Don Bowser",
+        "en": "Don Bowser",
+        "zh": "鲍泽老板",
+        "hi": "डॉन बाउज़र",
+        "ar": "دون باوزر"
+      },
+      "title": {
+        "es": "El Guardián del Reino",
+        "en": "The Kingdom's Guardian",
+        "zh": "王国守护者",
+        "hi": "साम्राज्य का रक्षक",
+        "ar": "حارس المملكة"
+      },
+      "age": 65,
+      "origin": {
+        "country": "usa",
+        "region": "The Dream Kingdom",
+        "es": "El Reino Soñado (ubicación abstracta)",
+        "en": "The Dream Kingdom (abstract location)"
+      },
+      "occupation": {
+        "es": "Empresario / Magnate Inmobiliario",
+        "en": "Businessman / Real Estate Mogul",
+        "zh": "商人",
+        "hi": "व्यवसायी",
+        "ar": "رجل أعمال"
+      },
+      "personality": {
+        "es": "Autoritario, egocéntrico, proteccionista extremo. Cree que está 'protegiendo' su reino pero en realidad lo está aislando. NO es malvado puro - tiene redención al final.",
+        "en": "Authoritarian, egocentric, extreme protectionist. Believes he's 'protecting' his kingdom but is actually isolating it. NOT purely evil - has redemption at the end."
+      },
+      "backstory": {
+        "es": "Don Bowser construyó un imperio inmobiliario y se convirtió en el guardián del Reino Soñado. Cerró las fronteras creyendo que protegería la riqueza del reino, sin entender que la diversidad lo enriquecería más.",
+        "en": "Don Bowser built a real estate empire and became the guardian of the Dream Kingdom. He closed the borders believing he would protect the kingdom's wealth, without understanding that diversity would enrich it more."
+      },
+      "appearance": {
+        "shell": "#FF8C00",
+        "features": "Orange turtle with spiky shell, exaggerated blonde combover hair",
+        "outfit": "Business suit over shell, long red tie",
+        "accessories": "Gold watch, gold rings, small crown",
+        "height": "large and imposing",
+        "build": "bulky but comical, not frightening"
+      },
+      "satiricalLevel": "9-10",
+      "iconicPhrases": {
+        "es": [
+          "¡Haz mi reino grande otra vez!",
+          "Nadie construye muros mejor que yo, créeme",
+          "Soy muy inteligente, la tortuga más inteligente",
+          "Este es MI reino, y yo decido quién entra",
+          "Los viajeros solo traen problemas... ¿o no?"
+        ],
+        "en": [
+          "Make my kingdom great again!",
+          "Nobody builds walls better than me, believe me",
+          "I'm very smart, the smartest turtle",
+          "This is MY kingdom, and I decide who enters",
+          "Travelers only bring problems... or do they?"
+        ]
+      },
+      "characterArc": {
+        "beginning": {
+          "es": "Villano que cierra fronteras y construye muros",
+          "en": "Villain who closes borders and builds walls"
+        },
+        "middle": {
+          "es": "Enfrenta a Marco y la familia, intenta detenerlos",
+          "en": "Confronts Marco and family, tries to stop them"
+        },
+        "end": {
+          "es": "Aprende que los migrantes enriquecen las sociedades, abre las puertas del reino",
+          "en": "Learns that migrants enrich societies, opens the kingdom's doors"
+        }
+      },
+      "redemption": {
+        "es": "Al final del juego, Marco muestra a Don Bowser los 35 objetos culturales que coleccionó. Don Bowser se da cuenta de que cada cultura tiene algo valioso que aportar. Decide abrir las fronteras y dar la bienvenida a viajeros.",
+        "en": "At the end of the game, Marco shows Don Bowser the 35 cultural objects he collected. Don Bowser realizes that each culture has something valuable to contribute. He decides to open the borders and welcome travelers."
+      },
+      "bossBattle": {
+        "country": 35,
+        "structure": "Massive golden castle with multiple phases",
+        "phases": 3,
+        "phase1": {
+          "es": "Destruir muros exteriores del castillo",
+          "en": "Destroy outer castle walls"
+        },
+        "phase2": {
+          "es": "Derribar torres de vigilancia con Koopas HIELO",
+          "en": "Topple watch towers with HIELO Koopas"
+        },
+        "phase3": {
+          "es": "Confrontación final - Don Bowser se rinde al ver la determinación de la familia",
+          "en": "Final confrontation - Don Bowser surrenders seeing the family's determination"
+        }
+      },
+      "themeMessage": {
+        "es": "Representa el sistema anti-migrante y el miedo al 'otro'. Su redención muestra que el cambio es posible con educación y empatía.",
+        "en": "Represents the anti-migrant system and fear of the 'other'. His redemption shows that change is possible with education and empathy."
+      },
+      "inspiredBy": "Bowser (Nintendo) + Donald Trump satire (level 9-10)",
+      "note": "Satirical character, not a direct representation. Appropriate for ages 12+ with parental guidance."
+    }
+  },
+
+  "enemies": {
+    "koopa_hielo": {
+      "id": "koopa_hielo",
+      "type": "obstacle",
+      "species": "turtle",
+      "name": {
+        "es": "Koopa HIELO",
+        "en": "HIELO Koopa",
+        "zh": "冰龟",
+        "hi": "बर्फ कोपा",
+        "ar": "كوبا الجليد"
+      },
+      "description": {
+        "es": "Guardias con uniformes y insignias de hielo. Representan al sistema de control migratorio (ICE), no a personas individuales.",
+        "en": "Guards with uniforms and ice insignias. Represent the immigration control system (ICE), not individual people."
+      },
+      "role": "passive_obstacle",
+      "behavior": {
+        "es": "Estaticos, no atacan activamente. Son obstáculos que deben ser evitados o desplazados (sin violencia).",
+        "en": "Stationary, don't actively attack. They are obstacles that must be avoided or displaced (without violence)."
+      },
+      "appearance": {
+        "shell": "#87CEEB",
+        "features": "Ice-blue shell with crystalline patterns",
+        "outfit": "Simple guard uniform (no specific agency markings)",
+        "badge": "Ice crystal insignia (ICE reference)",
+        "height": "smaller than heroes",
+        "build": "standard turtle"
+      },
+      "gameplay": {
+        "health": 2,
+        "behavior": "stationary",
+        "whenHit": {
+          "es": "Caen fuera de la pantalla (sin violencia gráfica)",
+          "en": "Fall off-screen (no graphic violence)"
+        },
+        "visualEffect": "Cloud of dust, stars (cartoon style)",
+        "sound": "Comical 'whoosh' sound"
+      },
+      "ethicalDesign": {
+        "es": "No se representan como malvados. Son parte del 'sistema', no villanos individuales. No hay violencia contra ellos, solo son desplazados.",
+        "en": "Not represented as evil. They are part of the 'system', not individual villains. No violence against them, just displaced."
+      },
+      "themeMessage": {
+        "es": "Representan las barreras sistémicas, no personas. El juego critica el sistema, no a los individuos.",
+        "en": "Represent systemic barriers, not people. The game criticizes the system, not individuals."
+      },
+      "count": "Appear in countries 21-35 (destroy mode)",
+      "inspiredBy": "Koopa Troopers (Nintendo) + ICE system representation"
+    }
+  },
+
+  "metadata": {
+    "totalCharacters": 7,
+    "familyMembers": 5,
+    "villains": 1,
+    "enemies": 1,
+    "allOriginal": true,
+    "copyrightCompliant": true,
+    "note": "All characters are 100% original. Inspired by Mario Bros aesthetics but with unique designs, names, professions, and stories."
+  }
+}

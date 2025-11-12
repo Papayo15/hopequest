@@ -1,0 +1,101 @@
+/**
+ * Filipinas - País 35 (FINAL)
+ */
+
+import { Country } from './types';
+
+export const filipinas: Country = {
+  id: 'filipinas',
+  name: 'Filipinas',
+  region: 'Asia',
+  flag: '🇵🇭',
+  coordinates: { latitude: 12.8797, longitude: 121.774 },
+  description: 'Nación de migrantes. OFWs (trabajadores filipinos) en todo el mundo. PAÍS FINAL.',
+  culturalFacts: [
+    '7,641 islas en el archipiélago',
+    'Únicopaís católico de Asia',
+    'Idiomas: filipino, inglés y 170 lenguas',
+    'Jeepneys coloridos, transporte icónico',
+  ],
+  migrationContext: {
+    reasons: ['Trabajo en el exterior (OFW)', 'Remesas vitales para economía', 'Enfermeras y cuidadores', 'Oportunidades limitadas'],
+    challenges: ['Separación familiar', 'Explotación laboral', 'Nostalgia y soledad', 'Discriminación'],
+    destinations: ['Estados Unidos', 'Arabia Saudita', 'Emiratos Árabes', 'Canadá', 'Australia'],
+    statistics: { emigrants: '10 millones de filipinos fuera (OFWs)', remittances: '$36 mil millones USD (10% del PIB)' },
+  },
+  activities: [
+    {
+      id: 'filipinas_trivia',
+      type: 'trivia',
+      title: 'Perla de Oriente',
+      description: 'Conoce Filipinas',
+      difficulty: 'medium',
+      questions: [
+        {
+          question: '¿Cuántas islas tiene Filipinas?',
+          options: ['100', '1,000', '7,641', '10,000'],
+          correctAnswer: 2,
+          explanation: 'Filipinas está compuesto por 7,641 islas.',
+          difficulty: 'hard',
+        },
+        {
+          question: '¿Qué son los OFWs?',
+          options: ['Una comida', 'Trabajadores filipinos en el exterior', 'Un festival', 'Un transporte'],
+          correctAnswer: 1,
+          explanation: 'OFW significa Overseas Filipino Workers, trabajadores filipinos en el exterior.',
+          difficulty: 'medium',
+        },
+        {
+          question: '¿Cuántos filipinos trabajan en el exterior?',
+          options: ['2 millones', '5 millones', '10 millones', '20 millones'],
+          correctAnswer: 2,
+          explanation: 'Aproximadamente 10 millones de filipinos trabajan en el exterior.',
+          difficulty: 'medium',
+        },
+      ],
+      rewards: { stars: 3, money: 220, experience: 170 },
+    },
+    {
+      id: 'filipinas_puzzle',
+      type: 'puzzle',
+      title: 'Banaue Rice Terraces',
+      description: 'Arma las terrazas de arroz',
+      difficulty: 'hard',
+      imageUrl: 'banaue_terraces.jpg',
+      gridSize: 5,
+      rewards: { stars: 3, money: 180, experience: 140 },
+    },
+    {
+      id: 'filipinas_memory',
+      type: 'memory',
+      title: 'Cultura Filipina',
+      description: 'Encuentra parejas',
+      difficulty: 'medium',
+      pairs: [
+        { id: 1, content: '🏝️' },
+        { id: 2, content: '🚌' },
+        { id: 3, content: '⛪' },
+        { id: 4, content: '🌴' },
+        { id: 5, content: '🎭' },
+        { id: 6, content: '🥥' },
+        { id: 7, content: '🌊' },
+      ],
+      rewards: { stars: 3, money: 160, experience: 120 },
+    },
+  ],
+  requiredStats: {
+    minMoney: 800,
+    minHealth: 80,
+    minMoral: 75,
+    requiredDocuments: ['passport', 'visa'],
+  },
+  availablePortals: ['aereo', 'maritimo'],
+  unlockConditions: {
+    previousCountries: ['india'],
+    minStars: 89,
+  },
+  specialEvent: {
+    type: 'special_story',
+    description: '¡FINAL DEL JUEGO! Has completado el viaje alrededor del mundo. Reflexión sobre migración y esperanza.',
+  },
+};

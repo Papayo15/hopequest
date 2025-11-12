@@ -1,0 +1,58 @@
+{
+  "expo": {
+    "name": "Hope Quest",
+    "slug": "hopequest",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#4A90E2"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hopequest.app",
+      "buildNumber": "1.0.0",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Esta app puede usar el micrófono para funciones interactivas de audio.",
+        "NSCameraUsageDescription": "Esta app puede usar la cámara para funciones futuras de realidad aumentada."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#4A90E2"
+      },
+      "package": "com.hopequest.app",
+      "versionCode": 1,
+      "permissions": [
+        "INTERNET",
+        "ACCESS_NETWORK_STATE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-localization",
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Permitir que $(PRODUCT_NAME) acceda a tu micrófono."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "hope-quest-2025"
+      }
+    },
+    "owner": "hopequest"
+  }
+}

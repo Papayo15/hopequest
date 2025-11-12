@@ -1,0 +1,422 @@
+{
+  "id": "mexico",
+  "name": {
+    "es": "México",
+    "en": "Mexico",
+    "zh": "墨西哥",
+    "hi": "मेक्सिको",
+    "ar": "المكسيك"
+  },
+  "continent": "americas",
+  "difficulty": 1,
+  "order": 1,
+
+  "culturalObject": {
+    "id": "calavera_azucar",
+    "name": {
+      "es": "Calavera de Azúcar",
+      "en": "Sugar Skull",
+      "zh": "糖骷髅",
+      "hi": "चीनी की खोपड़ी",
+      "ar": "جمجمة السكر"
+    },
+    "description": {
+      "es": "Decoración tradicional del Día de Muertos, hecha de azúcar colorida. Representa la celebración de la vida y la muerte como parte natural de la existencia.",
+      "en": "Traditional Day of the Dead decoration, made of colorful sugar. Represents the celebration of life and death as a natural part of existence."
+    },
+    "funFact": {
+      "es": "¡Se hacen para honrar a los seres queridos que ya no están con nosotros! Cada calavera es única y lleva el nombre de una persona especial.",
+      "en": "They're made to honor loved ones who are no longer with us! Each skull is unique and carries the name of a special person."
+    },
+    "image": "objects/mexico_calavera.png",
+    "model3D": "objects/mexico_calavera.glb"
+  },
+
+  "adventure": {
+    "intro": {
+      "dialogue": {
+        "es": "Este es mi hogar, México. Aquí nací y crecí en mi granja de aguacates en Michoacán. Hay tanto que aprender sobre mi propio país antes de explorar el mundo.",
+        "en": "This is my home, Mexico. Here I was born and grew up on my avocado farm in Michoacán. There's so much to learn about my own country before exploring the world."
+      },
+      "character": "marco",
+      "animation": "marco_intro.json",
+      "duration": 8
+    },
+
+    "locations": [
+      {
+        "id": "ciudad_mexico",
+        "name": {
+          "es": "Ciudad de México",
+          "en": "Mexico City"
+        },
+        "background": "backgrounds/mexico_city.jpg",
+        "interactiveElements": [
+          {
+            "id": "angel_independencia",
+            "type": "monument",
+            "name": {
+              "es": "Ángel de la Independencia",
+              "en": "Angel of Independence"
+            },
+            "position": { "x": 400, "y": 300 },
+            "fact": {
+              "es": "Este monumento dorado fue construido en 1910 para celebrar 100 años de la independencia de México. Representa la libertad y la victoria.",
+              "en": "This golden monument was built in 1910 to celebrate 100 years of Mexico's independence. It represents freedom and victory."
+            },
+            "image": "monuments/angel.png",
+            "sound": "sfx/discovery.mp3"
+          },
+          {
+            "id": "zocalo",
+            "type": "monument",
+            "name": {
+              "es": "El Zócalo",
+              "en": "The Zócalo"
+            },
+            "position": { "x": 200, "y": 400 },
+            "fact": {
+              "es": "¡Es una de las plazas más grandes del mundo! Aquí se han celebrado eventos importantes durante más de 500 años.",
+              "en": "It's one of the largest plazas in the world! Important events have been celebrated here for over 500 years."
+            },
+            "image": "monuments/zocalo.png"
+          },
+          {
+            "id": "xochimilco",
+            "type": "object",
+            "name": {
+              "es": "Canales de Xochimilco",
+              "en": "Xochimilco Canals"
+            },
+            "position": { "x": 600, "y": 350 },
+            "fact": {
+              "es": "Los canales de Xochimilco son el hogar de los ajolotes, una especie única de México. ¡Como Xolo, mi compañero!",
+              "en": "The Xochimilco canals are home to axolotls, a species unique to Mexico. Like Xolo, my companion!"
+            },
+            "image": "nature/xochimilco.png"
+          }
+        ],
+        "activity": {
+          "id": "mexico_activity_1",
+          "type": "trivia",
+          "config": {
+            "question": {
+              "es": "¿Cuál es la capital de México?",
+              "en": "What is the capital of Mexico?"
+            },
+            "options": [
+              {
+                "es": "Ciudad de México",
+                "en": "Mexico City"
+              },
+              {
+                "es": "Guadalajara",
+                "en": "Guadalajara"
+              },
+              {
+                "es": "Monterrey",
+                "en": "Monterrey"
+              }
+            ],
+            "correctAnswer": 0,
+            "explanation": {
+              "es": "¡Correcto! Ciudad de México es la capital y una de las ciudades más grandes del mundo, con más de 21 millones de habitantes.",
+              "en": "Correct! Mexico City is the capital and one of the largest cities in the world, with over 21 million inhabitants."
+            },
+            "image": "flags/mexico.png",
+            "difficulty": 1
+          }
+        },
+        "migrationContent": {
+          "historicalContext": {
+            "text": {
+              "es": "México tiene una rica historia de viajeros. Desde tiempos ancestrales, personas de diferentes regiones han viajado por este territorio compartiendo conocimientos y tradiciones.",
+              "en": "Mexico has a rich history of travelers. Since ancient times, people from different regions have traveled through this territory sharing knowledge and traditions."
+            },
+            "sensitivityLevel": 2,
+            "parentalControlRequired": false
+          },
+          "hopefulMessage": {
+            "es": "Cada viaje comienza con un primer paso. México me enseñó que mis raíces son mi fuerza, no importa a dónde vaya.",
+            "en": "Every journey begins with a first step. Mexico taught me that my roots are my strength, no matter where I go."
+          }
+        }
+      },
+
+      {
+        "id": "mercado_tradicional",
+        "name": {
+          "es": "Mercado Tradicional",
+          "en": "Traditional Market"
+        },
+        "background": "backgrounds/mexico_market.jpg",
+        "interactiveElements": [
+          {
+            "id": "artesanias",
+            "type": "object",
+            "name": {
+              "es": "Artesanías Mexicanas",
+              "en": "Mexican Handicrafts"
+            },
+            "position": { "x": 300, "y": 350 },
+            "fact": {
+              "es": "Las artesanías mexicanas son famosas en todo el mundo. Alebrijes, cerámica de Talavera, bordados oaxaqueños... ¡cada región tiene su especialidad!",
+              "en": "Mexican handicrafts are famous worldwide. Alebrijes, Talavera pottery, Oaxacan embroidery... each region has its specialty!"
+            },
+            "image": "objects/artesanias.png"
+          }
+        ],
+        "activity": {
+          "id": "mexico_activity_2",
+          "type": "memory",
+          "config": {
+            "pairs": 6,
+            "cards": [
+              {
+                "id": "taco",
+                "image": "cards/taco.png",
+                "name": { "es": "Taco", "en": "Taco" }
+              },
+              {
+                "id": "aguacate",
+                "image": "cards/avocado.png",
+                "name": { "es": "Aguacate", "en": "Avocado" }
+              },
+              {
+                "id": "mariachi",
+                "image": "cards/mariachi.png",
+                "name": { "es": "Mariachi", "en": "Mariachi" }
+              },
+              {
+                "id": "piñata",
+                "image": "cards/pinata.png",
+                "name": { "es": "Piñata", "en": "Piñata" }
+              },
+              {
+                "id": "alebrije",
+                "image": "cards/alebrije.png",
+                "name": { "es": "Alebrije", "en": "Alebrije" }
+              },
+              {
+                "id": "chocolate",
+                "image": "cards/chocolate.png",
+                "name": { "es": "Chocolate", "en": "Chocolate" }
+              }
+            ]
+          }
+        },
+        "migrationContent": {
+          "culturalContributions": {
+            "description": {
+              "es": "México ha compartido con el mundo alimentos increíbles: chocolate, aguacate, tomate, chiles, maíz, vainilla. ¡Imagina la cocina mundial sin estos ingredientes!",
+              "en": "Mexico has shared incredible foods with the world: chocolate, avocado, tomato, chili peppers, corn, vanilla. Imagine world cuisine without these ingredients!"
+            },
+            "examples": [
+              "Chocolate",
+              "Aguacate/Guacamole",
+              "Tacos",
+              "Música Mariachi",
+              "Día de Muertos (Patrimonio de la Humanidad)"
+            ],
+            "sensitivityLevel": 1
+          },
+          "famousMigrants": [
+            {
+              "name": "Guillermo del Toro",
+              "origin": "Guadalajara, México",
+              "destination": "Hollywood, USA",
+              "achievement": {
+                "es": "Director ganador del Oscar que llevó las historias y el arte mexicano al cine mundial ('El Laberinto del Fauno', 'La Forma del Agua')",
+                "en": "Oscar-winning director who brought Mexican stories and art to world cinema ('Pan's Labyrinth', 'The Shape of Water')"
+              },
+              "quote": {
+                "es": "Mis raíces mexicanas están en cada película que hago. No importa dónde filme, México siempre está conmigo.",
+                "en": "My Mexican roots are in every film I make. No matter where I film, Mexico is always with me."
+              },
+              "image": "migrants/deltoro.png",
+              "sensitivityLevel": 1
+            }
+          ],
+          "hopefulMessage": {
+            "es": "Las personas que comparten su cultura enriquecen al mundo entero. Cada tradición que viaja se convierte en un puente entre pueblos.",
+            "en": "People who share their culture enrich the entire world. Every tradition that travels becomes a bridge between peoples."
+          }
+        }
+      },
+
+      {
+        "id": "dia_muertos",
+        "name": {
+          "es": "Celebración del Día de Muertos",
+          "en": "Day of the Dead Celebration"
+        },
+        "background": "backgrounds/mexico_dia_muertos.jpg",
+        "interactiveElements": [
+          {
+            "id": "altar_ofrendas",
+            "type": "monument",
+            "name": {
+              "es": "Altar de Ofrendas",
+              "en": "Altar of Offerings"
+            },
+            "position": { "x": 400, "y": 300 },
+            "fact": {
+              "es": "Los altares del Día de Muertos honran a nuestros seres queridos. Tienen flores de cempasúchil, fotos, comida favorita y velas. ¡Es una celebración de la vida!",
+              "en": "Day of the Dead altars honor our loved ones. They have marigold flowers, photos, favorite food and candles. It's a celebration of life!"
+            },
+            "image": "objects/altar.png"
+          }
+        ],
+        "activity": {
+          "id": "mexico_activity_3",
+          "type": "puzzle",
+          "config": {
+            "image": "puzzles/mexico_altar.jpg",
+            "pieces": 6,
+            "canRotate": false
+          }
+        },
+        "migrationContent": {
+          "hopefulMessage": {
+            "es": "El Día de Muertos nos enseña que quienes amamos nunca nos dejan realmente. Llevamos su memoria a donde vayamos.",
+            "en": "Day of the Dead teaches us that those we love never truly leave us. We carry their memory wherever we go."
+          }
+        }
+      }
+    ],
+
+    "clues": [
+      {
+        "es": "La calavera está donde se celebra la vida y la muerte",
+        "en": "The skull is where life and death are celebrated"
+      },
+      {
+        "es": "Busca donde las flores de cempasúchil brillan",
+        "en": "Look where marigold flowers shine"
+      },
+      {
+        "es": "¡El altar de ofrendas guarda el secreto!",
+        "en": "The altar of offerings holds the secret!"
+      }
+    ],
+
+    "estimatedDuration": 12
+  },
+
+  "bridgeBuilding": {
+    "mode": "build",
+    "theme": "Construyendo el Camino del Migrante",
+    "background": "backgrounds/mexico_bridge.jpg",
+    "music": "music/mexico_hopeful.mp3",
+    "objective": {
+      "es": "Ayuda a Marco y Xolo a construir un puente sobre el río para comenzar su viaje",
+      "en": "Help Marco and Xolo build a bridge over the river to begin their journey"
+    },
+
+    "structures": [
+      {
+        "id": "gap_1",
+        "type": "gap",
+        "gap": {
+          "width": 180,
+          "height": 100,
+          "startPosition": { "x": 200, "y": 400 },
+          "endPosition": { "x": 380, "y": 400 }
+        },
+        "blocks": [
+          {
+            "id": "plank_1",
+            "shape": "rectangle",
+            "material": "wood_plank",
+            "size": { "width": 120, "height": 20 },
+            "position": { "x": 150, "y": 500 },
+            "rotation": 0,
+            "isStatic": true,
+            "canConnect": true
+          },
+          {
+            "id": "plank_2",
+            "shape": "rectangle",
+            "material": "wood_plank",
+            "size": { "width": 120, "height": 20 },
+            "position": { "x": 150, "y": 530 },
+            "rotation": 0,
+            "isStatic": true,
+            "canConnect": true
+          },
+          {
+            "id": "rope_1",
+            "shape": "rectangle",
+            "material": "rope",
+            "size": { "width": 80, "height": 8 },
+            "position": { "x": 150, "y": 560 },
+            "rotation": 0,
+            "isStatic": true,
+            "canConnect": true
+          }
+        ],
+        "culturalObjectPosition": { "x": 400, "y": 380 }
+      }
+    ],
+
+    "helpersAvailable": 2,
+    "optimalSolutions": 2,
+    "starThresholds": {
+      "3": 2,
+      "2": 3,
+      "1": 4
+    },
+
+    "specialMechanics": [],
+
+    "tutorial": {
+      "es": "¡Tu primer desafío! Lanza a Marco o Xolo para colocar las tablas y cuerdas. Construye un puente estable para cruzar el río.",
+      "en": "Your first challenge! Launch Marco or Xolo to place the planks and ropes. Build a stable bridge to cross the river."
+    }
+  },
+
+  "familyDialogue": [
+    {
+      "character": "marco",
+      "text": {
+        "es": "México, mi hogar. Aquí aprendí a cultivar la tierra, a valorar la familia, y a soñar con un futuro mejor.",
+        "en": "Mexico, my home. Here I learned to farm the land, to value family, and to dream of a better future."
+      }
+    },
+    {
+      "character": "xolo",
+      "text": {
+        "es": "Marco, estos canales de Xochimilco son mi hogar ancestral. He visto generaciones de viajeros partir en busca de sueños. Tu viaje apenas comienza.",
+        "en": "Marco, these Xochimilco canals are my ancestral home. I've seen generations of travelers depart in search of dreams. Your journey is just beginning."
+      }
+    },
+    {
+      "character": "marco",
+      "text": {
+        "es": "Gracias por acompañarme, Xolo. Juntos aprenderemos del mundo.",
+        "en": "Thank you for joining me, Xolo. Together we'll learn from the world."
+      }
+    }
+  ],
+
+  "metadata": {
+    "releaseVersion": "2.0_HopeQuest",
+    "premium": false,
+    "requiredLevel": null,
+    "isStartingCountry": true,
+    "characterIntroductions": ["marco", "xolo"],
+    "migrationThemes": [
+      "cultural_exchange",
+      "roots_and_identity",
+      "beginning_of_journey"
+    ],
+    "educationalFocus": [
+      "geography",
+      "culture",
+      "history",
+      "migration_history",
+      "famous_migrants",
+      "cultural_contributions"
+    ]
+  }
+}

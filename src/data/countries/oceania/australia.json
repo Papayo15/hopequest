@@ -1,0 +1,674 @@
+{
+  "id": "australia",
+  "name": {
+    "es": "Australia",
+    "en": "Australia",
+    "zh": "澳大利亚",
+    "hi": "ऑस्ट्रेलिया",
+    "ar": "أستراليا"
+  },
+  "continent": "oceania",
+  "difficulty": 3,
+  "order": 33,
+
+  "culturalObject": {
+    "id": "boomerang_migrante",
+    "name": {
+      "es": "Boomerang del Migrante",
+      "en": "Migrant's Boomerang",
+      "zh": "移民的回旋镖",
+      "hi": "प्रवासी का बूमरैंग",
+      "ar": "بوميرانج المهاجر"
+    },
+    "description": {
+      "es": "Herramienta aborigen australiana que siempre regresa a quien la lanza. Simboliza a los migrantes que van y vuelven, y cómo la migración es un ciclo, no un camino de ida.",
+      "en": "Australian Aboriginal tool that always returns to the thrower. Symbolizes migrants who go and return, and how migration is a cycle, not a one-way path."
+    },
+    "funFact": {
+      "es": "¡Australia fue construida por inmigrantes! Primero por convictos británicos (1788), luego por europeos buscando oro (1850s), y hoy por asiáticos, africanos y latinoamericanos. El 30% de australianos nacieron en otro país.",
+      "en": "Australia was built by immigrants! First by British convicts (1788), then Europeans seeking gold (1850s), and today by Asians, Africans and Latin Americans. 30% of Australians were born in another country."
+    },
+    "image": "objects/australia_boomerang.png",
+    "model3D": "objects/australia_boomerang.glb"
+  },
+
+  "adventure": {
+    "intro": {
+      "dialogue": {
+        "es": "Australia... El país más lejano. Una isla gigante donde los inmigrantes crearon una nación multicultural desde cero. Aquí todos venimos de otro lugar, hasta los europeos que llegaron hace 250 años.",
+        "en": "Australia... The farthest country. A giant island where immigrants created a multicultural nation from scratch. Here we all come from somewhere else, even the Europeans who arrived 250 years ago."
+      },
+      "character": "patricia",
+      "animation": "patricia_amazed.json",
+      "duration": 12
+    },
+
+    "locations": [
+      {
+        "id": "sydney",
+        "name": {
+          "es": "Sídney",
+          "en": "Sydney"
+        },
+        "background": "backgrounds/australia_sydney.jpg",
+        "interactiveElements": [
+          {
+            "id": "opera_house",
+            "type": "monument",
+            "name": {
+              "es": "Ópera de Sídney",
+              "en": "Sydney Opera House"
+            },
+            "position": { "x": 400, "y": 280 },
+            "fact": {
+              "es": "¡Este ícono fue diseñado por Jørn Utzon, un arquitecto danés (inmigrante)! La construcción tomó 14 años y trabajaron personas de más de 30 países. Un símbolo perfecto de Australia multicultural.",
+              "en": "This icon was designed by Jørn Utzon, a Danish architect (immigrant)! Construction took 14 years and people from over 30 countries worked on it. A perfect symbol of multicultural Australia."
+            },
+            "image": "monuments/opera_house.png",
+            "sound": "sfx/discovery.mp3"
+          },
+          {
+            "id": "harbour_bridge",
+            "type": "monument",
+            "name": {
+              "es": "Puente del Puerto",
+              "en": "Harbour Bridge"
+            },
+            "position": { "x": 250, "y": 350 },
+            "fact": {
+              "es": "Construido durante la Gran Depresión (1923-1932) por 1,400 trabajadores, muchos inmigrantes. Era un símbolo de esperanza: construir el futuro en tiempos difíciles.",
+              "en": "Built during the Great Depression (1923-1932) by 1,400 workers, many immigrants. It was a symbol of hope: building the future in difficult times."
+            },
+            "image": "monuments/harbour_bridge.png"
+          },
+          {
+            "id": "multicultural_sydney",
+            "type": "object",
+            "name": {
+              "es": "Barrios Multiculturales",
+              "en": "Multicultural Neighborhoods"
+            },
+            "position": { "x": 600, "y": 380 },
+            "fact": {
+              "es": "Sídney tiene Chinatown, Little Italy, Cabramatta (vietnamita), Auburn (turco-libanés). Es una de las ciudades más diversas del mundo. Más de 250 idiomas se hablan aquí.",
+              "en": "Sydney has Chinatown, Little Italy, Cabramatta (Vietnamese), Auburn (Turkish-Lebanese). It's one of the world's most diverse cities. Over 250 languages are spoken here."
+            },
+            "image": "places/multicultural_sydney.png"
+          }
+        ],
+        "activity": {
+          "id": "australia_activity_1",
+          "type": "trivia",
+          "config": {
+            "question": {
+              "es": "¿Qué porcentaje de australianos nacieron en otro país?",
+              "en": "What percentage of Australians were born in another country?"
+            },
+            "options": [
+              { "es": "10%", "en": "10%" },
+              { "es": "30%", "en": "30%" },
+              { "es": "50%", "en": "50%" }
+            ],
+            "correctAnswer": 1,
+            "explanation": {
+              "es": "¡Correcto! El 30% de australianos nacieron en otro país. Australia es literalmente una nación de inmigrantes. Los únicos nativos verdaderos son los aborígenes, que llegaron hace 65,000 años.",
+              "en": "Correct! 30% of Australians were born in another country. Australia is literally a nation of immigrants. The only true natives are the Aboriginals, who arrived 65,000 years ago."
+            },
+            "image": "flags/australia.png",
+            "difficulty": 3
+          }
+        },
+        "migrationContent": {
+          "historicalContext": {
+            "text": {
+              "es": "Australia tiene una historia migratoria compleja: 1) Aborígenes (65,000 años atrás), 2) Convictos británicos (1788-1868, 162,000 personas), 3) Fiebre del oro (1850s, chinos y europeos), 4) 'White Australia Policy' (1901-1973, política racista que solo permitía blancos), 5) Multiculturalismo moderno (1973-hoy, todos bienvenidos).",
+              "en": "Australia has a complex migration history: 1) Aboriginals (65,000 years ago), 2) British convicts (1788-1868, 162,000 people), 3) Gold Rush (1850s, Chinese and Europeans), 4) 'White Australia Policy' (1901-1973, racist policy allowing only whites), 5) Modern multiculturalism (1973-today, everyone welcome)."
+            },
+            "sensitivityLevel": 3,
+            "parentalControlRequired": false
+          },
+          "hopefulMessage": {
+            "es": "Australia me enseña que una nación puede reconocer sus errores del pasado y construir un futuro mejor. De política racista a ejemplo multicultural.",
+            "en": "Australia teaches me that a nation can recognize its past mistakes and build a better future. From racist policy to multicultural example."
+          }
+        }
+      },
+
+      {
+        "id": "uluru",
+        "name": {
+          "es": "Uluru (Ayers Rock)",
+          "en": "Uluru (Ayers Rock)"
+        },
+        "background": "backgrounds/australia_uluru.jpg",
+        "interactiveElements": [
+          {
+            "id": "uluru_rock",
+            "type": "monument",
+            "name": {
+              "es": "Uluru",
+              "en": "Uluru"
+            },
+            "position": { "x": 400, "y": 300 },
+            "fact": {
+              "es": "Uluru es sagrado para los aborígenes Anangu, que han vivido aquí por más de 30,000 años. En 2019, Australia finalmente prohibió escalar Uluru por respeto a los nativos. Un paso hacia la reconciliación.",
+              "en": "Uluru is sacred to the Anangu Aboriginals, who have lived here for over 30,000 years. In 2019, Australia finally banned climbing Uluru out of respect for the natives. A step toward reconciliation."
+            },
+            "image": "monuments/uluru.png"
+          },
+          {
+            "id": "aboriginal_art",
+            "type": "object",
+            "name": {
+              "es": "Arte Aborigen",
+              "en": "Aboriginal Art"
+            },
+            "position": { "x": 250, "y": 400 },
+            "fact": {
+              "es": "El arte aborigen es la tradición artística continua más antigua del mundo (40,000+ años). Cuenta historias del 'Tiempo del Sueño' (Dreamtime), su cosmología.",
+              "en": "Aboriginal art is the world's oldest continuous artistic tradition (40,000+ years). It tells stories of the 'Dreamtime', their cosmology."
+            },
+            "image": "culture/aboriginal_art.png"
+          }
+        ],
+        "activity": {
+          "id": "australia_activity_2",
+          "type": "hidden_objects",
+          "config": {
+            "background": "scenes/australia_outback.jpg",
+            "objects": [
+              {
+                "id": "kangaroo",
+                "name": { "es": "Canguro", "en": "Kangaroo" },
+                "position": { "x": 150, "y": 250 },
+                "size": { "width": 80, "height": 100 }
+              },
+              {
+                "id": "koala",
+                "name": { "es": "Koala", "en": "Koala" },
+                "position": { "x": 400, "y": 180 },
+                "size": { "width": 60, "height": 70 }
+              },
+              {
+                "id": "boomerang",
+                "name": { "es": "Boomerang", "en": "Boomerang" },
+                "position": { "x": 550, "y": 300 },
+                "size": { "width": 50, "height": 30 }
+              },
+              {
+                "id": "didgeridoo",
+                "name": { "es": "Didgeridoo", "en": "Didgeridoo" },
+                "position": { "x": 220, "y": 420 },
+                "size": { "width": 100, "height": 20 }
+              }
+            ],
+            "timeLimit": 60
+          }
+        },
+        "migrationContent": {
+          "culturalContributions": {
+            "description": {
+              "es": "Los aborígenes australianos dieron al mundo: el boomerang, el didgeridoo (instrumento musical), técnicas de manejo del fuego para agricultura, y conocimientos de supervivencia en desiertos. Tristemente, fueron casi exterminados por colonos europeos ('Generaciones Robadas' 1910-1970).",
+              "en": "Australian Aboriginals gave the world: the boomerang, the didgeridoo (musical instrument), fire management techniques for agriculture, and desert survival knowledge. Sadly, they were almost exterminated by European settlers ('Stolen Generations' 1910-1970)."
+            },
+            "examples": [
+              "Boomerang (arma de caza)",
+              "Didgeridoo (instrumento musical)",
+              "Arte aborigen (40,000+ años)",
+              "Conocimiento ecológico ancestral",
+              "Lenguas aborígenes (250+ idiomas)"
+            ],
+            "sensitivityLevel": 3
+          },
+          "famousMigrants": [
+            {
+              "name": "Anh Do",
+              "origin": "Vietnam → Australia (refugiado)",
+              "destination": "Australia",
+              "achievement": {
+                "es": "Llegó en bote como refugiado vietnamita a los 2 años (1980). Hoy es comediante, escritor y presentador de TV famoso en Australia. Su autobiografía 'The Happiest Refugee' es bestseller.",
+                "en": "Arrived by boat as a Vietnamese refugee at age 2 (1980). Today he's a famous comedian, writer and TV presenter in Australia. His autobiography 'The Happiest Refugee' is a bestseller."
+              },
+              "quote": {
+                "es": "Australia me dio una oportunidad cuando mi familia no tenía nada. Ahora es mi deber devolverle al país que me salvó.",
+                "en": "Australia gave me a chance when my family had nothing. Now it's my duty to give back to the country that saved me."
+              },
+              "image": "migrants/anh_do.png",
+              "sensitivityLevel": 2
+            }
+          ],
+          "hopefulMessage": {
+            "es": "Los aborígenes me recuerdan que los 'verdaderos dueños' de la tierra son quienes la respetan, no quienes la conquistan. Todos somos huéspedes en este mundo.",
+            "en": "Aboriginals remind me that the 'true owners' of the land are those who respect it, not those who conquer it. We are all guests in this world."
+          }
+        }
+      },
+
+      {
+        "id": "melbourne",
+        "name": {
+          "es": "Melbourne",
+          "en": "Melbourne"
+        },
+        "background": "backgrounds/australia_melbourne.jpg",
+        "interactiveElements": [
+          {
+            "id": "federation_square",
+            "type": "monument",
+            "name": {
+              "es": "Federation Square",
+              "en": "Federation Square"
+            },
+            "position": { "x": 400, "y": 300 },
+            "fact": {
+              "es": "Centro cultural de Melbourne. Cada año celebran festivales de más de 100 culturas diferentes: chino, griego, italiano, indio, africano. La diversidad es su identidad.",
+              "en": "Melbourne's cultural center. Every year they celebrate festivals from over 100 different cultures: Chinese, Greek, Italian, Indian, African. Diversity is their identity."
+            },
+            "image": "places/federation_square.png"
+          },
+          {
+            "id": "immigration_museum",
+            "type": "object",
+            "name": {
+              "es": "Museo de la Inmigración",
+              "en": "Immigration Museum"
+            },
+            "position": { "x": 250, "y": 380 },
+            "fact": {
+              "es": "Este museo cuenta las historias de millones de inmigrantes que llegaron a Australia buscando una vida mejor. Desde convictos hasta refugiados modernos.",
+              "en": "This museum tells the stories of millions of immigrants who came to Australia seeking a better life. From convicts to modern refugees."
+            },
+            "image": "places/immigration_museum.png"
+          }
+        ],
+        "activity": {
+          "id": "australia_activity_3",
+          "type": "timeline",
+          "config": {
+            "events": [
+              {
+                "id": "aboriginal_arrival",
+                "name": { "es": "Llegada de Aborígenes", "en": "Aboriginal Arrival" },
+                "year": -63000,
+                "description": { "es": "Primeros humanos en Australia", "en": "First humans in Australia" }
+              },
+              {
+                "id": "british_convicts",
+                "name": { "es": "Convictos Británicos", "en": "British Convicts" },
+                "year": 1788,
+                "description": { "es": "Primera Flota trae prisioneros", "en": "First Fleet brings prisoners" }
+              },
+              {
+                "id": "gold_rush",
+                "name": { "es": "Fiebre del Oro", "en": "Gold Rush" },
+                "year": 1851,
+                "description": { "es": "Inmigrantes de todo el mundo", "en": "Immigrants from around the world" }
+              },
+              {
+                "id": "white_australia",
+                "name": { "es": "White Australia Policy", "en": "White Australia Policy" },
+                "year": 1901,
+                "description": { "es": "Política racista implementada", "en": "Racist policy implemented" }
+              },
+              {
+                "id": "end_white_policy",
+                "name": { "es": "Fin de política racista", "en": "End of racist policy" },
+                "year": 1973,
+                "description": { "es": "Australia se abre al mundo", "en": "Australia opens to the world" }
+              },
+              {
+                "id": "multicultural_australia",
+                "name": { "es": "Australia Multicultural", "en": "Multicultural Australia" },
+                "year": 2024,
+                "description": { "es": "30% nacidos en otro país", "en": "30% born in another country" }
+              }
+            ]
+          }
+        },
+        "migrationContent": {
+          "modernReality": {
+            "text": {
+              "es": "Hoy Australia tiene un sistema de inmigración basado en puntos: prefiere inmigrantes calificados (médicos, ingenieros, programadores). También acepta refugiados, aunque su política de 'offshore detention' (detener refugiados en islas remotas) es muy criticada internacionalmente. Es un país de contradicciones: acoge inmigrantes pero también los trata duramente.",
+              "en": "Today Australia has a points-based immigration system: it prefers skilled immigrants (doctors, engineers, programmers). It also accepts refugees, though its 'offshore detention' policy (detaining refugees on remote islands) is heavily criticized internationally. It's a country of contradictions: it welcomes immigrants but also treats them harshly."
+            },
+            "sensitivityLevel": 4,
+            "parentalControlRequired": true
+          },
+          "hopefulMessage": {
+            "es": "Australia me muestra que no hay países 'puros'. Todos somos mezcla. La pregunta no es '¿aceptamos inmigrantes?', sino '¿cómo los tratamos cuando llegan?'",
+            "en": "Australia shows me there are no 'pure' countries. We're all mixed. The question isn't 'do we accept immigrants?', but 'how do we treat them when they arrive?'"
+          }
+        }
+      }
+    ],
+
+    "clues": [
+      {
+        "es": "El boomerang está donde la tierra roja se encuentra con el cielo",
+        "en": "The boomerang is where the red earth meets the sky"
+      },
+      {
+        "es": "Busca en el corazón sagrado de Australia",
+        "en": "Look in Australia's sacred heart"
+      },
+      {
+        "es": "¡Uluru guarda el secreto del migrante que siempre regresa!",
+        "en": "Uluru holds the secret of the migrant who always returns!"
+      }
+    ],
+
+    "estimatedDuration": 25
+  },
+
+  "bridgeBuilding": {
+    "mode": "destroy",
+    "theme": "Derrumbando el Muro del Pasado Racista",
+    "background": "backgrounds/australia_wall.jpg",
+    "music": "music/australia_didgeridoo.mp3",
+    "objective": {
+      "es": "Destruye el muro que representa la 'White Australia Policy'. Australia debe reconocer su pasado racista para construir un futuro verdaderamente multicultural.",
+      "en": "Destroy the wall representing the 'White Australia Policy'. Australia must recognize its racist past to build a truly multicultural future."
+    },
+
+    "structures": [
+      {
+        "id": "wall_1",
+        "type": "wall",
+        "wall": {
+          "width": 320,
+          "height": 220,
+          "position": { "x": 350, "y": 350 },
+          "material": "border_wall",
+          "layers": 6,
+          "blocks": [
+            {
+              "id": "block_1_1",
+              "material": "border_wall",
+              "size": { "width": 52, "height": 35 },
+              "position": { "x": 240, "y": 515 },
+              "health": 100
+            },
+            {
+              "id": "block_1_2",
+              "material": "border_wall",
+              "size": { "width": 52, "height": 35 },
+              "position": { "x": 292, "y": 515 },
+              "health": 100
+            },
+            {
+              "id": "block_1_3",
+              "material": "border_wall",
+              "size": { "width": 52, "height": 35 },
+              "position": { "x": 344, "y": 515 },
+              "health": 100
+            },
+            {
+              "id": "block_1_4",
+              "material": "border_wall",
+              "size": { "width": 52, "height": 35 },
+              "position": { "x": 396, "y": 515 },
+              "health": 100
+            },
+            {
+              "id": "block_1_5",
+              "material": "border_wall",
+              "size": { "width": 52, "height": 35 },
+              "position": { "x": 448, "y": 515 },
+              "health": 100
+            },
+            {
+              "id": "block_1_6",
+              "material": "border_wall",
+              "size": { "width": 52, "height": 35 },
+              "position": { "x": 500, "y": 515 },
+              "health": 100
+            },
+            {
+              "id": "block_2_1",
+              "material": "prejudice_wall",
+              "size": { "width": 52, "height": 35 },
+              "position": { "x": 266, "y": 480 },
+              "health": 110
+            },
+            {
+              "id": "block_2_2",
+              "material": "prejudice_wall",
+              "size": { "width": 52, "height": 35 },
+              "position": { "x": 318, "y": 480 },
+              "health": 110
+            },
+            {
+              "id": "block_2_3",
+              "material": "prejudice_wall",
+              "size": { "width": 52, "height": 35 },
+              "position": { "x": 370, "y": 480 },
+              "health": 110
+            },
+            {
+              "id": "block_2_4",
+              "material": "prejudice_wall",
+              "size": { "width": 52, "height": 35 },
+              "position": { "x": 422, "y": 480 },
+              "health": 110
+            },
+            {
+              "id": "block_2_5",
+              "material": "prejudice_wall",
+              "size": { "width": 52, "height": 35 },
+              "position": { "x": 474, "y": 480 },
+              "health": 110
+            },
+            {
+              "id": "block_3_1",
+              "material": "prejudice_wall",
+              "size": { "width": 52, "height": 35 },
+              "position": { "x": 240, "y": 445 },
+              "health": 120
+            },
+            {
+              "id": "block_3_2",
+              "material": "prejudice_wall",
+              "size": { "width": 52, "height": 35 },
+              "position": { "x": 292, "y": 445 },
+              "health": 120
+            },
+            {
+              "id": "block_3_3",
+              "material": "prejudice_wall",
+              "size": { "width": 52, "height": 35 },
+              "position": { "x": 344, "y": 445 },
+              "health": 120
+            },
+            {
+              "id": "block_3_4",
+              "material": "prejudice_wall",
+              "size": { "width": 52, "height": 35 },
+              "position": { "x": 396, "y": 445 },
+              "health": 120
+            },
+            {
+              "id": "block_3_5",
+              "material": "prejudice_wall",
+              "size": { "width": 52, "height": 35 },
+              "position": { "x": 448, "y": 445 },
+              "health": 120
+            },
+            {
+              "id": "block_3_6",
+              "material": "prejudice_wall",
+              "size": { "width": 52, "height": 35 },
+              "position": { "x": 500, "y": 445 },
+              "health": 120
+            },
+            {
+              "id": "block_4_1",
+              "material": "bureaucracy_wall",
+              "size": { "width": 64, "height": 32 },
+              "position": { "x": 258, "y": 413 },
+              "health": 140
+            },
+            {
+              "id": "block_4_2",
+              "material": "bureaucracy_wall",
+              "size": { "width": 64, "height": 32 },
+              "position": { "x": 322, "y": 413 },
+              "health": 140
+            },
+            {
+              "id": "block_4_3",
+              "material": "bureaucracy_wall",
+              "size": { "width": 64, "height": 32 },
+              "position": { "x": 386, "y": 413 },
+              "health": 140
+            },
+            {
+              "id": "block_4_4",
+              "material": "bureaucracy_wall",
+              "size": { "width": 64, "height": 32 },
+              "position": { "x": 450, "y": 413 },
+              "health": 140
+            },
+            {
+              "id": "block_5_1",
+              "material": "misinformation_wall",
+              "size": { "width": 74, "height": 30 },
+              "position": { "x": 265, "y": 383 },
+              "health": 160,
+              "isKey": true
+            },
+            {
+              "id": "block_5_2",
+              "material": "misinformation_wall",
+              "size": { "width": 74, "height": 30 },
+              "position": { "x": 339, "y": 383 },
+              "health": 160,
+              "isKey": true
+            },
+            {
+              "id": "block_5_3",
+              "material": "misinformation_wall",
+              "size": { "width": 74, "height": 30 },
+              "position": { "x": 413, "y": 383 },
+              "health": 160,
+              "isKey": true
+            },
+            {
+              "id": "block_6_1",
+              "material": "border_wall",
+              "size": { "width": 160, "height": 35 },
+              "position": { "x": 290, "y": 348 },
+              "health": 200,
+              "isKey": true
+            },
+            {
+              "id": "block_6_2",
+              "material": "border_wall",
+              "size": { "width": 160, "height": 35 },
+              "position": { "x": 450, "y": 348 },
+              "health": 200,
+              "isKey": true
+            }
+          ]
+        },
+        "culturalObjectPosition": { "x": 370, "y": 300 }
+      }
+    ],
+
+    "helpersAvailable": 5,
+    "optimalSolutions": 6,
+    "starThresholds": {
+      "3": 6,
+      "2": 8,
+      "1": 10
+    },
+
+    "specialMechanics": [
+      {
+        "type": "wind",
+        "strength": 0.025,
+        "direction": { "x": -1, "y": 0.2 },
+        "description": {
+          "es": "Vientos del Outback australiano que dificultan el lanzamiento",
+          "en": "Australian Outback winds that make launching difficult"
+        }
+      },
+      {
+        "type": "key_blocks",
+        "description": {
+          "es": "Los bloques de la cima (misinformación y frontera) son extremadamente fuertes. Representan las mentiras que sostuvieron la política racista.",
+          "en": "The blocks at the top (misinformation and border) are extremely strong. They represent the lies that sustained the racist policy."
+        }
+      }
+    ],
+
+    "tutorial": {
+      "es": "¡El muro más grande hasta ahora! 6 capas representan 72 años de política racista (1901-1973). Usa a toda tu familia estratégicamente. Teo puede infiltrarse, Marco puede romper, Patricia puede empujar bloques clave.",
+      "en": "The biggest wall yet! 6 layers represent 72 years of racist policy (1901-1973). Use your whole family strategically. Teo can infiltrate, Marco can break, Patricia can push key blocks."
+    }
+  },
+
+  "familyDialogue": [
+    {
+      "character": "teo",
+      "text": {
+        "es": "Familia, ¿sabían que Australia fue construida por prisioneros? Mi maestro en México nos contó.",
+        "en": "Family, did you know Australia was built by prisoners? My teacher in Mexico told us."
+      }
+    },
+    {
+      "character": "luis",
+      "text": {
+        "es": "Sí, Teo. Y luego por buscadores de oro, por italianos, griegos, vietnamitas... todos migrantes. Pero hubo épocas oscuras donde solo querían europeos blancos.",
+        "en": "Yes, Teo. And then by gold seekers, by Italians, Greeks, Vietnamese... all migrants. But there were dark times when they only wanted white Europeans."
+      }
+    },
+    {
+      "character": "patricia",
+      "text": {
+        "es": "La 'White Australia Policy' duró 72 años. Decían que solo los blancos podían vivir aquí. Miles de familias asiáticas fueron deportadas.",
+        "en": "The 'White Australia Policy' lasted 72 years. They said only whites could live here. Thousands of Asian families were deported."
+      }
+    },
+    {
+      "character": "xolo",
+      "text": {
+        "es": "Pero reconocieron su error. En 1973 terminaron esa política. Hoy, Australia es un ejemplo de multiculturalismo. Aunque aún tienen trabajo que hacer con los refugiados.",
+        "en": "But they recognized their mistake. In 1973 they ended that policy. Today, Australia is an example of multiculturalism. Though they still have work to do with refugees."
+      }
+    },
+    {
+      "character": "marco",
+      "text": {
+        "es": "Este boomerang... siempre regresa. Como los migrantes. Algunos van y vuelven. Otros se quedan pero su cultura viaja de vuelta. La migración es un ciclo infinito.",
+        "en": "This boomerang... it always returns. Like migrants. Some go and come back. Others stay but their culture travels back. Migration is an infinite cycle."
+      }
+    }
+  ],
+
+  "metadata": {
+    "releaseVersion": "2.0_HopeQuest",
+    "premium": false,
+    "requiredLevel": 5,
+    "isStartingCountry": false,
+    "characterIntroductions": [],
+    "migrationThemes": [
+      "forced_migration_convicts",
+      "gold_rush_migration",
+      "racist_immigration_policy",
+      "multiculturalism",
+      "aboriginal_displacement",
+      "refugee_policy"
+    ],
+    "educationalFocus": [
+      "geography",
+      "culture",
+      "history",
+      "colonial_history",
+      "racist_policies",
+      "reconciliation",
+      "indigenous_rights",
+      "modern_multiculturalism",
+      "refugee_treatment"
+    ]
+  }
+}

@@ -1,0 +1,741 @@
+{
+  "storyTitle": {
+    "es": "Hope Quest: El Viaje de la Esperanza",
+    "en": "Hope Quest: The Journey of Hope",
+    "zh": "希望之旅",
+    "hi": "आशा की यात्रा",
+    "ar": "رحلة الأمل"
+  },
+
+  "prologue": {
+    "id": "prologue",
+    "title": {
+      "es": "El Comienzo",
+      "en": "The Beginning"
+    },
+    "unlocksAt": "game_start",
+    "cutscene": {
+      "background": "mexico_sunset_farm.jpg",
+      "music": "main_theme_soft.mp3",
+      "duration": 60,
+      "dialogue": [
+        {
+          "character": "marco",
+          "text": {
+            "es": "Mi nombre es Marco. Soy agricultor aquí en Michoacán, México. Durante años cultivé aguacates en estas tierras...",
+            "en": "My name is Marco. I'm a farmer here in Michoacán, Mexico. For years I grew avocados on these lands..."
+          },
+          "emotion": "thoughtful"
+        },
+        {
+          "character": "marco",
+          "text": {
+            "es": "Pero las cosas han cambiado. La violencia llegó a nuestro pueblo. Ya no es seguro para mi familia.",
+            "en": "But things have changed. Violence came to our town. It's no longer safe for my family."
+          },
+          "emotion": "worried"
+        },
+        {
+          "character": "narrator",
+          "text": {
+            "es": "Una noche, un búho sabio visitó a Marco...",
+            "en": "One night, a wise owl visited Marco..."
+          }
+        },
+        {
+          "character": "owl_sage",
+          "text": {
+            "es": "Joven Marco, si realmente deseas llegar al Reino Soñado, primero debes conocer el mundo.",
+            "en": "Young Marco, if you truly wish to reach the Dream Kingdom, you must first know the world."
+          },
+          "emotion": "wise"
+        },
+        {
+          "character": "marco",
+          "text": {
+            "es": "¿El mundo entero? ¿Por qué?",
+            "en": "The whole world? Why?"
+          },
+          "emotion": "confused"
+        },
+        {
+          "character": "owl_sage",
+          "text": {
+            "es": "Porque solo entendiendo la diversidad del mundo comprenderás tu propio viaje. Visita 35 países. Aprende de cada cultura. Entonces estarás listo.",
+            "en": "Because only by understanding the world's diversity will you understand your own journey. Visit 35 countries. Learn from each culture. Then you'll be ready."
+          },
+          "emotion": "wise"
+        },
+        {
+          "character": "marco",
+          "text": {
+            "es": "Entonces... ¡que comience el viaje!",
+            "en": "Then... let the journey begin!"
+          },
+          "emotion": "determined"
+        },
+        {
+          "character": "narrator",
+          "text": {
+            "es": "Al día siguiente, mientras Marco preparaba su mochila, escuchó un sonido en el canal de riego...",
+            "en": "The next day, while Marco was preparing his backpack, he heard a sound in the irrigation canal..."
+          }
+        },
+        {
+          "character": "xolo",
+          "text": {
+            "es": "¿Vas a emprender un gran viaje, joven Marco?",
+            "en": "Are you going to embark on a great journey, young Marco?"
+          },
+          "emotion": "wise"
+        },
+        {
+          "character": "marco",
+          "text": {
+            "es": "¡Un ajolote que habla! ¿Quién eres?",
+            "en": "A talking axolotl! Who are you?"
+          },
+          "emotion": "surprised"
+        },
+        {
+          "character": "xolo",
+          "text": {
+            "es": "Soy Xolo, de los antiguos canales de Xochimilco. He vivido muchas vidas y he visto a muchos viajeros. Permíteme acompañarte, Marco. Serás mi compañero de aventuras.",
+            "en": "I am Xolo, from the ancient canals of Xochimilco. I have lived many lives and seen many travelers. Allow me to accompany you, Marco. You'll be my adventure companion."
+          },
+          "emotion": "wise"
+        },
+        {
+          "character": "marco",
+          "text": {
+            "es": "¿Un ajolote sabio como compañero? ¡Será un viaje increíble! Bienvenido, Xolo.",
+            "en": "A wise axolotl as a companion? It'll be an incredible journey! Welcome, Xolo."
+          },
+          "emotion": "happy"
+        }
+      ]
+    },
+    "choices": null,
+    "outcome": {
+      "unlocks": ["mexico"],
+      "helpersAvailable": ["marco", "xolo"],
+      "message": {
+        "es": "Marco y Xolo comienzan su viaje juntos en México, su tierra natal.",
+        "en": "Marco and Xolo begin their journey together in Mexico, their homeland."
+      }
+    }
+  },
+
+  "chapters": [
+    {
+      "id": "chapter_1_companions",
+      "number": 1,
+      "title": {
+        "es": "Los Primeros Pasos",
+        "en": "The First Steps"
+      },
+      "unlocksAt": "countries_completed:1",
+      "countriesRange": [1, 10],
+      "summary": {
+        "es": "Marco y Xolo viajan juntos por América, Europa y Asia, aprendiendo sobre diferentes culturas y enfrentando desafíos.",
+        "en": "Marco and Xolo travel together through America, Europe, and Asia, learning about different cultures and facing challenges."
+      },
+      "helpersAvailable": ["marco", "xolo"],
+      "keyEvents": [
+        {
+          "atCountry": 5,
+          "title": {
+            "es": "Primera Barrera",
+            "en": "First Barrier"
+          },
+          "description": {
+            "es": "Marco encuentra su primer muro de burocracia. Aprende a superarlo con paciencia.",
+            "en": "Marco encounters his first bureaucracy wall. He learns to overcome it with patience."
+          }
+        },
+        {
+          "atCountry": 10,
+          "title": {
+            "es": "Mensaje de Luis",
+            "en": "Message from Luis"
+          },
+          "cutscene": {
+            "dialogue": [
+              {
+                "character": "marco",
+                "text": {
+                  "es": "¿Un mensaje? ¡Es de Luis!",
+                  "en": "A message? It's from Luis!"
+                },
+                "emotion": "surprised"
+              },
+              {
+                "character": "luis",
+                "text": {
+                  "es": "Hermano, las cosas empeoraron en casa. Voy hacia ti. Nos encontraremos en España.",
+                  "en": "Brother, things got worse at home. I'm coming to you. We'll meet in Spain."
+                },
+                "emotion": "determined"
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "chapter_2_brothers",
+      "number": 2,
+      "title": {
+        "es": "Los Hermanos",
+        "en": "The Brothers"
+      },
+      "unlocksAt": "countries_completed:11",
+      "countriesRange": [11, 17],
+      "cutscene": {
+        "background": "spain_plaza.jpg",
+        "music": "reunion_theme.mp3",
+        "duration": 45,
+        "dialogue": [
+          {
+            "character": "marco",
+            "text": {
+              "es": "¡Luis! ¡No puedo creer que estés aquí!",
+              "en": "Luis! I can't believe you're here!"
+            },
+            "emotion": "happy"
+          },
+          {
+            "character": "luis",
+            "text": {
+              "es": "Hermano, no iba a dejarte hacer esto solo. Estamos juntos en esto.",
+              "en": "Brother, I wasn't going to let you do this alone. We're in this together."
+            },
+            "emotion": "determined"
+          },
+          {
+            "character": "marco",
+            "text": {
+              "es": "¿Y la granja?",
+              "en": "What about the farm?"
+            },
+            "emotion": "worried"
+          },
+          {
+            "character": "luis",
+            "text": {
+              "es": "Ya no hay granja, Marco. Pero tenemos algo mejor: tenemos nuestros sueños y nuestra familia.",
+              "en": "There's no farm anymore, Marco. But we have something better: we have our dreams and our family."
+            },
+            "emotion": "hopeful"
+          }
+        ]
+      },
+      "helpersAvailable": ["marco", "xolo", "luis"],
+      "gameplayChanges": {
+        "es": "Luis ahora está disponible para usar en el modo físico. Ahora tienes 3 personajes: Marco (golpe potente), Xolo (lengua de agarre), y Luis (salto alto).",
+        "en": "Luis is now available to use in physics mode. You now have 3 characters: Marco (powerful punch), Xolo (tongue grab), and Luis (high jump)."
+      },
+      "keyEvents": [
+        {
+          "atCountry": 15,
+          "title": {
+            "es": "Primer Muro de Injusticia",
+            "en": "First Wall of Injustice"
+          },
+          "description": {
+            "es": "Los hermanos encuentran un muro de prejuicios. Juntos aprenden que unidos son más fuertes.",
+            "en": "The brothers encounter a prejudice wall. Together they learn that united they are stronger."
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "chapter_3_patricia",
+      "number": 3,
+      "title": {
+        "es": "El Poder de la Voz",
+        "en": "The Power of Voice"
+      },
+      "unlocksAt": "countries_completed:18",
+      "countriesRange": [18, 24],
+      "cutscene": {
+        "background": "japan_temple.jpg",
+        "music": "encounter_theme.mp3",
+        "duration": 50,
+        "dialogue": [
+          {
+            "character": "marco",
+            "text": {
+              "es": "¿Patricia? ¿Qué haces aquí en Japón?",
+              "en": "Patricia? What are you doing here in Japan?"
+            },
+            "emotion": "surprised"
+          },
+          {
+            "character": "patricia",
+            "text": {
+              "es": "Marco, escuché sobre tu viaje. Yo también salí de México. Estoy documentando historias de migrantes alrededor del mundo.",
+              "en": "Marco, I heard about your journey. I also left Mexico. I'm documenting migrant stories around the world."
+            },
+            "emotion": "confident"
+          },
+          {
+            "character": "luis",
+            "text": {
+              "es": "Es peligroso viajar sola...",
+              "en": "It's dangerous to travel alone..."
+            },
+            "emotion": "worried"
+          },
+          {
+            "character": "patricia",
+            "text": {
+              "es": "¿Sola? Llevo visitados 15 países antes que ustedes. Pero sí... viajar juntos sería mejor.",
+              "en": "Alone? I've visited 15 countries before you. But yes... traveling together would be better."
+            },
+            "emotion": "confident"
+          },
+          {
+            "character": "marco",
+            "text": {
+              "es": "Entonces únete a nosotros. Tres cabezas piensan mejor que dos.",
+              "en": "Then join us. Three heads think better than two."
+            },
+            "emotion": "happy"
+          }
+        ]
+      },
+      "helpersAvailable": ["marco", "xolo", "luis", "patricia"],
+      "gameplayChanges": {
+        "es": "Patricia se une al equipo. Ahora tienes 4 personajes. La habilidad de onda sónica de Patricia puede derribar estructuras en un área amplia.",
+        "en": "Patricia joins the team. You now have 4 characters. Patricia's sonic wave ability can topple structures in a wide area."
+      },
+      "keyEvents": [
+        {
+          "atCountry": 21,
+          "title": {
+            "es": "Modo Destrucción Activado",
+            "en": "Destroy Mode Activated"
+          },
+          "description": {
+            "es": "A partir de este país, el juego cambia. Ya no construyes puentes, ahora debes destruir muros de injusticia.",
+            "en": "From this country, the game changes. You no longer build bridges, now you must destroy walls of injustice."
+          },
+          "mechanicChange": "build_to_destroy"
+        }
+      ]
+    },
+
+    {
+      "id": "chapter_4_teo",
+      "number": 4,
+      "title": {
+        "es": "El Niño Perdido",
+        "en": "The Lost Child"
+      },
+      "unlocksAt": "countries_completed:25",
+      "countriesRange": [25, 29],
+      "cutscene": {
+        "background": "kenya_market.jpg",
+        "music": "sad_theme.mp3",
+        "duration": 60,
+        "dialogue": [
+          {
+            "character": "patricia",
+            "text": {
+              "es": "Marco, mira... ese niño pequeño. Está solo y parece perdido.",
+              "en": "Marco, look... that little boy. He's alone and looks lost."
+            },
+            "emotion": "worried"
+          },
+          {
+            "character": "teo",
+            "text": {
+              "es": "*sollozando* No encuentro a mi mamá... Viajábamos desde Honduras y nos separamos aquí...",
+              "en": "*sobbing* I can't find my mom... We were traveling from Honduras and got separated here..."
+            },
+            "emotion": "crying"
+          },
+          {
+            "character": "marco",
+            "text": {
+              "es": "Tranquilo, pequeño. ¿Cómo te llamas?",
+              "en": "Calm down, little one. What's your name?"
+            },
+            "emotion": "gentle"
+          },
+          {
+            "character": "teo",
+            "text": {
+              "es": "Teo... Me llamo Teo.",
+              "en": "Teo... My name is Teo."
+            },
+            "emotion": "sad"
+          },
+          {
+            "character": "luis",
+            "text": {
+              "es": "No podemos dejarlo solo...",
+              "en": "We can't leave him alone..."
+            },
+            "emotion": "concerned"
+          },
+          {
+            "character": "patricia",
+            "text": {
+              "es": "Teo, vamos a ayudarte a encontrar a tu familia. Mientras tanto, quédate con nosotros. Estarás seguro.",
+              "en": "Teo, we're going to help you find your family. Meanwhile, stay with us. You'll be safe."
+            },
+            "emotion": "caring"
+          },
+          {
+            "character": "teo",
+            "text": {
+              "es": "¿De verdad? *limpiándose las lágrimas* Ustedes son muy buenos...",
+              "en": "Really? *wiping tears* You're very kind..."
+            },
+            "emotion": "hopeful"
+          },
+          {
+            "character": "marco",
+            "text": {
+              "es": "Ahora somos cuatro. Una pequeña familia de viajeros.",
+              "en": "Now we're four. A small family of travelers."
+            },
+            "emotion": "warm"
+          }
+        ]
+      },
+      "helpersAvailable": ["marco", "xolo", "luis", "patricia", "teo"],
+      "gameplayChanges": {
+        "es": "Teo se une a la familia. ¡Ahora tienes los 5 personajes completos! Aunque pequeño, la Explosión de Esperanza de Teo tiene un gran poder de área.",
+        "en": "Teo joins the family. You now have all 5 characters! Though small, Teo's Hope Burst has great area power."
+      },
+      "themeMessage": {
+        "es": "Este capítulo representa a los niños migrantes (Dreamers) que se separan de sus familias. Muestra la importancia de la compasión y la familia extendida.",
+        "en": "This chapter represents migrant children (Dreamers) who are separated from their families. It shows the importance of compassion and extended family."
+      }
+    },
+
+    {
+      "id": "chapter_5_approach",
+      "number": 5,
+      "title": {
+        "es": "El Camino al Reino",
+        "en": "The Path to the Kingdom"
+      },
+      "unlocksAt": "countries_completed:30",
+      "countriesRange": [30, 34],
+      "summary": {
+        "es": "La familia completa se acerca al Reino Soñado. Xolo comparte historias sobre Don Bowser y prepara a todos para el encuentro final.",
+        "en": "The complete family approaches the Dream Kingdom. Xolo shares stories about Don Bowser and prepares everyone for the final encounter."
+      },
+      "helpersAvailable": ["marco", "xolo", "luis", "patricia", "teo"],
+      "cutscene": {
+        "background": "approaching_kingdom.jpg",
+        "music": "preparation_theme.mp3",
+        "duration": 45,
+        "dialogue": [
+          {
+            "character": "xolo",
+            "text": {
+              "es": "Marco, amigos míos... pronto llegaremos al Reino Soñado. Debo advertirles sobre su guardián.",
+              "en": "Marco, my friends... we will soon reach the Dream Kingdom. I must warn you about its guardian."
+            },
+            "emotion": "serious"
+          },
+          {
+            "character": "teo",
+            "text": {
+              "es": "¿Es malo ese Don Bowser?",
+              "en": "Is that Don Bowser bad?"
+            },
+            "emotion": "worried"
+          },
+          {
+            "character": "xolo",
+            "text": {
+              "es": "No es malo, pequeño Teo. Solo tiene miedo. Miedo de que los viajeros cambien su reino. Pero hemos aprendido que los viajeros enriquecen, no empobrecen.",
+              "en": "He's not bad, little Teo. He's just afraid. Afraid that travelers will change his kingdom. But we've learned that travelers enrich, they don't impoverish."
+            },
+            "emotion": "wise"
+          },
+          {
+            "character": "marco",
+            "text": {
+              "es": "Xolo tiene razón. En cada país hemos visto cómo la diversidad hace a las sociedades más fuertes.",
+              "en": "Xolo is right. In every country we've seen how diversity makes societies stronger."
+            },
+            "emotion": "determined"
+          }
+        ]
+      },
+      "keyEvents": [
+        {
+          "atCountry": 34,
+          "title": {
+            "es": "El Último País Antes del Reino",
+            "en": "The Last Country Before the Kingdom"
+          },
+          "description": {
+            "es": "La familia completa está lista. Han aprendido de 34 culturas. Solo queda enfrentar a Don Bowser.",
+            "en": "The complete family is ready. They've learned from 34 cultures. Only facing Don Bowser remains."
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "chapter_6_confrontation",
+      "number": 6,
+      "title": {
+        "es": "Las Puertas del Reino",
+        "en": "The Kingdom's Gates"
+      },
+      "unlocksAt": "countries_completed:35",
+      "countriesRange": [35, 35],
+      "cutscene": {
+        "background": "dream_kingdom_gates.jpg",
+        "music": "final_theme_tense.mp3",
+        "duration": 90,
+        "dialogue": [
+          {
+            "character": "narrator",
+            "text": {
+              "es": "Después de visitar 35 países, la familia finalmente llega a las puertas del Reino Soñado...",
+              "en": "After visiting 35 countries, the family finally arrives at the Dream Kingdom's gates..."
+            }
+          },
+          {
+            "character": "don_bowser",
+            "text": {
+              "es": "Alto ahí. Este es MI reino. ¡Y yo decido quién entra! ¿Quiénes son ustedes para venir aquí?",
+              "en": "Stop right there. This is MY kingdom. And I decide who enters! Who are you to come here?"
+            },
+            "emotion": "angry"
+          },
+          {
+            "character": "marco",
+            "text": {
+              "es": "Soy Marco. Vengo de México. He viajado por 35 países aprendiendo sobre el mundo.",
+              "en": "I'm Marco. I come from Mexico. I've traveled through 35 countries learning about the world."
+            },
+            "emotion": "calm"
+          },
+          {
+            "character": "don_bowser",
+            "text": {
+              "es": "¿México? ¿Y qué tienen ustedes los viajeros que ofrecer? Solo traen problemas. ¡No los quiero aquí!",
+              "en": "Mexico? And what do you travelers have to offer? You only bring problems. I don't want you here!"
+            },
+            "emotion": "dismissive"
+          },
+          {
+            "character": "patricia",
+            "text": {
+              "es": "Señor Bowser, permítanos mostrarle algo...",
+              "en": "Mr. Bowser, allow us to show you something..."
+            },
+            "emotion": "diplomatic"
+          },
+          {
+            "character": "marco",
+            "text": {
+              "es": "En mi mochila llevo 35 objetos culturales. Cada uno representa algo valioso de un país diferente.",
+              "en": "In my backpack I carry 35 cultural objects. Each represents something valuable from a different country."
+            },
+            "emotion": "proud"
+          },
+          {
+            "character": "teo",
+            "text": {
+              "es": "¡Mira! Este es de Kenia. Y este de Japón. ¡Cada uno cuenta una historia!",
+              "en": "Look! This one is from Kenya. And this from Japan. Each tells a story!"
+            },
+            "emotion": "excited"
+          },
+          {
+            "character": "don_bowser",
+            "text": {
+              "es": "¿Y qué? Son solo... cosas...",
+              "en": "So what? They're just... things..."
+            },
+            "emotion": "dismissive_but_curious"
+          },
+          {
+            "character": "xolo",
+            "text": {
+              "es": "No son solo cosas, Don Bowser. Son símbolos. Cada cultura tiene algo que aportar. Los viajeros no vienen a quitar, vienen a compartir.",
+              "en": "They're not just things, Don Bowser. They're symbols. Each culture has something to contribute. Travelers don't come to take, they come to share."
+            },
+            "emotion": "wise"
+          },
+          {
+            "character": "luis",
+            "text": {
+              "es": "Mi hermano Marco puede enseñar agricultura sostenible. Patricia habla 5 idiomas y puede ayudar con comunicación. Yo soy ingeniero...",
+              "en": "My brother Marco can teach sustainable agriculture. Patricia speaks 5 languages and can help with communication. I'm an engineer..."
+            },
+            "emotion": "helpful"
+          },
+          {
+            "character": "teo",
+            "text": {
+              "es": "¡Y yo quiero ser científico! Puedo aprender mucho aquí y algún día ayudar a otros.",
+              "en": "And I want to be a scientist! I can learn a lot here and someday help others."
+            },
+            "emotion": "hopeful"
+          },
+          {
+            "character": "don_bowser",
+            "text": {
+              "es": "Yo... yo solo quería proteger mi reino. Pensé que cerrando las puertas lo mantendría seguro...",
+              "en": "I... I only wanted to protect my kingdom. I thought that by closing the doors I would keep it safe..."
+            },
+            "emotion": "conflicted"
+          },
+          {
+            "character": "marco",
+            "text": {
+              "es": "La verdadera seguridad viene de la diversidad. Hemos visto 35 países. Los lugares más prósperos son aquellos que abrazan a viajeros de todas partes.",
+              "en": "True security comes from diversity. We've seen 35 countries. The most prosperous places are those that embrace travelers from everywhere."
+            },
+            "emotion": "wise"
+          },
+          {
+            "character": "don_bowser",
+            "text": {
+              "es": "...*pausa larga*... Quizás... quizás he estado equivocado todo este tiempo.",
+              "en": "...*long pause*... Perhaps... perhaps I've been wrong all this time."
+            },
+            "emotion": "realization"
+          }
+        ]
+      },
+      "bossBattle": {
+        "type": "final_boss",
+        "phases": 3,
+        "description": {
+          "es": "Antes de que Don Bowser acepte completamente, debes demostrar tu determinación derribando su castillo de muros.",
+          "en": "Before Don Bowser fully accepts, you must demonstrate your determination by toppling his castle of walls."
+        }
+      }
+    },
+
+    {
+      "id": "epilogue",
+      "title": {
+        "es": "Un Nuevo Comienzo",
+        "en": "A New Beginning"
+      },
+      "unlocksAt": "boss_defeated",
+      "cutscene": {
+        "background": "dream_kingdom_open.jpg",
+        "music": "victory_theme_hopeful.mp3",
+        "duration": 60,
+        "dialogue": [
+          {
+            "character": "don_bowser",
+            "text": {
+              "es": "*bajando del castillo* Han... han ganado. No con fuerza, sino con sabiduría y determinación.",
+              "en": "*coming down from the castle* You... you've won. Not with force, but with wisdom and determination."
+            },
+            "emotion": "humbled"
+          },
+          {
+            "character": "don_bowser",
+            "text": {
+              "es": "Marco, Luis, Patricia, Teo, Xolo... Las puertas de mi reino están abiertas. No solo para ustedes, sino para todos los viajeros que vengan con esperanza en sus corazones.",
+              "en": "Marco, Luis, Patricia, Teo, Xolo... The doors of my kingdom are open. Not just for you, but for all travelers who come with hope in their hearts."
+            },
+            "emotion": "accepting"
+          },
+          {
+            "character": "marco",
+            "text": {
+              "es": "Gracias, Don Bowser. Has aprendido lo que nosotros aprendimos: que todos tenemos algo valioso que aportar.",
+              "en": "Thank you, Don Bowser. You've learned what we learned: that we all have something valuable to contribute."
+            },
+            "emotion": "grateful"
+          },
+          {
+            "character": "narrator",
+            "text": {
+              "es": "Y así, Marco y su familia encontraron un hogar. Pero más importante, cambiaron el corazón de un guardián. Las puertas del Reino Soñado permanecieron abiertas para siempre...",
+              "en": "And so, Marco and his family found a home. But more importantly, they changed the heart of a guardian. The Dream Kingdom's doors remained open forever..."
+            }
+          },
+          {
+            "character": "narrator",
+            "text": {
+              "es": "Porque al final del viaje, Marco aprendió la lección más importante: No se trata de dónde terminas, sino de todo lo que aprendes en el camino.",
+              "en": "Because at the end of the journey, Marco learned the most important lesson: It's not about where you end up, but about everything you learn along the way."
+            }
+          }
+        ]
+      },
+      "choices": {
+        "es": "¿Qué hará Marco ahora?",
+        "en": "What will Marco do now?",
+        "options": [
+          {
+            "id": "stay",
+            "text": {
+              "es": "Quedarse en el Reino Soñado",
+              "en": "Stay in the Dream Kingdom"
+            },
+            "outcome": {
+              "es": "Marco y su familia se establecen en el reino. Marco abre una granja comunitaria donde enseña agricultura sostenible a nuevos viajeros.",
+              "en": "Marco and his family settle in the kingdom. Marco opens a community farm where he teaches sustainable agriculture to new travelers."
+            }
+          },
+          {
+            "id": "return",
+            "text": {
+              "es": "Regresar a México con lo aprendido",
+              "en": "Return to Mexico with what he learned"
+            },
+            "outcome": {
+              "es": "Marco regresa a su pueblo con nuevas ideas y esperanza. Usa lo aprendido para ayudar a su comunidad a prosperar.",
+              "en": "Marco returns to his town with new ideas and hope. He uses what he learned to help his community thrive."
+            }
+          },
+          {
+            "id": "continue",
+            "text": {
+              "es": "Continuar viajando por el mundo",
+              "en": "Continue traveling the world"
+            },
+            "outcome": {
+              "es": "Marco decide que el viaje nunca termina. Continúa explorando, aprendiendo y ayudando a otros viajeros en su camino.",
+              "en": "Marco decides the journey never ends. He continues exploring, learning and helping other travelers on their way."
+            }
+          }
+        ]
+      },
+      "finalMessage": {
+        "es": "¡Felicitaciones! Has completado Hope Quest. Recuerda: cada persona que viaja lleva consigo historias, sueños y talentos que pueden cambiar el mundo. 🌍✨",
+        "en": "Congratulations! You've completed Hope Quest. Remember: every person who travels carries stories, dreams and talents that can change the world. 🌍✨"
+      }
+    }
+  ],
+
+  "metadata": {
+    "totalChapters": 6,
+    "totalCountries": 35,
+    "familyMembers": 5,
+    "characterProgression": {
+      "start": ["marco", "xolo"],
+      "chapter2": ["marco", "xolo", "luis"],
+      "chapter3": ["marco", "xolo", "luis", "patricia"],
+      "chapter4": ["marco", "xolo", "luis", "patricia", "teo"],
+      "note": "Xolo está desde el inicio como compañero fiel de Marco (similar a Yoshi con Mario)"
+    },
+    "mainTheme": "Migration, hope, cultural diversity, empathy",
+    "ageRating": "6-14 years",
+    "sensitivityLevel": "4-5 (realistic but hopeful)",
+    "messageType": "Pro-migration, pro-human rights, educational"
+  }
+}

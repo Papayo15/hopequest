@@ -1,0 +1,480 @@
+{
+  "id": "brazil",
+  "name": {
+    "es": "Brasil",
+    "en": "Brazil",
+    "zh": "巴西",
+    "hi": "ब्राज़ील",
+    "ar": "البرازيل"
+  },
+  "continent": "americas",
+  "difficulty": 1,
+  "order": 3,
+
+  "culturalObject": {
+    "id": "berimbau",
+    "name": {
+      "es": "Berimbau",
+      "en": "Berimbau",
+      "zh": "贝林堡",
+      "hi": "बेरिम्बाउ",
+      "ar": "بيريمباو"
+    },
+    "description": {
+      "es": "Instrumento musical afrobrasileño usado en capoeira. Un arco musical que canta historias de resistencia, libertad y la lucha de las personas esclavizadas por su dignidad.",
+      "en": "Afro-Brazilian musical instrument used in capoeira. A musical bow that sings stories of resistance, freedom, and the struggle of enslaved people for their dignity."
+    },
+    "funFact": {
+      "es": "¡La capoeira nació como un arte marcial disfrazada de danza! Las personas esclavizadas la crearon para defenderse sin que sus opresores lo notaran.",
+      "en": "Capoeira was born as a martial art disguised as a dance! Enslaved people created it to defend themselves without their oppressors noticing."
+    },
+    "image": "objects/brazil_berimbau.png",
+    "model3D": "objects/brazil_berimbau.glb"
+  },
+
+  "adventure": {
+    "intro": {
+      "dialogue": {
+        "es": "Brasil, el país más grande de América del Sur. Aquí veo la diversidad en su máxima expresión: indígenas, africanos, europeos, asiáticos... todos construyendo juntos una nación.",
+        "en": "Brazil, the largest country in South America. Here I see diversity at its peak: indigenous, African, European, Asian... all building a nation together."
+      },
+      "character": "marco",
+      "animation": "marco_amazed.json",
+      "duration": 8
+    },
+
+    "locations": [
+      {
+        "id": "rio_janeiro",
+        "name": {
+          "es": "Río de Janeiro",
+          "en": "Rio de Janeiro"
+        },
+        "background": "backgrounds/brazil_rio.jpg",
+        "interactiveElements": [
+          {
+            "id": "cristo_redentor",
+            "type": "monument",
+            "name": {
+              "es": "Cristo Redentor",
+              "en": "Christ the Redeemer"
+            },
+            "position": { "x": 400, "y": 200 },
+            "fact": {
+              "es": "Esta estatua icónica de 30 metros se eleva sobre Río. Fue construida por brasileños, franceses y polacos trabajando juntos. ¡Un símbolo de cooperación internacional!",
+              "en": "This iconic 30-meter statue rises above Rio. It was built by Brazilians, French and Poles working together. A symbol of international cooperation!"
+            },
+            "image": "monuments/cristo.png",
+            "sound": "sfx/discovery.mp3"
+          },
+          {
+            "id": "copacabana",
+            "type": "object",
+            "name": {
+              "es": "Playa de Copacabana",
+              "en": "Copacabana Beach"
+            },
+            "position": { "x": 200, "y": 400 },
+            "fact": {
+              "es": "La playa más famosa del mundo tiene un diseño de mosaico portugués en blanco y negro. ¡Mide 4 kilómetros de arena dorada!",
+              "en": "The world's most famous beach has a Portuguese black and white mosaic design. It measures 4 kilometers of golden sand!"
+            },
+            "image": "nature/copacabana.png"
+          },
+          {
+            "id": "favela",
+            "type": "object",
+            "name": {
+              "es": "Favela",
+              "en": "Favela"
+            },
+            "position": { "x": 600, "y": 300 },
+            "fact": {
+              "es": "Las favelas son comunidades vibrantes donde viven millones de brasileños. Aunque enfrentan desafíos, están llenas de arte, música y solidaridad comunitaria.",
+              "en": "Favelas are vibrant communities where millions of Brazilians live. Though they face challenges, they're filled with art, music and community solidarity."
+            },
+            "image": "places/favela.png"
+          }
+        ],
+        "activity": {
+          "id": "brazil_activity_1",
+          "type": "trivia",
+          "config": {
+            "question": {
+              "es": "¿Qué idioma se habla en Brasil?",
+              "en": "What language is spoken in Brazil?"
+            },
+            "options": [
+              {
+                "es": "Portugués",
+                "en": "Portuguese"
+              },
+              {
+                "es": "Español",
+                "en": "Spanish"
+              },
+              {
+                "es": "Inglés",
+                "en": "English"
+              }
+            ],
+            "correctAnswer": 0,
+            "explanation": {
+              "es": "¡Correcto! Brasil es el único país de América del Sur donde se habla portugués. Fue colonizado por Portugal, no España.",
+              "en": "Correct! Brazil is the only South American country where Portuguese is spoken. It was colonized by Portugal, not Spain."
+            },
+            "image": "flags/brazil.png",
+            "difficulty": 1
+          }
+        },
+        "migrationContent": {
+          "historicalContext": {
+            "text": {
+              "es": "Brasil recibió la mayor cantidad de personas esclavizadas de África (cerca de 4 millones entre 1500-1888). También acogió grandes olas de inmigrantes italianos, alemanes, japoneses y árabes entre 1870-1930, construyendo una sociedad multicultural.",
+              "en": "Brazil received the largest number of enslaved people from Africa (about 4 million between 1500-1888). It also welcomed large waves of Italian, German, Japanese and Arab immigrants between 1870-1930, building a multicultural society."
+            },
+            "sensitivityLevel": 3,
+            "parentalControlRequired": true
+          },
+          "hopefulMessage": {
+            "es": "Brasil me enseña que la diversidad no es una debilidad, es nuestra mayor fortaleza. Cuando personas de todos los orígenes trabajan juntas, crean algo hermoso.",
+            "en": "Brazil teaches me that diversity is not a weakness, it's our greatest strength. When people from all backgrounds work together, they create something beautiful."
+          }
+        }
+      },
+
+      {
+        "id": "amazonia",
+        "name": {
+          "es": "Selva Amazónica",
+          "en": "Amazon Rainforest"
+        },
+        "background": "backgrounds/brazil_amazon.jpg",
+        "interactiveElements": [
+          {
+            "id": "indigenas_amazonia",
+            "type": "object",
+            "name": {
+              "es": "Pueblos Indígenas",
+              "en": "Indigenous Peoples"
+            },
+            "position": { "x": 300, "y": 350 },
+            "fact": {
+              "es": "La Amazonía es hogar de más de 400 pueblos indígenas diferentes. Guardan conocimientos ancestrales sobre medicina, agricultura sostenible y conservación del planeta.",
+              "en": "The Amazon is home to over 400 different indigenous peoples. They hold ancestral knowledge about medicine, sustainable agriculture and planet conservation."
+            },
+            "image": "people/indigenous_brazil.png"
+          },
+          {
+            "id": "jaguar",
+            "type": "object",
+            "name": {
+              "es": "Jaguar",
+              "en": "Jaguar"
+            },
+            "position": { "x": 500, "y": 400 },
+            "fact": {
+              "es": "El jaguar es el felino más grande de América. Los pueblos indígenas lo consideran sagrado, símbolo de fuerza y protector de la selva.",
+              "en": "The jaguar is America's largest cat. Indigenous peoples consider it sacred, a symbol of strength and protector of the jungle."
+            },
+            "image": "animals/jaguar.png"
+          }
+        ],
+        "activity": {
+          "id": "brazil_activity_2",
+          "type": "memory",
+          "config": {
+            "pairs": 6,
+            "cards": [
+              {
+                "id": "feijoada",
+                "image": "cards/feijoada.png",
+                "name": { "es": "Feijoada", "en": "Feijoada" }
+              },
+              {
+                "id": "capoeira",
+                "image": "cards/capoeira.png",
+                "name": { "es": "Capoeira", "en": "Capoeira" }
+              },
+              {
+                "id": "samba",
+                "image": "cards/samba.png",
+                "name": { "es": "Samba", "en": "Samba" }
+              },
+              {
+                "id": "futbol",
+                "image": "cards/soccer.png",
+                "name": { "es": "Fútbol", "en": "Soccer" }
+              },
+              {
+                "id": "carnaval",
+                "image": "cards/carnival.png",
+                "name": { "es": "Carnaval", "en": "Carnival" }
+              },
+              {
+                "id": "acai",
+                "image": "cards/acai.png",
+                "name": { "es": "Açaí", "en": "Açaí" }
+              }
+            ]
+          }
+        },
+        "migrationContent": {
+          "culturalContributions": {
+            "description": {
+              "es": "Brasil ha dado al mundo ritmos como la samba y bossa nova, deportes como el fútbol arte (jogo bonito), superalimentos como el açaí, y la alegría del Carnaval. Su cultura afrobrasileña enriquece al planeta entero.",
+              "en": "Brazil has given the world rhythms like samba and bossa nova, sports like beautiful football (jogo bonito), superfoods like açaí, and the joy of Carnival. Its Afro-Brazilian culture enriches the entire planet."
+            },
+            "examples": [
+              "Samba y Bossa Nova",
+              "Capoeira (arte marcial-danza)",
+              "Carnaval de Río",
+              "Fútbol estilo brasileño",
+              "Açaí (superalimento amazónico)"
+            ],
+            "sensitivityLevel": 1
+          },
+          "famousMigrants": [
+            {
+              "name": "Carmen Miranda",
+              "origin": "Portugal → Brasil",
+              "destination": "Hollywood, USA",
+              "achievement": {
+                "es": "Actriz y cantante que llevó la cultura brasileña a Hollywood en los años 40. Aunque enfrentó estereotipos, abrió puertas para artistas latinos.",
+                "en": "Actress and singer who brought Brazilian culture to Hollywood in the 1940s. Though she faced stereotypes, she opened doors for Latino artists."
+              },
+              "quote": {
+                "es": "Yo no vendo mi país. Yo hago que el mundo conozca mi Brasil hermoso.",
+                "en": "I don't sell my country. I make the world know my beautiful Brazil."
+              },
+              "image": "migrants/carmen_miranda.png",
+              "sensitivityLevel": 2
+            }
+          ],
+          "hopefulMessage": {
+            "es": "La mezcla de culturas puede ser dolorosa en su origen, pero también puede crear algo nuevo y hermoso. Brasil me muestra que del dolor puede nacer esperanza.",
+            "en": "The mixing of cultures can be painful in its origin, but it can also create something new and beautiful. Brazil shows me that hope can be born from pain."
+          }
+        }
+      },
+
+      {
+        "id": "salvador_bahia",
+        "name": {
+          "es": "Salvador de Bahía",
+          "en": "Salvador, Bahia"
+        },
+        "background": "backgrounds/brazil_salvador.jpg",
+        "interactiveElements": [
+          {
+            "id": "pelourinho",
+            "type": "monument",
+            "name": {
+              "es": "Pelourinho",
+              "en": "Pelourinho"
+            },
+            "position": { "x": 400, "y": 300 },
+            "fact": {
+              "es": "Este barrio colonial colorido fue donde llegaban los barcos con personas esclavizadas. Hoy es patrimonio de la humanidad, un recordatorio de resiliencia y resistencia afrobrasileña.",
+              "en": "This colorful colonial neighborhood was where ships arrived with enslaved people. Today it's a world heritage site, a reminder of Afro-Brazilian resilience and resistance."
+            },
+            "image": "monuments/pelourinho.png"
+          },
+          {
+            "id": "candomble",
+            "type": "object",
+            "name": {
+              "es": "Candomblé",
+              "en": "Candomblé"
+            },
+            "position": { "x": 250, "y": 380 },
+            "fact": {
+              "es": "Religión afrobrasileña que preserva tradiciones de África Occidental. Las personas esclavizadas protegieron su espiritualidad mezclándola con el catolicismo.",
+              "en": "Afro-Brazilian religion that preserves West African traditions. Enslaved people protected their spirituality by blending it with Catholicism."
+            },
+            "image": "culture/candomble.png"
+          }
+        ],
+        "activity": {
+          "id": "brazil_activity_3",
+          "type": "puzzle",
+          "config": {
+            "image": "puzzles/brazil_capoeira.jpg",
+            "pieces": 6,
+            "canRotate": false
+          }
+        },
+        "migrationContent": {
+          "modernReality": {
+            "text": {
+              "es": "Hoy Brasil es un país de contrastes: acoge refugiados de Venezuela, Haití y África, mientras muchos brasileños emigran buscando mejores oportunidades en Europa, USA y Japón. La migración es un ciclo continuo.",
+              "en": "Today Brazil is a country of contrasts: it welcomes refugees from Venezuela, Haiti and Africa, while many Brazilians emigrate seeking better opportunities in Europe, USA and Japan. Migration is a continuous cycle."
+            },
+            "sensitivityLevel": 3,
+            "parentalControlRequired": false
+          },
+          "hopefulMessage": {
+            "es": "Brasil me enseña que mi herencia es compleja, a veces dolorosa, pero siempre valiosa. Puedo honrar mi pasado mientras construyo mi futuro.",
+            "en": "Brazil teaches me that my heritage is complex, sometimes painful, but always valuable. I can honor my past while building my future."
+          }
+        }
+      }
+    ],
+
+    "clues": [
+      {
+        "es": "El berimbau canta donde la resistencia se volvió danza",
+        "en": "The berimbau sings where resistance became dance"
+      },
+      {
+        "es": "Busca en la ciudad donde África y Portugal se encontraron",
+        "en": "Look in the city where Africa and Portugal met"
+      },
+      {
+        "es": "¡El Pelourinho guarda el secreto musical!",
+        "en": "Pelourinho holds the musical secret!"
+      }
+    ],
+
+    "estimatedDuration": 15
+  },
+
+  "bridgeBuilding": {
+    "mode": "build",
+    "theme": "Puente de la Diversidad",
+    "background": "backgrounds/brazil_bridge.jpg",
+    "music": "music/brazil_samba.mp3",
+    "objective": {
+      "es": "Construye un puente sobre el río Amazonas usando materiales resistentes. Marco y Xolo necesitan cruzar para encontrar a las comunidades indígenas.",
+      "en": "Build a bridge over the Amazon River using sturdy materials. Marco and Xolo need to cross to find the indigenous communities."
+    },
+
+    "structures": [
+      {
+        "id": "gap_1",
+        "type": "gap",
+        "gap": {
+          "width": 220,
+          "height": 120,
+          "startPosition": { "x": 180, "y": 400 },
+          "endPosition": { "x": 400, "y": 400 }
+        },
+        "blocks": [
+          {
+            "id": "plank_1",
+            "shape": "rectangle",
+            "material": "wood_plank",
+            "size": { "width": 140, "height": 20 },
+            "position": { "x": 130, "y": 500 },
+            "rotation": 0,
+            "isStatic": true,
+            "canConnect": true
+          },
+          {
+            "id": "plank_2",
+            "shape": "rectangle",
+            "material": "wood_plank",
+            "size": { "width": 140, "height": 20 },
+            "position": { "x": 130, "y": 530 },
+            "rotation": 0,
+            "isStatic": true,
+            "canConnect": true
+          },
+          {
+            "id": "steel_1",
+            "shape": "rectangle",
+            "material": "steel_beam",
+            "size": { "width": 100, "height": 15 },
+            "position": { "x": 130, "y": 560 },
+            "rotation": 0,
+            "isStatic": true,
+            "canConnect": true
+          },
+          {
+            "id": "rope_1",
+            "shape": "rectangle",
+            "material": "rope",
+            "size": { "width": 80, "height": 8 },
+            "position": { "x": 130, "y": 585 },
+            "rotation": 0,
+            "isStatic": true,
+            "canConnect": true
+          }
+        ],
+        "culturalObjectPosition": { "x": 420, "y": 380 }
+      }
+    ],
+
+    "helpersAvailable": 2,
+    "optimalSolutions": 2,
+    "starThresholds": {
+      "3": 2,
+      "2": 3,
+      "1": 5
+    },
+
+    "specialMechanics": [],
+
+    "tutorial": {
+      "es": "Este río es más ancho. Necesitarás combinar diferentes materiales para crear un puente estable. Las vigas de acero son más fuertes que la madera.",
+      "en": "This river is wider. You'll need to combine different materials to create a stable bridge. Steel beams are stronger than wood."
+    }
+  },
+
+  "familyDialogue": [
+    {
+      "character": "marco",
+      "text": {
+        "es": "Brasil... tantos orígenes diferentes conviviendo. Africanos, europeos, indígenas, asiáticos. ¿Cómo lo logran?",
+        "en": "Brazil... so many different origins living together. Africans, Europeans, indigenous, Asians. How do they do it?"
+      }
+    },
+    {
+      "character": "xolo",
+      "text": {
+        "es": "No sin dificultad, Marco. La historia de Brasil está marcada por el sufrimiento, especialmente de las personas africanas traídas como esclavas. Pero de ese dolor nació una cultura resiliente.",
+        "en": "Not without difficulty, Marco. Brazil's history is marked by suffering, especially of African people brought as slaves. But from that pain, a resilient culture was born."
+      }
+    },
+    {
+      "character": "marco",
+      "text": {
+        "es": "El berimbau... es un instrumento nacido de la resistencia. Me recuerda que incluso en las situaciones más oscuras, las personas encuentran formas de mantener su dignidad.",
+        "en": "The berimbau... it's an instrument born from resistance. It reminds me that even in the darkest situations, people find ways to maintain their dignity."
+      }
+    },
+    {
+      "character": "xolo",
+      "text": {
+        "es": "Exactamente. Y esa lección te acompañará en tu propio viaje, Marco. La resiliencia es tu mayor herramienta.",
+        "en": "Exactly. And that lesson will accompany you on your own journey, Marco. Resilience is your greatest tool."
+      }
+    }
+  ],
+
+  "metadata": {
+    "releaseVersion": "2.0_HopeQuest",
+    "premium": false,
+    "requiredLevel": null,
+    "isStartingCountry": false,
+    "characterIntroductions": [],
+    "migrationThemes": [
+      "forced_migration_slavery",
+      "voluntary_immigration",
+      "cultural_resistance",
+      "multicultural_society",
+      "refugee_host_country"
+    ],
+    "educationalFocus": [
+      "geography",
+      "culture",
+      "history",
+      "colonial_history",
+      "afro_diaspora",
+      "indigenous_rights",
+      "migration_history",
+      "cultural_contributions",
+      "resilience"
+    ]
+  }
+}

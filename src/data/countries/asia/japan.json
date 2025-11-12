@@ -1,0 +1,543 @@
+{
+  "id": "japan",
+  "name": {
+    "es": "Japón",
+    "en": "Japan",
+    "zh": "日本",
+    "hi": "जापान",
+    "ar": "اليابان"
+  },
+  "continent": "asia",
+  "difficulty": 2,
+  "order": 22,
+
+  "culturalObject": {
+    "id": "omamori_viajero",
+    "name": {
+      "es": "Omamori del Viajero",
+      "en": "Traveler's Omamori",
+      "zh": "旅行者护身符",
+      "hi": "यात्री की ओममोरी",
+      "ar": "أومامو ري المسافر"
+    },
+    "description": {
+      "es": "Amuleto japonés de protección que los emigrantes japoneses (dekasegi) llevan consigo. Representa la conexión espiritual con el hogar, sin importar cuán lejos estés.",
+      "en": "Japanese protection amulet that Japanese emigrants (dekasegi) carry with them. Represents spiritual connection to home, no matter how far you are."
+    },
+    "funFact": {
+      "es": "¡Los dekasegi son japoneses que van a trabajar al extranjero temporalmente y luego regresan! Brasil tiene la comunidad japonesa más grande fuera de Japón (1.5 millones de personas).",
+      "en": "Dekasegi are Japanese who go to work abroad temporarily and then return! Brazil has the largest Japanese community outside Japan (1.5 million people)."
+    },
+    "image": "objects/japan_omamori.png",
+    "model3D": "objects/japan_omamori.glb"
+  },
+
+  "adventure": {
+    "intro": {
+      "dialogue": {
+        "es": "Japón... Un país que fue de emigrantes y ahora necesita inmigrantes. Un lugar donde la tradición y la modernidad se abrazan. Aquí aprenderé sobre resiliencia y reinvención.",
+        "en": "Japan... A country that was of emigrants and now needs immigrants. A place where tradition and modernity embrace. Here I'll learn about resilience and reinvention."
+      },
+      "character": "marco",
+      "animation": "marco_contemplative.json",
+      "duration": 10
+    },
+
+    "locations": [
+      {
+        "id": "tokyo",
+        "name": {
+          "es": "Tokio",
+          "en": "Tokyo"
+        },
+        "background": "backgrounds/japan_tokyo.jpg",
+        "interactiveElements": [
+          {
+            "id": "shibuya_crossing",
+            "type": "monument",
+            "name": {
+              "es": "Cruce de Shibuya",
+              "en": "Shibuya Crossing"
+            },
+            "position": { "x": 400, "y": 350 },
+            "fact": {
+              "es": "¡El cruce peatonal más transitado del mundo! Hasta 3,000 personas lo cruzan a la vez. Es un símbolo del Japón moderno, ordenado y eficiente.",
+              "en": "The world's busiest pedestrian crossing! Up to 3,000 people cross it at once. It's a symbol of modern, orderly and efficient Japan."
+            },
+            "image": "places/shibuya.png",
+            "sound": "sfx/city_crowd.mp3"
+          },
+          {
+            "id": "meiji_shrine",
+            "type": "monument",
+            "name": {
+              "es": "Santuario Meiji",
+              "en": "Meiji Shrine"
+            },
+            "position": { "x": 250, "y": 300 },
+            "fact": {
+              "es": "Un oasis de paz en medio de Tokio. Este santuario sintoísta honra al emperador Meiji, quien modernizó Japón. Tradición y progreso conviviendo.",
+              "en": "An oasis of peace in the middle of Tokyo. This Shinto shrine honors Emperor Meiji, who modernized Japan. Tradition and progress coexisting."
+            },
+            "image": "monuments/meiji_shrine.png"
+          },
+          {
+            "id": "robot_restaurant",
+            "type": "object",
+            "name": {
+              "es": "Distrito Electrónico",
+              "en": "Electronics District"
+            },
+            "position": { "x": 600, "y": 380 },
+            "fact": {
+              "es": "Akihabara es el paraíso de la tecnología. Aquí se vende el futuro: robots, videojuegos, anime. Japón lidera la innovación tecnológica mundial.",
+              "en": "Akihabara is technology paradise. Here the future is sold: robots, video games, anime. Japan leads world technological innovation."
+            },
+            "image": "places/akihabara.png"
+          }
+        ],
+        "activity": {
+          "id": "japan_activity_1",
+          "type": "trivia",
+          "config": {
+            "question": {
+              "es": "¿Cuál es la capital de Japón?",
+              "en": "What is the capital of Japan?"
+            },
+            "options": [
+              {
+                "es": "Kioto",
+                "en": "Kyoto"
+              },
+              {
+                "es": "Tokio",
+                "en": "Tokyo"
+              },
+              {
+                "es": "Osaka",
+                "en": "Osaka"
+              }
+            ],
+            "correctAnswer": 1,
+            "explanation": {
+              "es": "¡Correcto! Tokio es la capital desde 1868. Es la ciudad más poblada del mundo con más de 37 millones de habitantes en su área metropolitana.",
+              "en": "Correct! Tokyo has been the capital since 1868. It's the world's most populous city with over 37 million inhabitants in its metropolitan area."
+            },
+            "image": "flags/japan.png",
+            "difficulty": 2
+          }
+        },
+        "migrationContent": {
+          "historicalContext": {
+            "text": {
+              "es": "Entre 1868-1960, más de 1 millón de japoneses emigraron a Brasil, Perú, USA y Hawái buscando trabajo. Eran campesinos pobres que escapaban del hambre. Los llamaban 'dekasegi' (trabajadores temporales que envían dinero a casa).",
+              "en": "Between 1868-1960, over 1 million Japanese emigrated to Brazil, Peru, USA and Hawaii seeking work. They were poor farmers escaping hunger. They were called 'dekasegi' (temporary workers who send money home)."
+            },
+            "sensitivityLevel": 2,
+            "parentalControlRequired": false
+          },
+          "hopefulMessage": {
+            "es": "Japón me enseña que incluso las naciones más desarrolladas tienen pasado migrante. El éxito de hoy no borra las luchas de ayer.",
+            "en": "Japan teaches me that even the most developed nations have a migrant past. Today's success doesn't erase yesterday's struggles."
+          }
+        }
+      },
+
+      {
+        "id": "hiroshima",
+        "name": {
+          "es": "Hiroshima",
+          "en": "Hiroshima"
+        },
+        "background": "backgrounds/japan_hiroshima.jpg",
+        "interactiveElements": [
+          {
+            "id": "peace_memorial",
+            "type": "monument",
+            "name": {
+              "es": "Memorial de la Paz",
+              "en": "Peace Memorial"
+            },
+            "position": { "x": 400, "y": 300 },
+            "fact": {
+              "es": "Este memorial recuerda la bomba atómica de 1945. Hiroshima se reconstruyó como ciudad de paz. Es un mensaje al mundo: de la destrucción puede nacer esperanza.",
+              "en": "This memorial remembers the 1945 atomic bomb. Hiroshima rebuilt itself as a city of peace. It's a message to the world: from destruction, hope can be born."
+            },
+            "image": "monuments/hiroshima_peace.png"
+          },
+          {
+            "id": "origami_cranes",
+            "type": "object",
+            "name": {
+              "es": "Grullas de Origami",
+              "en": "Origami Cranes"
+            },
+            "position": { "x": 250, "y": 380 },
+            "fact": {
+              "es": "Sadako Sasaki, sobreviviente de la bomba, hizo 1,000 grullas de papel pidiendo paz antes de morir de leucemia. Hoy, millones de niños hacen grullas por la paz mundial.",
+              "en": "Sadako Sasaki, bomb survivor, made 1,000 paper cranes asking for peace before dying of leukemia. Today, millions of children make cranes for world peace."
+            },
+            "image": "objects/origami_cranes.png"
+          }
+        ],
+        "activity": {
+          "id": "japan_activity_2",
+          "type": "sequence_order",
+          "config": {
+            "items": [
+              {
+                "id": "1",
+                "text": { "es": "Periodo Edo (aislamiento)", "en": "Edo Period (isolation)" },
+                "correctOrder": 1
+              },
+              {
+                "id": "2",
+                "text": { "es": "Restauración Meiji (apertura)", "en": "Meiji Restoration (opening)" },
+                "correctOrder": 2
+              },
+              {
+                "id": "3",
+                "text": { "es": "Segunda Guerra Mundial", "en": "World War II" },
+                "correctOrder": 3
+              },
+              {
+                "id": "4",
+                "text": { "es": "Reconstrucción y milagro económico", "en": "Reconstruction and economic miracle" },
+                "correctOrder": 4
+              }
+            ],
+            "explanation": {
+              "es": "Japón pasó de aislamiento total a potencia mundial, luego guerra y reconstrucción. Es una historia de resiliencia increíble.",
+              "en": "Japan went from total isolation to world power, then war and reconstruction. It's a story of incredible resilience."
+            }
+          }
+        },
+        "migrationContent": {
+          "culturalContributions": {
+            "description": {
+              "es": "Los emigrantes japoneses llevaron su cultura del trabajo duro, respeto y disciplina a América. Introdujeron el cultivo de arroz, técnicas de pesca, artes marciales (judo, karate), y gastronomía (sushi, tempura, ramen).",
+              "en": "Japanese emigrants brought their culture of hard work, respect and discipline to America. They introduced rice cultivation, fishing techniques, martial arts (judo, karate), and gastronomy (sushi, tempura, ramen)."
+            },
+            "examples": [
+              "Sushi y gastronomía japonesa",
+              "Artes marciales (judo, karate, aikido)",
+              "Manga y anime",
+              "Tecnología (Sony, Nintendo, Toyota)",
+              "Filosofía zen y minimalismo"
+            ],
+            "sensitivityLevel": 1
+          },
+          "famousMigrants": [
+            {
+              "name": "Alberto Fujimori",
+              "origin": "Japón → Perú (padres dekasegi)",
+              "destination": "Perú",
+              "achievement": {
+                "es": "Hijo de inmigrantes japoneses que llegó a ser presidente de Perú (1990-2000). Su historia muestra cómo los inmigrantes pueden alcanzar las más altas posiciones, aunque su legado es controvertido.",
+                "en": "Son of Japanese immigrants who became president of Peru (1990-2000). His story shows how immigrants can reach the highest positions, though his legacy is controversial."
+              },
+              "quote": {
+                "es": "Mis padres llegaron sin nada. Perú les dio una oportunidad.",
+                "en": "My parents arrived with nothing. Peru gave them a chance."
+              },
+              "image": "migrants/fujimori.png",
+              "sensitivityLevel": 3
+            }
+          ],
+          "hopefulMessage": {
+            "es": "Hiroshima me enseña que no importa cuán oscuro sea el momento, siempre podemos reconstruir con esperanza y determinación.",
+            "en": "Hiroshima teaches me that no matter how dark the moment, we can always rebuild with hope and determination."
+          }
+        }
+      },
+
+      {
+        "id": "kyoto",
+        "name": {
+          "es": "Kioto",
+          "en": "Kyoto"
+        },
+        "background": "backgrounds/japan_kyoto.jpg",
+        "interactiveElements": [
+          {
+            "id": "fushimi_inari",
+            "type": "monument",
+            "name": {
+              "es": "Fushimi Inari",
+              "en": "Fushimi Inari"
+            },
+            "position": { "x": 400, "y": 280 },
+            "fact": {
+              "es": "Miles de torii (puertas rojas) forman un camino mágico en esta montaña sagrada. Cada torii fue donada por alguien pidiendo buena fortuna en sus viajes.",
+              "en": "Thousands of torii (red gates) form a magical path on this sacred mountain. Each torii was donated by someone asking for good fortune in their travels."
+            },
+            "image": "monuments/fushimi_inari.png"
+          },
+          {
+            "id": "geisha_district",
+            "type": "object",
+            "name": {
+              "es": "Distrito Geisha (Gion)",
+              "en": "Geisha District (Gion)"
+            },
+            "position": { "x": 250, "y": 400 },
+            "fact": {
+              "es": "Las geishas son artistas tradicionales que preservan la cultura japonesa antigua: danza, música, ceremonia del té. Son símbolos vivientes de tradición.",
+              "en": "Geishas are traditional artists who preserve ancient Japanese culture: dance, music, tea ceremony. They are living symbols of tradition."
+            },
+            "image": "culture/geisha.png"
+          }
+        ],
+        "activity": {
+          "id": "japan_activity_3",
+          "type": "puzzle",
+          "config": {
+            "image": "puzzles/japan_torii.jpg",
+            "pieces": 12,
+            "canRotate": true
+          }
+        },
+        "migrationContent": {
+          "modernReality": {
+            "text": {
+              "es": "Hoy Japón enfrenta una paradoja: su población envejece y necesita trabajadores extranjeros, pero históricamente ha sido cerrado a la inmigración. Está aprendiendo lentamente a abrirse, aceptando trabajadores de Vietnam, China, Filipinas y Brasil (descendientes de japoneses que regresan).",
+              "en": "Today Japan faces a paradox: its population is aging and needs foreign workers, but it has historically been closed to immigration. It's slowly learning to open up, accepting workers from Vietnam, China, Philippines and Brazil (descendants of Japanese returning)."
+            },
+            "sensitivityLevel": 3,
+            "parentalControlRequired": false
+          },
+          "hopefulMessage": {
+            "es": "Japón me muestra que cambiar es difícil, pero necesario. Incluso las culturas más tradicionales pueden aprender a abrazar la diversidad cuando la necesitan.",
+            "en": "Japan shows me that change is difficult, but necessary. Even the most traditional cultures can learn to embrace diversity when they need it."
+          }
+        }
+      }
+    ],
+
+    "clues": [
+      {
+        "es": "El omamori está donde los caminos sagrados comienzan",
+        "en": "The omamori is where sacred paths begin"
+      },
+      {
+        "es": "Busca entre las mil puertas rojas",
+        "en": "Look among the thousand red gates"
+      },
+      {
+        "es": "¡Fushimi Inari guarda el amuleto del viajero!",
+        "en": "Fushimi Inari holds the traveler's amulet!"
+      }
+    ],
+
+    "estimatedDuration": 20
+  },
+
+  "bridgeBuilding": {
+    "mode": "destroy",
+    "theme": "Rompiendo el Muro de la Xenofobia",
+    "background": "backgrounds/japan_wall.jpg",
+    "music": "music/japan_taiko.mp3",
+    "objective": {
+      "es": "Destruye el muro de la xenofobia que impide que los trabajadores extranjeros sean aceptados en Japón. La sociedad necesita abrirse a la diversidad.",
+      "en": "Destroy the wall of xenophobia that prevents foreign workers from being accepted in Japan. Society needs to open up to diversity."
+    },
+
+    "structures": [
+      {
+        "id": "wall_1",
+        "type": "wall",
+        "wall": {
+          "width": 250,
+          "height": 180,
+          "position": { "x": 350, "y": 350 },
+          "material": "prejudice_wall",
+          "layers": 4,
+          "blocks": [
+            {
+              "id": "block_1_1",
+              "material": "prejudice_wall",
+              "size": { "width": 60, "height": 40 },
+              "position": { "x": 290, "y": 510 },
+              "health": 100
+            },
+            {
+              "id": "block_1_2",
+              "material": "prejudice_wall",
+              "size": { "width": 60, "height": 40 },
+              "position": { "x": 350, "y": 510 },
+              "health": 100
+            },
+            {
+              "id": "block_1_3",
+              "material": "prejudice_wall",
+              "size": { "width": 60, "height": 40 },
+              "position": { "x": 410, "y": 510 },
+              "health": 100
+            },
+            {
+              "id": "block_1_4",
+              "material": "prejudice_wall",
+              "size": { "width": 60, "height": 40 },
+              "position": { "x": 470, "y": 510 },
+              "health": 100
+            },
+            {
+              "id": "block_2_1",
+              "material": "prejudice_wall",
+              "size": { "width": 60, "height": 40 },
+              "position": { "x": 320, "y": 470 },
+              "health": 100
+            },
+            {
+              "id": "block_2_2",
+              "material": "prejudice_wall",
+              "size": { "width": 60, "height": 40 },
+              "position": { "x": 380, "y": 470 },
+              "health": 100
+            },
+            {
+              "id": "block_2_3",
+              "material": "prejudice_wall",
+              "size": { "width": 60, "height": 40 },
+              "position": { "x": 440, "y": 470 },
+              "health": 100
+            },
+            {
+              "id": "block_3_1",
+              "material": "prejudice_wall",
+              "size": { "width": 60, "height": 40 },
+              "position": { "x": 290, "y": 430 },
+              "health": 120
+            },
+            {
+              "id": "block_3_2",
+              "material": "prejudice_wall",
+              "size": { "width": 60, "height": 40 },
+              "position": { "x": 350, "y": 430 },
+              "health": 120
+            },
+            {
+              "id": "block_3_3",
+              "material": "prejudice_wall",
+              "size": { "width": 60, "height": 40 },
+              "position": { "x": 410, "y": 430 },
+              "health": 120
+            },
+            {
+              "id": "block_3_4",
+              "material": "prejudice_wall",
+              "size": { "width": 60, "height": 40 },
+              "position": { "x": 470, "y": 430 },
+              "health": 120
+            },
+            {
+              "id": "block_4_1",
+              "material": "bureaucracy_wall",
+              "size": { "width": 80, "height": 35 },
+              "position": { "x": 305, "y": 395 },
+              "health": 150,
+              "isKey": true
+            },
+            {
+              "id": "block_4_2",
+              "material": "bureaucracy_wall",
+              "size": { "width": 80, "height": 35 },
+              "position": { "x": 385, "y": 395 },
+              "health": 150,
+              "isKey": true
+            },
+            {
+              "id": "block_4_3",
+              "material": "bureaucracy_wall",
+              "size": { "width": 80, "height": 35 },
+              "position": { "x": 465, "y": 395 },
+              "health": 150,
+              "isKey": true
+            }
+          ]
+        },
+        "culturalObjectPosition": { "x": 350, "y": 320 }
+      }
+    ],
+
+    "helpersAvailable": 4,
+    "optimalSolutions": 4,
+    "starThresholds": {
+      "3": 4,
+      "2": 5,
+      "1": 7
+    },
+
+    "specialMechanics": [
+      {
+        "type": "key_blocks",
+        "description": {
+          "es": "Los bloques de burocracia (color gris) en la cima son más fuertes. Destrúyelos primero para colapsar todo el muro.",
+          "en": "Bureaucracy blocks (gray color) at the top are stronger. Destroy them first to collapse the entire wall."
+        }
+      }
+    ],
+
+    "tutorial": {
+      "es": "¡Tu primer muro de destrucción! Los muros de prejuicio son duros. Apunta a los bloques clave en la cima para hacer colapsar la estructura. Marco puede golpear, Patricia puede empujar con fuerza.",
+      "en": "Your first destruction wall! Prejudice walls are tough. Aim for the key blocks at the top to collapse the structure. Marco can punch, Patricia can push with force."
+    }
+  },
+
+  "familyDialogue": [
+    {
+      "character": "patricia",
+      "text": {
+        "es": "Marco, este país es tan... ordenado. Todo funciona perfectamente. Pero siento que no hay espacio para los forasteros como nosotros.",
+        "en": "Marco, this country is so... orderly. Everything works perfectly. But I feel there's no space for outsiders like us."
+      }
+    },
+    {
+      "character": "marco",
+      "text": {
+        "es": "Lo sé, Patricia. Pero aprendí que Japón también fue país de emigrantes. Millones de japoneses salieron buscando trabajo, igual que nosotros.",
+        "en": "I know, Patricia. But I learned that Japan was also a country of emigrants. Millions of Japanese left seeking work, just like us."
+      }
+    },
+    {
+      "character": "xolo",
+      "text": {
+        "es": "La memoria es corta, amigos. Cuando una nación prospera, olvida que sus abuelos también migraron por hambre. Por eso debemos recordar siempre nuestra historia.",
+        "en": "Memory is short, friends. When a nation prospers, it forgets that its grandparents also migrated from hunger. That's why we must always remember our history."
+      }
+    },
+    {
+      "character": "patricia",
+      "text": {
+        "es": "Este omamori... es como mi estampita de la Virgen de Guadalupe. Un pedacito de hogar que llevamos a donde vayamos.",
+        "en": "This omamori... it's like my little Virgin of Guadalupe stamp. A piece of home we carry wherever we go."
+      }
+    }
+  ],
+
+  "metadata": {
+    "releaseVersion": "2.0_HopeQuest",
+    "premium": false,
+    "requiredLevel": 3,
+    "isStartingCountry": false,
+    "characterIntroductions": ["patricia"],
+    "migrationThemes": [
+      "historical_emigration",
+      "dekasegi_workers",
+      "return_migration",
+      "aging_society",
+      "closed_borders",
+      "cultural_preservation_vs_diversity"
+    ],
+    "educationalFocus": [
+      "geography",
+      "culture",
+      "history",
+      "post_war_reconstruction",
+      "migration_paradox",
+      "resilience",
+      "tradition_vs_modernity",
+      "xenophobia"
+    ]
+  }
+}

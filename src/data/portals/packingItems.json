@@ -1,0 +1,977 @@
+{
+  "items": {
+    "documents": [
+      {
+        "id": "passport",
+        "name": {
+          "es": "Pasaporte",
+          "en": "Passport",
+          "zh": "护照",
+          "hi": "पासपोर्ट",
+          "ar": "جواز السفر"
+        },
+        "description": {
+          "es": "Tu identidad oficial. Sin esto, no puedes cruzar fronteras legalmente.",
+          "en": "Your official identity. Without this, you can't cross borders legally."
+        },
+        "category": "documents",
+        "weight": 0.1,
+        "volume": 0.5,
+        "effects": [
+          {
+            "type": "survival",
+            "value": 100,
+            "description": {
+              "es": "OBLIGATORIO para migración legal",
+              "en": "MANDATORY for legal migration"
+            }
+          }
+        ],
+        "image": "items/passport.png",
+        "isMandatory": true
+      },
+      {
+        "id": "visa",
+        "name": {
+          "es": "Visa",
+          "en": "Visa",
+          "zh": "签证",
+          "hi": "वीज़ा",
+          "ar": "تأشيرة"
+        },
+        "description": {
+          "es": "Permiso oficial para entrar a otro país. Puede tomar meses obtenerla.",
+          "en": "Official permission to enter another country. Can take months to obtain."
+        },
+        "category": "documents",
+        "weight": 0.05,
+        "volume": 0.2,
+        "effects": [
+          {
+            "type": "survival",
+            "value": 80,
+            "description": {
+              "es": "Aumenta probabilidad de entrada exitosa",
+              "en": "Increases chance of successful entry"
+            }
+          }
+        ],
+        "image": "items/visa.png",
+        "isMandatory": false
+      },
+      {
+        "id": "birth_certificate",
+        "name": {
+          "es": "Acta de Nacimiento",
+          "en": "Birth Certificate",
+          "zh": "出生证",
+          "hi": "जन्म प्रमाण पत्र",
+          "ar": "شهادة ميلاد"
+        },
+        "description": {
+          "es": "Prueba de tu identidad y origen. Especialmente importante para niños.",
+          "en": "Proof of your identity and origin. Especially important for children."
+        },
+        "category": "documents",
+        "weight": 0.05,
+        "volume": 0.2,
+        "effects": [
+          {
+            "type": "survival",
+            "value": 30,
+            "description": {
+              "es": "Útil para trámites oficiales",
+              "en": "Useful for official procedures"
+            }
+          }
+        ],
+        "image": "items/birth_certificate.png",
+        "isMandatory": false
+      },
+      {
+        "id": "medical_records",
+        "name": {
+          "es": "Registros Médicos",
+          "en": "Medical Records",
+          "zh": "医疗记录",
+          "hi": "चिकित्सा रिकॉर्ड",
+          "ar": "السجلات الطبية"
+        },
+        "description": {
+          "es": "Historial de vacunas y condiciones médicas. Puede ser requerido en fronteras.",
+          "en": "Vaccine history and medical conditions. May be required at borders."
+        },
+        "category": "documents",
+        "weight": 0.1,
+        "volume": 0.3,
+        "effects": [
+          {
+            "type": "health",
+            "value": 20,
+            "description": {
+              "es": "Facilita atención médica en destino",
+              "en": "Facilitates medical care at destination"
+            }
+          }
+        ],
+        "image": "items/medical_records.png",
+        "isMandatory": false
+      }
+    ],
+
+    "money": [
+      {
+        "id": "cash_savings",
+        "name": {
+          "es": "Ahorros en Efectivo",
+          "en": "Cash Savings",
+          "zh": "现金储蓄",
+          "hi": "नकद बचत",
+          "ar": "مدخرات نقدية"
+        },
+        "description": {
+          "es": "Todo el dinero que has ahorrado. Vital para sobrevivir los primeros meses.",
+          "en": "All the money you've saved. Vital to survive the first months."
+        },
+        "category": "money",
+        "weight": 0.5,
+        "volume": 1.0,
+        "effects": [
+          {
+            "type": "money",
+            "value": 500,
+            "description": {
+              "es": "Permite pagar comida, alojamiento, transporte",
+              "en": "Allows paying for food, lodging, transportation"
+            }
+          },
+          {
+            "type": "survival",
+            "value": 60,
+            "description": {
+              "es": "CRÍTICO para supervivencia inicial",
+              "en": "CRITICAL for initial survival"
+            }
+          }
+        ],
+        "image": "items/cash.png",
+        "isMandatory": true
+      },
+      {
+        "id": "credit_card",
+        "name": {
+          "es": "Tarjeta de Crédito",
+          "en": "Credit Card",
+          "zh": "信用卡",
+          "hi": "क्रेडिट कार्ड",
+          "ar": "بطاقة ائتمان"
+        },
+        "description": {
+          "es": "Respaldo financiero si se agota el efectivo. No funciona en todos los países.",
+          "en": "Financial backup if cash runs out. Doesn't work in all countries."
+        },
+        "category": "money",
+        "weight": 0.02,
+        "volume": 0.1,
+        "effects": [
+          {
+            "type": "money",
+            "value": 200,
+            "description": {
+              "es": "Dinero de emergencia",
+              "en": "Emergency money"
+            }
+          }
+        ],
+        "image": "items/credit_card.png",
+        "isMandatory": false
+      }
+    ],
+
+    "clothing": [
+      {
+        "id": "warm_clothes",
+        "name": {
+          "es": "Ropa Abrigadora",
+          "en": "Warm Clothes",
+          "zh": "保暖衣物",
+          "hi": "गर्म कपड़े",
+          "ar": "ملابس دافئة"
+        },
+        "description": {
+          "es": "Chaqueta, suéter, bufanda. Esencial si vas a clima frío.",
+          "en": "Jacket, sweater, scarf. Essential if going to cold climate."
+        },
+        "category": "clothing",
+        "weight": 2.5,
+        "volume": 8.0,
+        "effects": [
+          {
+            "type": "health",
+            "value": 40,
+            "description": {
+              "es": "Protege del frío en climas invernales",
+              "en": "Protects from cold in winter climates"
+            }
+          }
+        ],
+        "image": "items/warm_jacket.png",
+        "isMandatory": false
+      },
+      {
+        "id": "extra_clothes",
+        "name": {
+          "es": "Ropa Extra",
+          "en": "Extra Clothes",
+          "zh": "额外衣服",
+          "hi": "अतिरिक्त कपड़े",
+          "ar": "ملابس إضافية"
+        },
+        "description": {
+          "es": "Cambios de ropa para la semana. Pesado pero necesario.",
+          "en": "Changes of clothes for the week. Heavy but necessary."
+        },
+        "category": "clothing",
+        "weight": 3.0,
+        "volume": 10.0,
+        "effects": [
+          {
+            "type": "health",
+            "value": 15,
+            "description": {
+              "es": "Higiene y presentación básica",
+              "en": "Basic hygiene and presentation"
+            }
+          },
+          {
+            "type": "moral",
+            "value": 10,
+            "description": {
+              "es": "Sentirse limpio ayuda al ánimo",
+              "en": "Feeling clean helps morale"
+            }
+          }
+        ],
+        "image": "items/clothes_pile.png",
+        "isMandatory": false
+      },
+      {
+        "id": "shoes",
+        "name": {
+          "es": "Zapatos Cómodos",
+          "en": "Comfortable Shoes",
+          "zh": "舒适鞋",
+          "hi": "आरामदायक जूते",
+          "ar": "أحذية مريحة"
+        },
+        "description": {
+          "es": "Para caminar largas distancias. Pueden salvarte los pies.",
+          "en": "For walking long distances. Can save your feet."
+        },
+        "category": "clothing",
+        "weight": 1.0,
+        "volume": 3.0,
+        "effects": [
+          {
+            "type": "health",
+            "value": 25,
+            "description": {
+              "es": "Evita lesiones al caminar mucho",
+              "en": "Prevents injuries when walking a lot"
+            }
+          }
+        ],
+        "image": "items/shoes.png",
+        "isMandatory": false
+      }
+    ],
+
+    "food": [
+      {
+        "id": "non_perishable_food",
+        "name": {
+          "es": "Comida No Perecedera",
+          "en": "Non-Perishable Food",
+          "zh": "不易腐食品",
+          "hi": "गैर-नाशवान भोजन",
+          "ar": "طعام غير قابل للتلف"
+        },
+        "description": {
+          "es": "Latas, galletas, barras energéticas. Para emergencias durante el viaje.",
+          "en": "Cans, crackers, energy bars. For emergencies during the journey."
+        },
+        "category": "food",
+        "weight": 2.0,
+        "volume": 5.0,
+        "effects": [
+          {
+            "type": "health",
+            "value": 30,
+            "description": {
+              "es": "Alimento de emergencia si no hay tiendas",
+              "en": "Emergency food if no stores available"
+            }
+          },
+          {
+            "type": "survival",
+            "value": 40,
+            "description": {
+              "es": "Puede ser la diferencia entre vida y muerte",
+              "en": "Can be the difference between life and death"
+            }
+          }
+        ],
+        "image": "items/canned_food.png",
+        "isMandatory": false
+      },
+      {
+        "id": "water_bottle",
+        "name": {
+          "es": "Botella de Agua Reutilizable",
+          "en": "Reusable Water Bottle",
+          "zh": "可重复使用水瓶",
+          "hi": "पुन: प्रयोज्य पानी की बोतल",
+          "ar": "زجاجة مياه قابلة لإعادة الاستخدام"
+        },
+        "description": {
+          "es": "Mantenerte hidratado es vital. Puedes rellenarla en fuentes.",
+          "en": "Staying hydrated is vital. You can refill it at fountains."
+        },
+        "category": "food",
+        "weight": 0.3,
+        "volume": 1.0,
+        "effects": [
+          {
+            "type": "health",
+            "value": 35,
+            "description": {
+              "es": "Previene deshidratación",
+              "en": "Prevents dehydration"
+            }
+          },
+          {
+            "type": "survival",
+            "value": 50,
+            "description": {
+              "es": "CRÍTICO en rutas de desierto o largas",
+              "en": "CRITICAL on desert or long routes"
+            }
+          }
+        ],
+        "image": "items/water_bottle.png",
+        "isMandatory": false
+      },
+      {
+        "id": "home_recipe_food",
+        "name": {
+          "es": "Comida de Casa",
+          "en": "Home-Cooked Food",
+          "zh": "家常菜",
+          "hi": "घर का बना खाना",
+          "ar": "طعام منزلي"
+        },
+        "description": {
+          "es": "Tamales, tortillas, pan casero. Pesado pero reconforta el alma.",
+          "en": "Tamales, tortillas, homemade bread. Heavy but comforts the soul."
+        },
+        "category": "food",
+        "weight": 1.5,
+        "volume": 4.0,
+        "effects": [
+          {
+            "type": "moral",
+            "value": 40,
+            "description": {
+              "es": "Sabor de hogar que levanta el ánimo",
+              "en": "Taste of home that lifts spirits"
+            }
+          },
+          {
+            "type": "health",
+            "value": 10,
+            "description": {
+              "es": "Nutrición familiar",
+              "en": "Family nutrition"
+            }
+          }
+        ],
+        "image": "items/tamales.png",
+        "isMandatory": false
+      }
+    ],
+
+    "personal": [
+      {
+        "id": "cellphone",
+        "name": {
+          "es": "Teléfono Celular",
+          "en": "Cell Phone",
+          "zh": "手机",
+          "hi": "सेल फोन",
+          "ar": "هاتف محمول"
+        },
+        "description": {
+          "es": "Tu conexión con familia y el mundo. GPS, comunicación, información.",
+          "en": "Your connection to family and the world. GPS, communication, information."
+        },
+        "category": "personal",
+        "weight": 0.2,
+        "volume": 0.5,
+        "effects": [
+          {
+            "type": "communication",
+            "value": 80,
+            "description": {
+              "es": "Esencial para contactar familia y pedir ayuda",
+              "en": "Essential to contact family and ask for help"
+            }
+          },
+          {
+            "type": "survival",
+            "value": 40,
+            "description": {
+              "es": "GPS puede salvarte si te pierdes",
+              "en": "GPS can save you if you get lost"
+            }
+          },
+          {
+            "type": "moral",
+            "value": 30,
+            "description": {
+              "es": "Hablar con familia mantiene esperanza",
+              "en": "Talking to family maintains hope"
+            }
+          }
+        ],
+        "image": "items/cellphone.png",
+        "isMandatory": false
+      },
+      {
+        "id": "charger",
+        "name": {
+          "es": "Cargador y Batería Externa",
+          "en": "Charger and Power Bank",
+          "zh": "充电器和移动电源",
+          "hi": "चार्जर और पावर बैंक",
+          "ar": "شاحن وبطارية محمولة"
+        },
+        "description": {
+          "es": "Un teléfono sin batería es inútil. Esto puede salvar vidas.",
+          "en": "A phone without battery is useless. This can save lives."
+        },
+        "category": "personal",
+        "weight": 0.4,
+        "volume": 1.0,
+        "effects": [
+          {
+            "type": "communication",
+            "value": 40,
+            "description": {
+              "es": "Mantiene el teléfono funcionando",
+              "en": "Keeps the phone working"
+            }
+          }
+        ],
+        "image": "items/charger.png",
+        "isMandatory": false
+      },
+      {
+        "id": "medicine",
+        "name": {
+          "es": "Botiquín de Primeros Auxilios",
+          "en": "First Aid Kit",
+          "zh": "急救箱",
+          "hi": "प्राथमिक चिकित्सा किट",
+          "ar": "مجموعة الإسعافات الأولية"
+        },
+        "description": {
+          "es": "Vendas, analgésicos, antibióticos. Para emergencias médicas.",
+          "en": "Bandages, painkillers, antibiotics. For medical emergencies."
+        },
+        "category": "personal",
+        "weight": 0.8,
+        "volume": 2.0,
+        "effects": [
+          {
+            "type": "health",
+            "value": 50,
+            "description": {
+              "es": "Trata lesiones y enfermedades menores",
+              "en": "Treats minor injuries and illnesses"
+            }
+          },
+          {
+            "type": "survival",
+            "value": 35,
+            "description": {
+              "es": "Puede prevenir infecciones mortales",
+              "en": "Can prevent deadly infections"
+            }
+          }
+        ],
+        "image": "items/first_aid.png",
+        "isMandatory": false
+      },
+      {
+        "id": "hygiene_kit",
+        "name": {
+          "es": "Kit de Higiene",
+          "en": "Hygiene Kit",
+          "zh": "卫生用品",
+          "hi": "स्वच्छता किट",
+          "ar": "مجموعة النظافة"
+        },
+        "description": {
+          "es": "Cepillo de dientes, jabón, papel higiénico. Dignidad básica.",
+          "en": "Toothbrush, soap, toilet paper. Basic dignity."
+        },
+        "category": "personal",
+        "weight": 0.6,
+        "volume": 2.0,
+        "effects": [
+          {
+            "type": "health",
+            "value": 20,
+            "description": {
+              "es": "Previene enfermedades",
+              "en": "Prevents diseases"
+            }
+          },
+          {
+            "type": "moral",
+            "value": 25,
+            "description": {
+              "es": "Mantener higiene preserva dignidad",
+              "en": "Maintaining hygiene preserves dignity"
+            }
+          }
+        ],
+        "image": "items/hygiene.png",
+        "isMandatory": false
+      }
+    ],
+
+    "sentimental": [
+      {
+        "id": "family_photos",
+        "name": {
+          "es": "Fotos de Familia",
+          "en": "Family Photos",
+          "zh": "家庭照片",
+          "hi": "परिवार की तस्वीरें",
+          "ar": "صور العائلة"
+        },
+        "description": {
+          "es": "Rostros de quienes amas. No tienen peso en gramos, pero son pesados en el corazón.",
+          "en": "Faces of those you love. They don't weigh in grams, but they're heavy on the heart."
+        },
+        "category": "sentimental",
+        "weight": 0.2,
+        "volume": 0.5,
+        "effects": [
+          {
+            "type": "moral",
+            "value": 50,
+            "description": {
+              "es": "Recordar por qué luchas da fuerza",
+              "en": "Remembering why you fight gives strength"
+            }
+          }
+        ],
+        "image": "items/photos.png",
+        "isMandatory": false
+      },
+      {
+        "id": "religious_item",
+        "name": {
+          "es": "Objeto Religioso",
+          "en": "Religious Item",
+          "zh": "宗教物品",
+          "hi": "धार्मिक वस्तु",
+          "ar": "عنصر ديني"
+        },
+        "description": {
+          "es": "Virgen de Guadalupe, Biblia, Corán, crucifijo. Fe que reconforta.",
+          "en": "Virgin of Guadalupe, Bible, Quran, crucifix. Faith that comforts."
+        },
+        "category": "sentimental",
+        "weight": 0.3,
+        "volume": 1.0,
+        "effects": [
+          {
+            "type": "moral",
+            "value": 45,
+            "description": {
+              "es": "Fe da esperanza en momentos oscuros",
+              "en": "Faith gives hope in dark moments"
+            }
+          }
+        ],
+        "image": "items/virgin_guadalupe.png",
+        "isMandatory": false
+      },
+      {
+        "id": "favorite_book",
+        "name": {
+          "es": "Libro Favorito",
+          "en": "Favorite Book",
+          "zh": "最喜欢的书",
+          "hi": "पसंदीदा किताब",
+          "ar": "كتاب مفضل"
+        },
+        "description": {
+          "es": "Poesía, novela, libro de cuentos. Escape mental en momentos difíciles.",
+          "en": "Poetry, novel, story book. Mental escape in difficult moments."
+        },
+        "category": "sentimental",
+        "weight": 0.5,
+        "volume": 1.5,
+        "effects": [
+          {
+            "type": "moral",
+            "value": 30,
+            "description": {
+              "es": "Leer distrae del sufrimiento",
+              "en": "Reading distracts from suffering"
+            }
+          },
+          {
+            "type": "culture",
+            "value": 20,
+            "description": {
+              "es": "Mantiene conexión con tu idioma",
+              "en": "Maintains connection to your language"
+            }
+          }
+        ],
+        "image": "items/book.png",
+        "isMandatory": false
+      },
+      {
+        "id": "musical_instrument",
+        "name": {
+          "es": "Instrumento Musical Pequeño",
+          "en": "Small Musical Instrument",
+          "zh": "小型乐器",
+          "hi": "छोटा संगीत वाद्य",
+          "ar": "آلة موسيقية صغيرة"
+        },
+        "description": {
+          "es": "Armónica, flauta, guitarra pequeña. Música sana el alma.",
+          "en": "Harmonica, flute, small guitar. Music heals the soul."
+        },
+        "category": "sentimental",
+        "weight": 1.0,
+        "volume": 4.0,
+        "effects": [
+          {
+            "type": "moral",
+            "value": 40,
+            "description": {
+              "es": "Música eleva el espíritu",
+              "en": "Music lifts the spirit"
+            }
+          },
+          {
+            "type": "culture",
+            "value": 30,
+            "description": {
+              "es": "Compartes tu cultura con otros",
+              "en": "Share your culture with others"
+            }
+          }
+        ],
+        "image": "items/harmonica.png",
+        "isMandatory": false
+      },
+      {
+        "id": "family_recipe",
+        "name": {
+          "es": "Receta de Familia Escrita",
+          "en": "Written Family Recipe",
+          "zh": "家庭食谱",
+          "hi": "पारिवारिक नुस्खा",
+          "ar": "وصفة عائلية"
+        },
+        "description": {
+          "es": "Receta de tu abuela en papel. Sabores que llevas contigo.",
+          "en": "Your grandmother's recipe on paper. Flavors you carry with you."
+        },
+        "category": "sentimental",
+        "weight": 0.05,
+        "volume": 0.1,
+        "effects": [
+          {
+            "type": "moral",
+            "value": 25,
+            "description": {
+              "es": "Recuerdo tangible de hogar",
+              "en": "Tangible memory of home"
+            }
+          },
+          {
+            "type": "culture",
+            "value": 35,
+            "description": {
+              "es": "Preservas tradición culinaria",
+              "en": "Preserve culinary tradition"
+            }
+          }
+        ],
+        "image": "items/recipe_card.png",
+        "isMandatory": false
+      },
+      {
+        "id": "toy_child",
+        "name": {
+          "es": "Juguete de Hijo/a",
+          "en": "Child's Toy",
+          "zh": "孩子的玩具",
+          "hi": "बच्चे का खिलौना",
+          "ar": "لعبة الطفل"
+        },
+        "description": {
+          "es": "Muñeca, carrito, peluche. Para que Teo tenga algo de normalidad.",
+          "en": "Doll, toy car, stuffed animal. So Teo has some normalcy."
+        },
+        "category": "sentimental",
+        "weight": 0.3,
+        "volume": 1.0,
+        "effects": [
+          {
+            "type": "moral",
+            "value": 35,
+            "description": {
+              "es": "Los niños necesitan jugar para procesar trauma",
+              "en": "Children need play to process trauma"
+            }
+          }
+        ],
+        "image": "items/teddy_bear.png",
+        "isMandatory": false
+      }
+    ],
+
+    "tools": [
+      {
+        "id": "backpack",
+        "name": {
+          "es": "Mochila Resistente",
+          "en": "Sturdy Backpack",
+          "zh": "耐用背包",
+          "hi": "मजबूत बैकपैक",
+          "ar": "حقيبة ظهر متينة"
+        },
+        "description": {
+          "es": "Para cargar todo lo demás. Una buena mochila distribuye el peso.",
+          "en": "To carry everything else. A good backpack distributes weight."
+        },
+        "category": "tools",
+        "weight": 0.8,
+        "volume": 3.0,
+        "effects": [
+          {
+            "type": "survival",
+            "value": 30,
+            "description": {
+              "es": "Permite cargar más items organizadamente",
+              "en": "Allows carrying more items in an organized way"
+            }
+          },
+          {
+            "type": "health",
+            "value": 15,
+            "description": {
+              "es": "Protege espalda al distribuir peso",
+              "en": "Protects back by distributing weight"
+            }
+          }
+        ],
+        "image": "items/backpack.png",
+        "isMandatory": false
+      },
+      {
+        "id": "flashlight",
+        "name": {
+          "es": "Linterna",
+          "en": "Flashlight",
+          "zh": "手电筒",
+          "hi": "टॉर्च",
+          "ar": "مصباح يدوي"
+        },
+        "description": {
+          "es": "Luz en la oscuridad, literal y metafóricamente.",
+          "en": "Light in the darkness, literally and metaphorically."
+        },
+        "category": "tools",
+        "weight": 0.3,
+        "volume": 0.8,
+        "effects": [
+          {
+            "type": "survival",
+            "value": 25,
+            "description": {
+              "es": "Útil en viajes nocturnos",
+              "en": "Useful in night travel"
+            }
+          }
+        ],
+        "image": "items/flashlight.png",
+        "isMandatory": false
+      },
+      {
+        "id": "knife_multitool",
+        "name": {
+          "es": "Navaja Multiusos",
+          "en": "Multi-tool Knife",
+          "zh": "多功能刀",
+          "hi": "बहुउद्देशीय चाकू",
+          "ar": "سكين متعددة الاستخدامات"
+        },
+        "description": {
+          "es": "Herramienta práctica: cortar, abrir latas, reparar. No es arma.",
+          "en": "Practical tool: cut, open cans, repair. Not a weapon."
+        },
+        "category": "tools",
+        "weight": 0.2,
+        "volume": 0.3,
+        "effects": [
+          {
+            "type": "survival",
+            "value": 30,
+            "description": {
+              "es": "Resuelve problemas prácticos",
+              "en": "Solves practical problems"
+            }
+          }
+        ],
+        "image": "items/multitool.png",
+        "isMandatory": false
+      },
+      {
+        "id": "map_compass",
+        "name": {
+          "es": "Mapa y Brújula",
+          "en": "Map and Compass",
+          "zh": "地图和指南针",
+          "hi": "नक्शा और कंपास",
+          "ar": "خريطة وبوصلة"
+        },
+        "description": {
+          "es": "Si el celular falla, estos te guían. Tecnología antigua pero confiable.",
+          "en": "If the phone fails, these guide you. Ancient but reliable technology."
+        },
+        "category": "tools",
+        "weight": 0.4,
+        "volume": 1.0,
+        "effects": [
+          {
+            "type": "survival",
+            "value": 40,
+            "description": {
+              "es": "Navegación sin tecnología",
+              "en": "Navigation without technology"
+            }
+          }
+        ],
+        "image": "items/map_compass.png",
+        "isMandatory": false
+      }
+    ]
+  },
+
+  "presets": {
+    "aereo_economy": {
+      "name": {
+        "es": "Vuelo Económico",
+        "en": "Economy Flight"
+      },
+      "maxWeight": 23,
+      "maxVolume": 40,
+      "mandatoryItems": ["passport", "visa", "cash_savings"],
+      "recommendedItems": ["cellphone", "charger", "extra_clothes", "family_photos"]
+    },
+    "aereo_first_class": {
+      "name": {
+        "es": "Vuelo Primera Clase",
+        "en": "First Class Flight"
+      },
+      "maxWeight": 32,
+      "maxVolume": 60,
+      "mandatoryItems": ["passport", "visa", "cash_savings"],
+      "recommendedItems": ["cellphone", "charger", "extra_clothes", "family_photos", "musical_instrument"]
+    },
+    "maritimo": {
+      "name": {
+        "es": "Viaje en Barco",
+        "en": "Ship Journey"
+      },
+      "maxWeight": 30,
+      "maxVolume": 50,
+      "mandatoryItems": ["passport", "cash_savings"],
+      "recommendedItems": ["warm_clothes", "non_perishable_food", "water_bottle", "medicine", "family_photos"]
+    },
+    "terrestre": {
+      "name": {
+        "es": "Viaje Terrestre",
+        "en": "Land Journey"
+      },
+      "maxWeight": 20,
+      "maxVolume": 35,
+      "mandatoryItems": ["passport", "cash_savings"],
+      "recommendedItems": ["water_bottle", "cellphone", "shoes", "backpack", "map_compass"]
+    },
+    "clandestino": {
+      "name": {
+        "es": "Ruta Clandestina",
+        "en": "Clandestine Route"
+      },
+      "maxWeight": 15,
+      "maxVolume": 25,
+      "mandatoryItems": ["cash_savings", "water_bottle"],
+      "recommendedItems": ["cellphone", "charger", "non_perishable_food", "medicine", "shoes", "flashlight", "family_photos"],
+      "note": {
+        "es": "IMPORTANTE: Esta ruta es peligrosa. Lleva solo lo esencial para sobrevivir.",
+        "en": "IMPORTANT: This route is dangerous. Carry only essentials to survive."
+      }
+    },
+    "refugiado": {
+      "name": {
+        "es": "Convoy Humanitario",
+        "en": "Humanitarian Convoy"
+      },
+      "maxWeight": 18,
+      "maxVolume": 30,
+      "mandatoryItems": ["passport", "medical_records"],
+      "recommendedItems": ["family_photos", "toy_child", "religious_item", "medicine", "hygiene_kit"]
+    },
+    "familiar": {
+      "name": {
+        "es": "Reunificación Familiar",
+        "en": "Family Reunification"
+      },
+      "maxWeight": 25,
+      "maxVolume": 45,
+      "mandatoryItems": ["passport", "birth_certificate", "cash_savings"],
+      "recommendedItems": ["family_photos", "cellphone", "extra_clothes", "family_recipe", "toy_child"]
+    }
+  },
+
+  "metadata": {
+    "version": "1.0",
+    "totalItems": 33,
+    "categories": {
+      "documents": 4,
+      "money": 2,
+      "clothing": 3,
+      "food": 3,
+      "personal": 4,
+      "sentimental": 6,
+      "tools": 4
+    },
+    "notes": {
+      "es": "Cada item tiene peso (kg) y volumen (litros). Los jugadores deben decidir qué llevar basándose en las restricciones del portal elegido.",
+      "en": "Each item has weight (kg) and volume (liters). Players must decide what to carry based on the chosen portal's restrictions."
+    }
+  }
+}
