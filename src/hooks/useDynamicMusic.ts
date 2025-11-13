@@ -5,7 +5,7 @@
  */
 
 import { useEffect, useState, useRef } from 'react';
-import { useAudio } from './useAudio';
+import { audioService, MusicTrack } from '@/services/audio/audioService';
 
 export type MusicContext =
   | 'menu' // Menú principal
@@ -55,8 +55,6 @@ export const useDynamicMusic = ({
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(0.7);
   const fadeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  const { playMusic, stopMusic, setMusicVolume } = useAudio();
 
   useEffect(() => {
     if (!enabled) {
@@ -115,70 +113,38 @@ export const useDynamicMusic = ({
     return track || null;
   };
 
-  const switchTrack = (newTrack: MusicTrack) => {
-    const fadeDuration = newTrack.fadeDuration || 1000;
+  const switchTrack = async (newTrack: MusicTrack) => {
+    // Solo mapear contexto a track de audioService
+    const trackMap: Record<MusicContext, MusicTrack> = {
+      'menu': 'menu',
+      'worldmap': 'map',
+      'gameplay': 'activity',
+      'victory': 'victory',
+      'defeat': 'defeat',
+      'detective': 'activity', // Usar activity music para detective
+      'journal': 'menu', // Usar menu music para journal
+    };
 
-    // Fade out track actual
-    if (currentTrack && isPlaying) {
-      fadeOut(fadeDuration, () => {
-        // Fade in nuevo track
-        setCurrentTrack(newTrack);
-        fadeIn(newTrack, fadeDuration);
-      });
-    } else {
-      // No hay track actual, solo fade in
+    const audioTrack = trackMap[context] || 'menu';
+
+    try {
+      await audioService.playMusic(audioTrack, true);
       setCurrentTrack(newTrack);
-      fadeIn(newTrack, fadeDuration);
+      setIsPlaying(true);
+    } catch (error) {
+      console.error('Error switching track:', error);
     }
   };
 
-  const fadeOut = (duration: number, onComplete: () => void) => {
-    const steps = 10;
-    const stepDuration = duration / steps;
-    let currentStep = 0;
-
-    const fadeInterval = setInterval(() => {
-      currentStep++;
-      const newVolume = volume * (1 - currentStep / steps);
-      setMusicVolume(Math.max(0, newVolume));
-
-      if (currentStep >= steps) {
-        clearInterval(fadeInterval);
-        stopMusic();
-        setIsPlaying(false);
-        onComplete();
-      }
-    }, stepDuration);
-  };
-
-  const fadeIn = (track: MusicTrack, duration: number) => {
-    const steps = 10;
-    const stepDuration = duration / steps;
-    let currentStep = 0;
-    const targetVolume = track.volume;
-
-    // Empezar reproducción con volumen 0
-    setMusicVolume(0);
-    playMusic(track.id);
-    setIsPlaying(true);
-
-    const fadeInterval = setInterval(() => {
-      currentStep++;
-      const newVolume = targetVolume * (currentStep / steps);
-      setMusicVolume(Math.min(targetVolume, newVolume));
-
-      if (currentStep >= steps) {
-        clearInterval(fadeInterval);
-        setVolume(targetVolume);
-      }
-    }, stepDuration);
-  };
-
-  const stopCurrentTrack = () => {
+  const stopCurrentTrack = async () => {
     if (isPlaying) {
-      fadeOut(500, () => {
+      try {
+        await audioService.stopMusic(true);
         setCurrentTrack(null);
-      });
+        setIsPlaying(false);
+      } catch (error) {
+        console.error('Error stopping track:', error);
+      }
     }
   };
 
@@ -189,10 +155,10 @@ export const useDynamicMusic = ({
     }
   };
 
-  const changeVolume = (newVolume: number) => {
+  const changeVolume = async (newVolume: number) => {
     const clampedVolume = Math.max(0, Math.min(1, newVolume));
     setVolume(clampedVolume);
-    setMusicVolume(clampedVolume);
+    await audioService.setVolume('music', clampedVolume);
   };
 
   return {

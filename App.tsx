@@ -14,6 +14,7 @@ import RootNavigator from '@navigation/RootNavigator';
 
 // Servicios
 import { audioService } from '@/services/audio/audioService';
+import { achievementService } from '@/services/achievements/achievementService';
 
 // i18n
 import '@i18n/config';
@@ -29,6 +30,9 @@ export default function App() {
       try {
         // Inicializar audio service
         await audioService.initialize();
+
+        // Inicializar achievement service con datos vacíos (se cargará del gameStore después)
+        achievementService.initialize([]);
 
         // Cargar fuentes personalizadas (si las hay)
         await Font.loadAsync({

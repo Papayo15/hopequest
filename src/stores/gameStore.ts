@@ -7,6 +7,7 @@ import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { Country, FamilyCharacter } from '../types';
+import { achievementService, GameStats } from '../services/achievements/achievementService';
 
 interface GameState {
   // Estado del juego
@@ -57,6 +58,7 @@ interface GameState {
   incrementPortalsUsed: () => void;
   incrementActivitiesCompleted: (isPerfect: boolean) => void;
   incrementTriviaCorrect: () => void;
+  checkAchievements: () => void; // Verifica y actualiza achievements basado en stats actuales
 }
 
 const initialState = {
@@ -103,6 +105,8 @@ export const useGameStore = create<GameState>()(
             totalStars: state.totalStars + stars,
             currentLevel: state.currentLevel + 1,
           });
+          // Verificar achievements después de completar país
+          get().checkAchievements();
         }
       },
 
@@ -140,17 +144,39 @@ export const useGameStore = create<GameState>()(
         set({ ...initialState }),
 
       // Achievement tracking actions
-      incrementPortalsUsed: () =>
-        set((state) => ({ portalsUsed: state.portalsUsed + 1 })),
+      incrementPortalsUsed: () => {
+        set((state) => ({ portalsUsed: state.portalsUsed + 1 }));
+        get().checkAchievements();
+      },
 
-      incrementActivitiesCompleted: (isPerfect) =>
+      incrementActivitiesCompleted: (isPerfect) => {
         set((state) => ({
           activitiesCompleted: state.activitiesCompleted + 1,
           perfectActivities: isPerfect ? state.perfectActivities + 1 : state.perfectActivities,
-        })),
+        }));
+        get().checkAchievements();
+      },
 
-      incrementTriviaCorrect: () =>
-        set((state) => ({ triviaCorrect: state.triviaCorrect + 1 })),
+      incrementTriviaCorrect: () => {
+        set((state) => ({ triviaCorrect: state.triviaCorrect + 1 }));
+        get().checkAchievements();
+      },
+
+      // Verificar achievements con stats actuales
+      checkAchievements: () => {
+        const state = get();
+        const stats: GameStats = {
+          countriesCompleted: state.completedCountries.length,
+          totalStars: state.totalStars,
+          portalsUsed: state.portalsUsed,
+          activitiesCompleted: state.activitiesCompleted,
+          perfectActivities: state.perfectActivities,
+          companionsMet: state.unlockedHelpers.length,
+          currentMoney: 0, // TODO: agregar currentMoney al gameStore si no existe
+          triviaCorrect: state.triviaCorrect,
+        };
+        achievementService.checkAchievements(stats);
+      },
     }),
     {
       name: 'hope-quest-game-storage',
