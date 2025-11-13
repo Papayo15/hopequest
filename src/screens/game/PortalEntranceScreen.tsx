@@ -82,10 +82,6 @@ const PortalEntranceScreen: React.FC = () => {
     ? availablePortals.find((p) => p.type === selectedPortalType)
     : null;
 
-  const canAffordPortal = (portal: MigrationPortal): boolean => {
-    return money >= portal.costs.money;
-  };
-
   const hasRequiredDocuments = (portal: MigrationPortal): boolean => {
     const requiredDocs = portal.requirements.documents || [];
     return requiredDocs.every((doc) => documents.includes(doc as any));
@@ -98,17 +94,10 @@ const PortalEntranceScreen: React.FC = () => {
   const handleContinue = () => {
     if (!selectedPortal) return;
 
-    // Validate affordability
-    if (!canAffordPortal(selectedPortal)) {
-      Alert.alert(
-        'Dinero insuficiente',
-        `Necesitas $${selectedPortal.costs.money} para usar este portal. Tienes $${money}.`,
-        [{ text: 'OK' }]
-      );
-      return;
-    }
+    // NOTE: Los portales son GRATIS - el dinero es solo puntos/score
+    // La progresión se desbloquea completando países, no pagando
 
-    // Validate documents
+    // Validate documents (parte de la narrativa educativa)
     if (!hasRequiredDocuments(selectedPortal)) {
       const missingDocs = (selectedPortal.requirements.documents || [])
         .filter((doc) => !documents.includes(doc as any))
@@ -121,7 +110,7 @@ const PortalEntranceScreen: React.FC = () => {
       return;
     }
 
-    // Check health status
+    // Educational warning about health (no bloquea, solo advierte)
     if (economyStatus === 'critical') {
       Alert.alert(
         'Salud Crítica',
@@ -164,19 +153,22 @@ const PortalEntranceScreen: React.FC = () => {
     <View style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <Heading1>Portal de Migración</Heading1>
+        <Heading1>Portal de Viaje 🌀</Heading1>
         <BodyText color={Colors.text.secondary}>
           Saliendo de: {fromCountry}
         </BodyText>
         <BodyText color={Colors.text.secondary}>
           Destino: {countryId}
         </BodyText>
+        <SmallText color={Colors.success} style={{ marginTop: 8, fontWeight: '600' }}>
+          ✨ Los portales son GRATIS - ¡Solo completa actividades para avanzar!
+        </SmallText>
       </View>
 
-      {/* Economy Status */}
+      {/* Economy Status - Solo informativo, NO bloquea */}
       <View style={styles.statusBar}>
         <View style={styles.statusItem}>
-          <SmallText color={Colors.text.tertiary}>💰 Dinero</SmallText>
+          <SmallText color={Colors.text.tertiary}>⭐ Puntos</SmallText>
           <BodyText color={Colors.success}>${money}</BodyText>
         </View>
         <View style={styles.statusItem}>
@@ -209,10 +201,10 @@ const PortalEntranceScreen: React.FC = () => {
         contentContainerStyle={styles.scrollContent}
       >
         <Heading2 style={styles.sectionTitle}>
-          Selecciona un Portal
+          Selecciona un Portal Mágico
         </Heading2>
         <BodyText color={Colors.text.secondary} style={styles.sectionSubtitle}>
-          Cada portal tiene diferentes costos, riesgos y tiempos de viaje
+          Cada portal representa diferentes formas de migración (educativo)
         </BodyText>
 
         {filteredPortals.map((portal) => (
