@@ -589,7 +589,21 @@ export interface AudioContextType {
 
 // ========== PORTALES DE MIGRACIÓN ==========
 
-export type PortalType = 'aereo' | 'maritimo' | 'terrestre' | 'clandestino' | 'refugiado' | 'familiar';
+/**
+ * Tipos de portales visuales para viajar entre países
+ * Cada tipo representa un medio de transporte específico
+ */
+export type PortalType =
+  | 'avion'      // Avión ✈️ - Rápido, moderno
+  | 'barco'      // Barco 🚢 - Lento, seguro
+  | 'tren'       // Tren 🚂 - Medio, terrestre
+  | 'autobus'    // Autobús 🚌 - Económico, común
+  | 'carro'      // Carro 🚗 - Personal, flexible
+  | 'balsa'      // Balsa 🛶 - Arriesgado, agua
+  | 'tunel'      // Túnel 🚇 - Subterráneo, especial
+  | 'puente'     // Puente 🌉 - Icónico, frontera
+  | 'caminando'; // Caminando 🚶 - Básico, siempre disponible
+
 export type PortalStatus = 'locked' | 'available' | 'inaccesible' | 'active' | 'in_use';
 
 export interface MigrationPortal {
@@ -659,11 +673,13 @@ export interface SpecialCondition {
   description: LocalizedString;
 }
 
+/**
+ * Costos de usar un portal
+ * SIN dinero - todos los portales son GRATIS
+ */
 export interface PortalCosts {
-  money: number; // Costo en moneda del juego
-  time: number; // Días en el juego
-  documents: DocumentType[];
-  emotional?: number; // Costo emocional (afecta la moral de la familia)
+  time: number; // Días que toma el viaje (animación/narrativa)
+  emotional?: number; // Costo emocional (afecta la moral de la familia) - 0-10
 }
 
 export interface PortalRisks {
@@ -674,7 +690,7 @@ export interface PortalRisks {
 }
 
 export interface PortalConsequence {
-  type: 'deportation' | 'detention' | 'injury' | 'loss_money' | 'loss_documents' | 'family_separation' | 'success' | 'partial_success';
+  type: 'deportation' | 'detention' | 'injury' | 'loss_documents' | 'family_separation' | 'success' | 'partial_success';
   probability: number; // 0-1
   description: LocalizedString;
   outcome: ConsequenceOutcome;
@@ -684,9 +700,8 @@ export interface ConsequenceOutcome {
   nextCountry?: string; // null = quedas donde estás
   lostItems?: string[]; // IDs de items perdidos
   gainedItems?: string[]; // IDs de items ganados
-  healthChange?: number; // +/- salud
-  moralChange?: number; // +/- moral
-  moneyChange?: number; // +/- dinero
+  healthChange?: number; // +/- salud (0-100)
+  moralChange?: number; // +/- moral (0-100)
   storyEvent?: string; // ID de evento narrativo especial
 }
 

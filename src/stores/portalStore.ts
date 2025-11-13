@@ -65,7 +65,7 @@ interface PortalUsageHistory {
   toCountry: string;
   outcome: 'success' | 'failure' | 'partial';
   itemsPacked: string[]; // IDs
-  moneySpent: number;
+  // SIN money - todo es gratis
   healthChange: number;
   moralChange: number;
   timestamp: Date;
@@ -74,7 +74,7 @@ interface PortalUsageHistory {
 interface PortalStats {
   mostUsedPortal: PortalType | null;
   successRate: number; // 0-1
-  totalMoneySpent: number;
+  // SIN totalMoneySpent - todo es gratis
   averageItemsPacked: number;
 }
 
@@ -82,7 +82,7 @@ const initialState = {
   currentTransition: null,
   currentPhase: null,
   isInPortal: false,
-  unlockedPortals: ['terrestre'] as PortalType[], // Portal terrestre desbloqueado desde el inicio
+  unlockedPortals: ['caminando'] as PortalType[], // Portal "caminando" 🚶 disponible desde el inicio (GRATIS)
   portalsUsed: [],
   totalPortalsUsed: 0,
   selectedPortal: null,
@@ -148,9 +148,9 @@ export const usePortalStore = create<PortalState>()(
           toCountry: currentTransition.route.toCountry,
           outcome,
           itemsPacked: selectedItems.map((item) => item.id),
-          moneySpent: currentTransition.portal.costs.money,
+          // SIN moneySpent - todo es gratis
           healthChange: 0, // Se calculará según outcome
-          moralChange: 0,
+          moralChange: currentTransition.portal.costs.emotional || 0,
           timestamp: new Date(),
         };
 
@@ -241,7 +241,6 @@ export const usePortalStore = create<PortalState>()(
           return {
             mostUsedPortal: null,
             successRate: 0,
-            totalMoneySpent: 0,
             averageItemsPacked: 0,
           };
         }
@@ -259,9 +258,6 @@ export const usePortalStore = create<PortalState>()(
         const successCount = portalsUsed.filter((u) => u.outcome === 'success').length;
         const successRate = successCount / portalsUsed.length;
 
-        // Total money spent
-        const totalMoneySpent = portalsUsed.reduce((sum, u) => sum + u.moneySpent, 0);
-
         // Average items packed
         const averageItemsPacked =
           portalsUsed.reduce((sum, u) => sum + u.itemsPacked.length, 0) / portalsUsed.length;
@@ -269,7 +265,6 @@ export const usePortalStore = create<PortalState>()(
         return {
           mostUsedPortal,
           successRate,
-          totalMoneySpent,
           averageItemsPacked,
         };
       },
