@@ -39,15 +39,19 @@ const PortalPackingScreen: React.FC = () => {
   const { spendMoney } = useEconomyStore();
 
   // Calculate max capacity based on portal type
-  const maxWeight = selectedPortal?.type === 'aereo' ? 23 :
-                    selectedPortal?.type === 'maritimo' ? 50 :
-                    selectedPortal?.type === 'terrestre' ? 30 :
-                    20;
+  const maxWeight = selectedPortal?.type === 'avion' ? 23 :
+                    selectedPortal?.type === 'barco' ? 50 :
+                    selectedPortal?.type === 'tren' ? 30 :
+                    selectedPortal?.type === 'autobus' ? 25 :
+                    selectedPortal?.type === 'carro' ? 20 :
+                    15; // balsa, tunel, puente, caminando
 
-  const maxVolume = selectedPortal?.type === 'aereo' ? 40 :
-                    selectedPortal?.type === 'maritimo' ? 80 :
-                    selectedPortal?.type === 'terrestre' ? 60 :
-                    35;
+  const maxVolume = selectedPortal?.type === 'avion' ? 40 :
+                    selectedPortal?.type === 'barco' ? 80 :
+                    selectedPortal?.type === 'tren' ? 60 :
+                    selectedPortal?.type === 'autobus' ? 50 :
+                    selectedPortal?.type === 'carro' ? 40 :
+                    30; // balsa, tunel, puente, caminando
 
   // Parse all available items from JSON
   const allItems: PackingItemType[] = Object.values(packingItemsData.items).flat() as PackingItemType[];
@@ -126,8 +130,7 @@ const PortalPackingScreen: React.FC = () => {
           onPress: () => {
             if (!selectedPortal) return;
 
-            // Deduct money
-            spendMoney(selectedPortal.costs.money, `Portal: ${selectedPortal.name}`);
+            // NOTE: Portales son GRATIS - no money deduction
 
             // Start transition
             startTransition();
@@ -153,11 +156,13 @@ const PortalPackingScreen: React.FC = () => {
     });
 
     // Auto-pack recommended items based on portal type
-    const recommendedCategories = selectedPortal?.type === 'aereo'
-      ? ['documents', 'money', 'personal']
-      : selectedPortal?.type === 'maritimo'
-      ? ['documents', 'money', 'clothing', 'food']
-      : ['documents', 'money', 'tools'];
+    const recommendedCategories = selectedPortal?.type === 'avion'
+      ? ['documents', 'personal']
+      : selectedPortal?.type === 'barco'
+      ? ['documents', 'clothing', 'food']
+      : selectedPortal?.type === 'tren' || selectedPortal?.type === 'autobus'
+      ? ['documents', 'personal', 'food']
+      : ['documents', 'tools']; // carro, balsa, tunel, puente, caminando
 
     let currentW = currentWeight;
     let currentV = currentVolume;

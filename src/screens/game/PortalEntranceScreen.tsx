@@ -19,12 +19,15 @@ import portalDefinitionsData from '../../data/portals/portalDefinitions.json';
 type PortalEntranceRouteProp = RouteProp<GameStackParamList, 'PortalEntrance'>;
 
 const PORTAL_ICONS: Record<PortalType, string> = {
-  aereo: '✈️',
-  maritimo: '🚢',
-  terrestre: '🚌',
-  clandestino: '🌵',
-  refugiado: '🆘',
-  familiar: '👨‍👩‍👧‍👦',
+  avion: '✈️',
+  barco: '🚢',
+  tren: '🚂',
+  autobus: '🚌',
+  carro: '🚗',
+  balsa: '🛶',
+  tunel: '🚇',
+  puente: '🌉',
+  caminando: '🚶',
 };
 
 const PortalEntranceScreen: React.FC = () => {
@@ -70,10 +73,6 @@ const PortalEntranceScreen: React.FC = () => {
     // Check sensitivity level
     if (portal.sensitivityLevel > contentSensitivityLevel) {
       return false;
-    }
-    // Clandestino requires parental controls override
-    if (portal.type === 'clandestino' && parentalControlsEnabled) {
-      return false; // TODO: Implement PIN verification
     }
     return true;
   });
@@ -216,8 +215,8 @@ const PortalEntranceScreen: React.FC = () => {
             icon={portal.icon}
             unlocked={portal.unlocked}
             costs={{
-              money: portal.costs.money,
               time: portal.costs.time,
+              emotional: portal.costs.emotional,
             }}
             risks={{
               health: portal.risks.health,

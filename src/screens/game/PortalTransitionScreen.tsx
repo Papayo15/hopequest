@@ -196,7 +196,6 @@ const PortalTransitionScreen: React.FC = () => {
       countryId: 'next_country', // TODO: Get from route
       stars: outcome === 'success' ? 3 : outcome === 'partial' ? 2 : 1,
       rewards: {
-        money: outcome === 'success' ? 100 : 50,
         items: [],
       },
     });
@@ -214,14 +213,24 @@ const PortalTransitionScreen: React.FC = () => {
 
   // Portal-specific colors
   const portalColor =
-    portal?.type === 'aereo'
+    portal?.type === 'avion'
       ? '#4A90E2'
-      : portal?.type === 'maritimo'
+      : portal?.type === 'barco'
       ? '#2E5C8A'
-      : portal?.type === 'terrestre'
+      : portal?.type === 'tren'
       ? '#8B7355'
-      : portal?.type === 'clandestino'
+      : portal?.type === 'autobus'
+      ? '#F4A261'
+      : portal?.type === 'carro'
+      ? '#E27D60'
+      : portal?.type === 'balsa'
+      ? '#5A9FD4'
+      : portal?.type === 'tunel'
       ? '#5A5A5A'
+      : portal?.type === 'puente'
+      ? '#A67C52'
+      : portal?.type === 'caminando'
+      ? '#7CB342'
       : Colors.primary.main;
 
   return (

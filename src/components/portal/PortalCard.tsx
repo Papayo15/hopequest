@@ -16,8 +16,8 @@ interface PortalCardProps {
   icon: string;
   unlocked: boolean;
   costs: {
-    money: number;
     time: number;
+    emotional?: number;
   };
   risks: {
     health: number;
@@ -28,21 +28,27 @@ interface PortalCardProps {
 }
 
 const PORTAL_COLORS: Record<PortalType, string> = {
-  aereo: '#4A90E2',
-  maritimo: '#2E5C8A',
-  terrestre: '#8B7355',
-  clandestino: '#5A5A5A',
-  refugiado: '#E8A03A',
-  familiar: '#E27D60',
+  avion: '#4A90E2',      // Azul cielo (aire)
+  barco: '#2E5C8A',      // Azul marino (mar)
+  tren: '#8B7355',       // Café (terrestre)
+  autobus: '#F4A261',    // Naranja (transporte común)
+  carro: '#E27D60',      // Coral (personal)
+  balsa: '#5A9FD4',      // Azul claro (agua arriesgado)
+  tunel: '#5A5A5A',      // Gris (subterráneo)
+  puente: '#A67C52',     // Tan (estructura)
+  caminando: '#7CB342',  // Verde (naturaleza, básico)
 };
 
 const PORTAL_GRADIENTS: Record<PortalType, string[]> = {
-  aereo: ['#87CEEB', '#4A90E2'],
-  maritimo: ['#4A90E2', '#2E5C8A'],
-  terrestre: ['#D2B48C', '#8B7355'],
-  clandestino: ['#808080', '#3A3A3A'],
-  refugiado: ['#FDB44B', '#E8A03A'],
-  familiar: ['#F4A261', '#E27D60'],
+  avion: ['#87CEEB', '#4A90E2'],
+  barco: ['#4A90E2', '#2E5C8A'],
+  tren: ['#D2B48C', '#8B7355'],
+  autobus: ['#FFD54F', '#F4A261'],
+  carro: ['#F4A261', '#E27D60'],
+  balsa: ['#81D4FA', '#5A9FD4'],
+  tunel: ['#808080', '#3A3A3A'],
+  puente: ['#D7CCC8', '#A67C52'],
+  caminando: ['#AED581', '#7CB342'],
 };
 
 export const PortalCard: React.FC<PortalCardProps> = ({
@@ -128,13 +134,15 @@ export const PortalCard: React.FC<PortalCardProps> = ({
           {unlocked && (
             <View style={styles.stats}>
               <View style={styles.statItem}>
-                <SmallText color={Colors.text.tertiary}>💰 Costo</SmallText>
-                <BodyText color={Colors.warning}>${costs.money}</BodyText>
-              </View>
-              <View style={styles.statItem}>
                 <SmallText color={Colors.text.tertiary}>⏱️ Tiempo</SmallText>
                 <BodyText color={Colors.info}>{costs.time}d</BodyText>
               </View>
+              {costs.emotional !== undefined && costs.emotional > 0 && (
+                <View style={styles.statItem}>
+                  <SmallText color={Colors.text.tertiary}>💭 Emocional</SmallText>
+                  <BodyText color={Colors.warning}>{costs.emotional}/10</BodyText>
+                </View>
+              )}
               <View style={styles.statItem}>
                 <SmallText color={Colors.text.tertiary}>⚠️ Riesgo</SmallText>
                 <BodyText

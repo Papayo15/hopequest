@@ -55,7 +55,7 @@ export interface Country {
 
 export type DocumentType = 'passport' | 'visa' | 'work_permit' | 'refugee_status' | 'birth_certificate';
 
-export type PortalType = 'aereo' | 'maritimo' | 'terrestre' | 'clandestino' | 'refugiado' | 'familiar';
+export type PortalType = 'avion' | 'barco' | 'tren' | 'autobus' | 'carro' | 'balsa' | 'tunel' | 'puente' | 'caminando';
 
 export interface Activity {
   id: string;
