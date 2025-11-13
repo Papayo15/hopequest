@@ -16,6 +16,7 @@ const ActivityScreen: React.FC = () => {
   const route = useRoute<any>();
   const navigation = useNavigation<any>();
   const userAge = useUserStore((state) => state.age);
+  const { incrementActivitiesCompleted, incrementTriviaCorrect } = useGameStore();
 
   const {
     countryName,
@@ -168,6 +169,7 @@ const ActivityScreen: React.FC = () => {
               if (selectedAnswer !== null) {
                 if (selectedAnswer === question.correctAnswer) {
                   setScore(score + 1);
+                  incrementTriviaCorrect();
                   playSFX('success');
                 } else {
                   playSFX('error');
@@ -191,6 +193,9 @@ const ActivityScreen: React.FC = () => {
                 setShowExplanation(false);
               } else {
                 playSFX('level_complete');
+                // Check if perfect score (100%)
+                const isPerfect = score === questions.length;
+                incrementActivitiesCompleted(isPerfect);
                 setCompleted(true);
               }
             }}

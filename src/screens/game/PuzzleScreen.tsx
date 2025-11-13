@@ -9,7 +9,7 @@ import { View, StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
 import { useRoute, useNavigation } from '@react-navigation/native';
 import { Heading1, Heading2, BodyText, SmallText, Card } from '../../components/ui';
 import { Colors } from '../../constants';
-import { useUserStore } from '../../stores';
+import { useUserStore, useGameStore } from '../../stores';
 import { useBackgroundMusic, useSFX } from '../../hooks/useAudio';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
@@ -27,6 +27,7 @@ const PuzzleScreen: React.FC = () => {
   const route = useRoute<any>();
   const navigation = useNavigation<any>();
   const userAge = useUserStore((state) => state.age);
+  const { incrementActivitiesCompleted } = useGameStore();
 
   const { countryName, countryFlag, puzzleEmoji } = route.params || {};
 
@@ -165,6 +166,9 @@ const PuzzleScreen: React.FC = () => {
 
   const handleFinish = () => {
     playSFX('level_complete');
+    // Track completion (perfect if got 3 stars)
+    const isPerfect = calculateStars() === 3;
+    incrementActivitiesCompleted(isPerfect);
     navigation.goBack();
   };
 

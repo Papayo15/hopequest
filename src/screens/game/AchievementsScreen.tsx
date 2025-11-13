@@ -21,7 +21,7 @@ import {
   getAchievementsByCategory,
 } from '@/constants/achievements';
 import { achievementService } from '@/services/achievements/achievementService';
-import { useUserStore } from '@/stores/userStore';
+import { useClaimAchievement } from '@/hooks/useAchievements';
 
 const CATEGORIES: { key: AchievementCategory; label: string; icon: string }[] = [
   { key: 'exploration', label: 'Exploración', icon: '🌍' },
@@ -37,7 +37,7 @@ export const AchievementsScreen: React.FC = () => {
   const [selectedAchievement, setSelectedAchievement] = useState<Achievement | null>(null);
   const [modalVisible, setModalVisible] = useState(false);
 
-  const { money, totalStars, addMoney, addStars } = useUserStore();
+  const { claimAchievement } = useClaimAchievement();
 
   // Get achievement stats
   const stats = achievementService.getAchievementStats();
@@ -70,15 +70,9 @@ export const AchievementsScreen: React.FC = () => {
   const handleClaimRewards = () => {
     if (!selectedAchievement) return;
 
-    const rewards = achievementService.claimAchievement(selectedAchievement.id);
+    const rewards = claimAchievement(selectedAchievement.id);
 
     if (rewards) {
-      // Add rewards to user
-      addMoney(rewards.coins);
-      if (rewards.stars) {
-        addStars(rewards.stars);
-      }
-
       // Close modal
       setModalVisible(false);
       setSelectedAchievement(null);

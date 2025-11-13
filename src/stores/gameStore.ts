@@ -22,6 +22,12 @@ interface GameState {
   totalStars: number;
   currentLevel: number; // Nivel del jugador (1-35)
 
+  // Achievement tracking
+  portalsUsed: number; // Total de portales usados
+  activitiesCompleted: number; // Total de actividades completadas
+  perfectActivities: number; // Actividades con 100%
+  triviaCorrect: number; // Respuestas correctas de trivia
+
   // Configuración
   difficulty: 'auto' | 'easy' | 'normal' | 'hard';
   language: 'es' | 'en' | 'zh' | 'hi' | 'ar';
@@ -46,6 +52,11 @@ interface GameState {
   pauseGame: () => void;
   resumeGame: () => void;
   resetGame: () => void;
+
+  // Achievement tracking actions
+  incrementPortalsUsed: () => void;
+  incrementActivitiesCompleted: (isPerfect: boolean) => void;
+  incrementTriviaCorrect: () => void;
 }
 
 const initialState = {
@@ -58,6 +69,10 @@ const initialState = {
   unlockedHelpers: ['marco', 'xolo'] as FamilyCharacter[], // Empiezan con Marco y Xolo
   totalStars: 0,
   currentLevel: 1,
+  portalsUsed: 0,
+  activitiesCompleted: 0,
+  perfectActivities: 0,
+  triviaCorrect: 0,
   difficulty: 'auto' as const,
   language: 'es' as const,
   soundEnabled: true,
@@ -123,6 +138,19 @@ export const useGameStore = create<GameState>()(
 
       resetGame: () =>
         set({ ...initialState }),
+
+      // Achievement tracking actions
+      incrementPortalsUsed: () =>
+        set((state) => ({ portalsUsed: state.portalsUsed + 1 })),
+
+      incrementActivitiesCompleted: (isPerfect) =>
+        set((state) => ({
+          activitiesCompleted: state.activitiesCompleted + 1,
+          perfectActivities: isPerfect ? state.perfectActivities + 1 : state.perfectActivities,
+        })),
+
+      incrementTriviaCorrect: () =>
+        set((state) => ({ triviaCorrect: state.triviaCorrect + 1 })),
     }),
     {
       name: 'hope-quest-game-storage',
@@ -133,6 +161,10 @@ export const useGameStore = create<GameState>()(
         unlockedHelpers: state.unlockedHelpers,
         totalStars: state.totalStars,
         currentLevel: state.currentLevel,
+        portalsUsed: state.portalsUsed,
+        activitiesCompleted: state.activitiesCompleted,
+        perfectActivities: state.perfectActivities,
+        triviaCorrect: state.triviaCorrect,
         difficulty: state.difficulty,
         language: state.language,
         soundEnabled: state.soundEnabled,

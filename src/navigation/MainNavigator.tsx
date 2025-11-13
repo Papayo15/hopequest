@@ -8,6 +8,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import type { MainTabParamList } from './types';
 import { Colors } from '../constants';
+import { useAchievementSync } from '../hooks/useAchievements';
 
 // Tab Screens
 import HomeScreen from '../screens/HomeScreen';
@@ -86,6 +87,9 @@ const MainTabs: React.FC = () => {
 
 // Main Navigator with Stack for modals/game screens
 const MainNavigator: React.FC = () => {
+  // Initialize achievement tracking
+  useAchievementSync();
+
   return (
     <Stack.Navigator
       screenOptions={{
