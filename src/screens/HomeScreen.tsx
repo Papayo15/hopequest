@@ -3,13 +3,14 @@
  * Pantalla principal del juego
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import type { MainTabNavigationProp } from '../navigation/types';
 import { Heading1, Heading2, BodyText, Button, Card } from '../components/ui';
 import { Colors } from '../constants';
 import { useUserStore, useGameStore, useEconomyStore } from '../stores';
+import { audioService } from '../services/audio/audioService';
 
 const HomeScreen: React.FC = () => {
   const navigation = useNavigation<MainTabNavigationProp>();
@@ -18,6 +19,16 @@ const HomeScreen: React.FC = () => {
   const money = useEconomyStore((state) => state.money);
   const health = useEconomyStore((state) => state.health);
   const moral = useEconomyStore((state) => state.moral);
+
+  // Play menu music on mount
+  useEffect(() => {
+    audioService.playMusic('menu', true);
+
+    return () => {
+      // Optional: stop music when leaving
+      // audioService.stopMusic(true);
+    };
+  }, []);
 
   const handleContinueAdventure = () => {
     // TODO: Navigate to current country or world map

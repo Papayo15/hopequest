@@ -7,6 +7,7 @@ import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { Country, FamilyCharacter } from '../types';
+import { achievementService, type GameStats } from '../services/achievements/achievementService';
 
 interface GameState {
   // Estado del juego
@@ -21,6 +22,13 @@ interface GameState {
   unlockedHelpers: FamilyCharacter[]; // Personajes desbloqueados
   totalStars: number;
   currentLevel: number; // Nivel del jugador (1-35)
+
+  // Achievement tracking stats
+  portalsUsed: number;
+  activitiesCompleted: number;
+  perfectActivities: number;
+  companionsMet: number;
+  triviaCorrect: number;
 
   // Configuración
   difficulty: 'auto' | 'easy' | 'normal' | 'hard';
@@ -46,6 +54,12 @@ interface GameState {
   pauseGame: () => void;
   resumeGame: () => void;
   resetGame: () => void;
+
+  // Achievement tracking actions
+  incrementPortalsUsed: () => void;
+  incrementActivitiesCompleted: (isPerfect: boolean) => void;
+  incrementTriviaCorrect: () => void;
+  checkAchievements: () => void;
 }
 
 const initialState = {
@@ -58,6 +72,11 @@ const initialState = {
   unlockedHelpers: ['marco', 'xolo'] as FamilyCharacter[], // Empiezan con Marco y Xolo
   totalStars: 0,
   currentLevel: 1,
+  portalsUsed: 0,
+  activitiesCompleted: 0,
+  perfectActivities: 0,
+  companionsMet: 2, // Marco and Xolo
+  triviaCorrect: 0,
   difficulty: 'auto' as const,
   language: 'es' as const,
   soundEnabled: true,
@@ -123,6 +142,46 @@ export const useGameStore = create<GameState>()(
 
       resetGame: () =>
         set({ ...initialState }),
+
+      // Achievement tracking actions
+      incrementPortalsUsed: () => {
+        set((state) => ({ portalsUsed: state.portalsUsed + 1 }));
+        get().checkAchievements();
+      },
+
+      incrementActivitiesCompleted: (isPerfect) => {
+        set((state) => ({
+          activitiesCompleted: state.activitiesCompleted + 1,
+          perfectActivities: isPerfect
+            ? state.perfectActivities + 1
+            : state.perfectActivities,
+        }));
+        get().checkAchievements();
+      },
+
+      incrementTriviaCorrect: () => {
+        set((state) => ({ triviaCorrect: state.triviaCorrect + 1 }));
+        get().checkAchievements();
+      },
+
+      checkAchievements: () => {
+        const state = get();
+
+        // Create GameStats object for achievement service
+        const stats: GameStats = {
+          countriesCompleted: state.completedCountries.length,
+          totalStars: state.totalStars,
+          portalsUsed: state.portalsUsed,
+          activitiesCompleted: state.activitiesCompleted,
+          perfectActivities: state.perfectActivities,
+          companionsMet: state.companionsMet,
+          currentMoney: 0, // Get from economyStore if needed
+          triviaCorrect: state.triviaCorrect,
+        };
+
+        // Check all achievements
+        achievementService.checkAchievements(stats);
+      },
     }),
     {
       name: 'hope-quest-game-storage',
@@ -133,6 +192,11 @@ export const useGameStore = create<GameState>()(
         unlockedHelpers: state.unlockedHelpers,
         totalStars: state.totalStars,
         currentLevel: state.currentLevel,
+        portalsUsed: state.portalsUsed,
+        activitiesCompleted: state.activitiesCompleted,
+        perfectActivities: state.perfectActivities,
+        companionsMet: state.companionsMet,
+        triviaCorrect: state.triviaCorrect,
         difficulty: state.difficulty,
         language: state.language,
         soundEnabled: state.soundEnabled,

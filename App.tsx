@@ -13,6 +13,7 @@ import * as Font from 'expo-font';
 import RootNavigator from '@navigation/RootNavigator';
 
 // Servicios
+import { audioService } from '@/services/audio/audioService';
 // Firebase and audio initialization happen automatically in their modules
 
 // i18n
@@ -27,6 +28,10 @@ export default function App() {
   useEffect(() => {
     async function prepare() {
       try {
+        // Initialize audio service
+        await audioService.initialize();
+        console.log('✅ Audio service initialized');
+
         // Cargar fuentes personalizadas (si las hay)
         await Font.loadAsync({
           // Aquí puedes cargar fuentes custom

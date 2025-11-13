@@ -4,12 +4,13 @@
  * DEMO: Solo Trivia es funcional, Puzzle y Memory muestran placeholder
  */
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { View, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { useRoute, useNavigation } from '@react-navigation/native';
 import { Heading1, Heading2, BodyText, SmallText, Card } from '../../components/ui';
 import { Colors } from '../../constants';
 import { useUserStore } from '../../stores';
+import { audioService } from '../../services/audio/audioService';
 
 const ActivityScreen: React.FC = () => {
   const route = useRoute<any>();
@@ -28,6 +29,11 @@ const ActivityScreen: React.FC = () => {
   const [showExplanation, setShowExplanation] = useState(false);
   const [score, setScore] = useState(0);
   const [completed, setCompleted] = useState(false);
+
+  // Play activity music on mount
+  useEffect(() => {
+    audioService.playMusic('activity', true);
+  }, []);
 
   // Filtrar preguntas según la edad del usuario
   const filteredQuestions = useMemo(() => {
@@ -122,7 +128,12 @@ const ActivityScreen: React.FC = () => {
                   showResult && isSelected && !isCorrect && styles.optionWrong,
                   showResult && isCorrect && styles.optionCorrect,
                 ]}
-                onPress={() => !showExplanation && setSelectedAnswer(index)}
+                onPress={() => {
+                  if (!showExplanation) {
+                    audioService.playSFX('button_press');
+                    setSelectedAnswer(index);
+                  }
+                }}
                 disabled={showExplanation}
               >
                 <BodyText
@@ -156,8 +167,12 @@ const ActivityScreen: React.FC = () => {
             ]}
             onPress={() => {
               if (selectedAnswer !== null) {
-                if (selectedAnswer === question.correctAnswer) {
+                const isCorrect = selectedAnswer === question.correctAnswer;
+                if (isCorrect) {
                   setScore(score + 1);
+                  audioService.playSFX('success');
+                } else {
+                  audioService.playSFX('error');
                 }
                 setShowExplanation(true);
               }
@@ -173,10 +188,13 @@ const ActivityScreen: React.FC = () => {
             style={styles.primaryButton}
             onPress={() => {
               if (currentQuestion < questions.length - 1) {
+                audioService.playSFX('button_press');
                 setCurrentQuestion(currentQuestion + 1);
                 setSelectedAnswer(null);
                 setShowExplanation(false);
               } else {
+                audioService.playSFX('level_complete');
+                audioService.playMusic('victory', true);
                 setCompleted(true);
               }
             }}
@@ -224,7 +242,13 @@ const ActivityScreen: React.FC = () => {
         });
         return null;
       case 'memory':
-        return renderPlaceholder('🧠');
+        // Navegar a MemoryScreen
+        navigation.navigate('Memory', {
+          countryName,
+          countryFlag: route.params?.countryFlag || '🌍',
+          memoryData: activityData,
+        });
+        return null;
       default:
         return renderPlaceholder('🎮');
     }

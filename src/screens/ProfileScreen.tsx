@@ -107,9 +107,19 @@ const ProfileScreen: React.FC = () => {
 
       {/* Achievements */}
       <Card variant="outlined" style={styles.card}>
-        <Heading2 style={styles.sectionTitle}>
-          Logros ({achievements.length})
-        </Heading2>
+        <View style={styles.sectionHeader}>
+          <Heading2 style={styles.sectionTitle}>
+            Logros ({achievements.length})
+          </Heading2>
+          <TouchableOpacity
+            style={styles.viewAllButton}
+            onPress={() => (navigation as any).navigate('Achievements')}
+          >
+            <SmallText color={Colors.primary} style={styles.viewAllText}>
+              Ver Todos →
+            </SmallText>
+          </TouchableOpacity>
+        </View>
         {achievements.length === 0 ? (
           <BodyText color={Colors.text.secondary}>
             Aún no has desbloqueado ningún logro. ¡Sigue jugando!
@@ -208,6 +218,19 @@ const styles = StyleSheet.create({
   achievementInfo: {
     flex: 1,
     marginLeft: 12,
+  },
+  sectionHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 12,
+  },
+  viewAllButton: {
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+  },
+  viewAllText: {
+    fontWeight: '600',
   },
   memberSince: {
     marginBottom: 16,

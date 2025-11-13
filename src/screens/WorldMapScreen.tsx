@@ -4,7 +4,7 @@
  * HISTORIA: Inicia en México (con Xolo), progresión lineal hasta Estados Unidos
  */
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   View,
   StyleSheet,
@@ -19,6 +19,7 @@ import { Colors, GameConfig } from '../constants';
 import { useGameStore } from '../stores';
 import * as CountriesData from '../constants/countries';
 import Svg, { Line, Circle } from 'react-native-svg';
+import { audioService } from '../services/audio/audioService';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
@@ -162,6 +163,11 @@ const WorldMapScreen: React.FC = () => {
       };
     }).filter(Boolean) as CountryPin[];
   }, [completedCountries]);
+
+  // Play map music on mount
+  useEffect(() => {
+    audioService.playMusic('map', true);
+  }, []);
 
   // Filtrar países por región
   const filteredCountries = useMemo(() => {
