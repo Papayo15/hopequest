@@ -20,6 +20,7 @@ import CountryOverviewScreen from '../screens/game/CountryOverviewScreen';
 import ActivityScreen from '../screens/game/ActivityScreen';
 import PhysicsScreen from '../screens/game/PhysicsScreen';
 import BossBattleScreen from '../screens/game/BossBattleScreen';
+import PuzzleScreen from '../screens/game/PuzzleScreen';
 
 const Tab = createBottomTabNavigator<MainTabParamList>();
 const Stack = createStackNavigator();
@@ -129,6 +130,11 @@ const MainNavigator: React.FC = () => {
         name="BossBattle"
         component={BossBattleScreen}
         options={{ title: 'Batalla Final' }}
+      />
+      <Stack.Screen
+        name="Puzzle"
+        component={PuzzleScreen}
+        options={{ title: 'Rompecabezas' }}
       />
     </Stack.Navigator>
   );

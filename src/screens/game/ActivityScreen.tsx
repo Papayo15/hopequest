@@ -216,7 +216,13 @@ const ActivityScreen: React.FC = () => {
       case 'trivia':
         return renderTrivia();
       case 'puzzle':
-        return renderPlaceholder('🧩');
+        // Navegar a PuzzleScreen
+        navigation.navigate('Puzzle', {
+          countryName,
+          countryFlag: route.params?.countryFlag || '🌍',
+          puzzleEmoji: activityData?.imageUrl || '🖼️',
+        });
+        return null;
       case 'memory':
         return renderPlaceholder('🧠');
       default:
