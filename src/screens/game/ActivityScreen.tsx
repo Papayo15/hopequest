@@ -10,6 +10,7 @@ import { useRoute, useNavigation } from '@react-navigation/native';
 import { Heading1, Heading2, BodyText, SmallText, Card } from '../../components/ui';
 import { Colors } from '../../constants';
 import { useUserStore } from '../../stores';
+import { useBackgroundMusic, useSFX } from '../../hooks/useAudio';
 
 const ActivityScreen: React.FC = () => {
   const route = useRoute<any>();
@@ -28,6 +29,10 @@ const ActivityScreen: React.FC = () => {
   const [showExplanation, setShowExplanation] = useState(false);
   const [score, setScore] = useState(0);
   const [completed, setCompleted] = useState(false);
+
+  // Background music and sound effects
+  useBackgroundMusic('activity');
+  const { playSFX } = useSFX();
 
   // Filtrar preguntas según la edad del usuario
   const filteredQuestions = useMemo(() => {
@@ -122,7 +127,12 @@ const ActivityScreen: React.FC = () => {
                   showResult && isSelected && !isCorrect && styles.optionWrong,
                   showResult && isCorrect && styles.optionCorrect,
                 ]}
-                onPress={() => !showExplanation && setSelectedAnswer(index)}
+                onPress={() => {
+                  if (!showExplanation) {
+                    playSFX('button_press');
+                    setSelectedAnswer(index);
+                  }
+                }}
                 disabled={showExplanation}
               >
                 <BodyText
@@ -158,6 +168,9 @@ const ActivityScreen: React.FC = () => {
               if (selectedAnswer !== null) {
                 if (selectedAnswer === question.correctAnswer) {
                   setScore(score + 1);
+                  playSFX('success');
+                } else {
+                  playSFX('error');
                 }
                 setShowExplanation(true);
               }
@@ -177,6 +190,7 @@ const ActivityScreen: React.FC = () => {
                 setSelectedAnswer(null);
                 setShowExplanation(false);
               } else {
+                playSFX('level_complete');
                 setCompleted(true);
               }
             }}

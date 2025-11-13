@@ -19,6 +19,7 @@ import { Colors, GameConfig } from '../constants';
 import { useGameStore } from '../stores';
 import * as CountriesData from '../constants/countries';
 import Svg, { Line, Circle } from 'react-native-svg';
+import { useBackgroundMusic } from '../hooks/useAudio';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
@@ -81,6 +82,9 @@ const WorldMapScreen: React.FC = () => {
   const setCurrentCountryId = useGameStore((state) => state.setCurrentCountryId);
 
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
+
+  // Background music
+  useBackgroundMusic('map');
 
   // Regiones disponibles (basadas en los datos de países)
   const regions = [

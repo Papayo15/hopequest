@@ -21,6 +21,7 @@ import ActivityScreen from '../screens/game/ActivityScreen';
 import PhysicsScreen from '../screens/game/PhysicsScreen';
 import BossBattleScreen from '../screens/game/BossBattleScreen';
 import PuzzleScreen from '../screens/game/PuzzleScreen';
+import { AchievementsScreen } from '../screens/game/AchievementsScreen';
 
 const Tab = createBottomTabNavigator<MainTabParamList>();
 const Stack = createStackNavigator();
@@ -135,6 +136,11 @@ const MainNavigator: React.FC = () => {
         name="Puzzle"
         component={PuzzleScreen}
         options={{ title: 'Rompecabezas' }}
+      />
+      <Stack.Screen
+        name="Achievements"
+        component={AchievementsScreen}
+        options={{ title: 'Logros' }}
       />
     </Stack.Navigator>
   );

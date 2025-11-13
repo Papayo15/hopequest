@@ -10,6 +10,7 @@ import type { MainTabNavigationProp } from '../navigation/types';
 import { Heading1, Heading2, BodyText, Button, Card } from '../components/ui';
 import { Colors } from '../constants';
 import { useUserStore, useGameStore, useEconomyStore } from '../stores';
+import { useBackgroundMusic } from '../hooks/useAudio';
 
 const HomeScreen: React.FC = () => {
   const navigation = useNavigation<MainTabNavigationProp>();
@@ -18,6 +19,9 @@ const HomeScreen: React.FC = () => {
   const money = useEconomyStore((state) => state.money);
   const health = useEconomyStore((state) => state.health);
   const moral = useEconomyStore((state) => state.moral);
+
+  // Background music
+  useBackgroundMusic('menu');
 
   const handleContinueAdventure = () => {
     // TODO: Navigate to current country or world map

@@ -115,17 +115,27 @@ const ProfileScreen: React.FC = () => {
             Aún no has desbloqueado ningún logro. ¡Sigue jugando!
           </BodyText>
         ) : (
-          achievements.slice(0, 5).map((achievement) => (
-            <View key={achievement.id} style={styles.achievementItem}>
-              <BodyText>{achievement.icon}</BodyText>
-              <View style={styles.achievementInfo}>
-                <BodyText>{achievement.name}</BodyText>
-                <SmallText color={Colors.text.secondary}>
-                  {achievement.description}
-                </SmallText>
+          <>
+            {achievements.slice(0, 5).map((achievement) => (
+              <View key={achievement.id} style={styles.achievementItem}>
+                <BodyText>{achievement.icon}</BodyText>
+                <View style={styles.achievementInfo}>
+                  <BodyText>{achievement.name}</BodyText>
+                  <SmallText color={Colors.text.secondary}>
+                    {achievement.description}
+                  </SmallText>
+                </View>
               </View>
-            </View>
-          ))
+            ))}
+            <TouchableOpacity
+              style={styles.viewAllButton}
+              onPress={() => (navigation as any).navigate('Achievements')}
+            >
+              <BodyText color={Colors.primary} style={styles.viewAllButtonText}>
+                Ver Todos los Logros
+              </BodyText>
+            </TouchableOpacity>
+          </>
         )}
       </Card>
 
@@ -208,6 +218,16 @@ const styles = StyleSheet.create({
   achievementInfo: {
     flex: 1,
     marginLeft: 12,
+  },
+  viewAllButton: {
+    marginTop: 12,
+    padding: 12,
+    backgroundColor: Colors.primary + '10',
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  viewAllButtonText: {
+    fontWeight: '600',
   },
   memberSince: {
     marginBottom: 16,
