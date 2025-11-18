@@ -37,7 +37,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png",
-      "bundler": "metro"
+      "bundler": "metro",
+      "build": {
+        "babel": {
+          "include": ["@react-navigation/web"]
+        }
+      }
     },
     "plugins": [
       "expo-localization",
