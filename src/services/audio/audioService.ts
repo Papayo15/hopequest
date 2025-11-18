@@ -54,29 +54,29 @@ class AudioService {
 
   // Music track paths
   private musicTracks: Record<MusicTrack, any> = {
-    menu: require('@/assets/audio/music/menu.wav'),
-    map: require('@/assets/audio/music/map.wav'),
-    portal: require('@/assets/audio/music/portal.wav'),
-    activity: require('@/assets/audio/music/activity.wav'),
-    victory: require('@/assets/audio/music/victory.wav'),
-    defeat: require('@/assets/audio/music/defeat.wav'),
+    menu: require('../../../assets/audio/music/menu.wav'),
+    map: require('../../../assets/audio/music/map.wav'),
+    portal: require('../../../assets/audio/music/portal.wav'),
+    activity: require('../../../assets/audio/music/activity.wav'),
+    victory: require('../../../assets/audio/music/victory.wav'),
+    defeat: require('../../../assets/audio/music/defeat.wav'),
   };
 
   // SFX paths
   private sfxPaths: Record<SFXType, any> = {
-    button_press: require('@/assets/audio/sfx/button_press.wav'),
-    button_hover: require('@/assets/audio/sfx/button_hover.wav'),
-    portal_select: require('@/assets/audio/sfx/portal_select.wav'),
-    portal_enter: require('@/assets/audio/sfx/portal_enter.wav'),
-    level_complete: require('@/assets/audio/sfx/level_complete.wav'),
-    achievement_unlock: require('@/assets/audio/sfx/achievement_unlock.wav'),
-    coin_collect: require('@/assets/audio/sfx/coin_collect.wav'),
-    star_earn: require('@/assets/audio/sfx/star_earn.wav'),
-    error: require('@/assets/audio/sfx/error.wav'),
-    success: require('@/assets/audio/sfx/success.wav'),
-    companion_meet: require('@/assets/audio/sfx/companion_meet.wav'),
-    checkpoint_pass: require('@/assets/audio/sfx/checkpoint_pass.wav'),
-    checkpoint_fail: require('@/assets/audio/sfx/checkpoint_fail.wav'),
+    button_press: require('../../../assets/audio/sfx/button_press.wav'),
+    button_hover: require('../../../assets/audio/sfx/button_hover.wav'),
+    portal_select: require('../../../assets/audio/sfx/portal_select.wav'),
+    portal_enter: require('../../../assets/audio/sfx/portal_enter.wav'),
+    level_complete: require('../../../assets/audio/sfx/level_complete.wav'),
+    achievement_unlock: require('../../../assets/audio/sfx/achievement_unlock.wav'),
+    coin_collect: require('../../../assets/audio/sfx/coin_collect.wav'),
+    star_earn: require('../../../assets/audio/sfx/star_earn.wav'),
+    error: require('../../../assets/audio/sfx/error.wav'),
+    success: require('../../../assets/audio/sfx/success.wav'),
+    companion_meet: require('../../../assets/audio/sfx/companion_meet.wav'),
+    checkpoint_pass: require('../../../assets/audio/sfx/checkpoint_pass.wav'),
+    checkpoint_fail: require('../../../assets/audio/sfx/checkpoint_fail.wav'),
   };
 
   /**
