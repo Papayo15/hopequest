@@ -8,8 +8,10 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "build:web": "expo export -p web",
+    "preview:web": "npm run build:web && npx serve dist",
     "test": "jest",
     "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
     "build:android": "eas build --platform android --profile production",
     "build:ios": "eas build --platform ios --profile production",
@@ -19,7 +21,9 @@
     "submit:android": "eas submit --platform android --profile production",
     "deploy": "npm run build:ios && npm run build:android",
     "typecheck": "tsc --noEmit",
-    "validate": "npm run typecheck && npm run lint"
+    "validate": "npm run typecheck && npm run lint",
+    "clean": "npx expo start -c",
+    "test:platforms": "./scripts/test-platforms.sh"
   },
   "dependencies": {
     "@expo/metro-runtime": "~3.2.3",
