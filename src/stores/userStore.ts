@@ -5,8 +5,8 @@
 
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { ProtagonistGender } from '../constants/gameConfig';
+import { getStorage } from '../utils/storage';
 
 interface UserState {
   // Información del usuario
@@ -179,7 +179,7 @@ export const useUserStore = create<UserState>()(
     }),
     {
       name: 'hope-quest-user-storage',
-      storage: createJSONStorage(() => AsyncStorage),
+      storage: createJSONStorage(() => getStorage()),
     }
   )
 );

@@ -5,7 +5,7 @@
 
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { getStorage } from '../utils/storage';
 import type {
   PortalType,
   PortalTransition,
@@ -274,7 +274,7 @@ export const usePortalStore = create<PortalState>()(
     }),
     {
       name: 'hope-quest-portal-storage',
-      storage: createJSONStorage(() => AsyncStorage),
+      storage: createJSONStorage(() => getStorage()),
       partialize: (state) => ({
         unlockedPortals: state.unlockedPortals,
         portalsUsed: state.portalsUsed,

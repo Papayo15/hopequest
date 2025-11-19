@@ -5,9 +5,9 @@
 
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { Country, FamilyCharacter } from '../types';
 import { achievementService, GameStats } from '../services/achievements/achievementService';
+import { getStorage } from '../utils/storage';
 
 interface GameState {
   // Estado del juego
@@ -180,7 +180,7 @@ export const useGameStore = create<GameState>()(
     }),
     {
       name: 'hope-quest-game-storage',
-      storage: createJSONStorage(() => AsyncStorage),
+      storage: createJSONStorage(() => getStorage()),
       // Solo persistir ciertos campos
       partialize: (state) => ({
         completedCountries: state.completedCountries,

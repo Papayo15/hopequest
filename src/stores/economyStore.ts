@@ -5,7 +5,7 @@
 
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { getStorage } from '../utils/storage';
 import type { DocumentType } from '../types';
 
 interface EconomyState {
@@ -293,7 +293,7 @@ export const useEconomyStore = create<EconomyState>()(
     }),
     {
       name: 'hope-quest-economy-storage',
-      storage: createJSONStorage(() => AsyncStorage),
+      storage: createJSONStorage(() => getStorage()),
       // Persistir todo excepto transactions (puede crecer mucho)
       partialize: (state) => ({
         money: state.money,
